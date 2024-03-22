@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Red+Hat+Display:wght@300&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Inter', sans serif;
+  background-color: #BADFE7;
 }
+/* Dark Mode .alert{
+  background: rgb(255,73,40);
+background: linear-gradient(180deg, rgba(255,73,40,1) 30%, rgba(40,62,255,1) 100%);
+  } */
+.alert{
+  background: #388087;
+background: linear-gradient(180deg, #388087 30%, #3C0084 100%);
+  }
+.btn{
+  background-color: #388087;
+  color: black;
+   border-radius: 30px;
+   border:none;
+}
+.sign-in{
+  background-color: #388087;
+}
+.head-txt{
+  color: #388087;
+}
+.wherecanmove{
+  border: #388087 1px solid;
+}
+.box{
+  background-color: #6FB9B8;
+  box-shadow: #388087 5px;
+}
+.happy-stn{
+  border-radius: 50px;
+  border: #6FB9B8 2px solid;
+}
+/* For drop in the navbar */
+.navbar .nav-item .dropdown-menu{ display: none; }
+.navbar .nav-item:hover .dropdown-menu{ display: block; }
+/* For Dark mode & Light mode */
+
