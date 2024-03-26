@@ -17,18 +17,32 @@ background: linear-gradient(180deg, #388087 30%, #3C0084 100%);
   }
 .btn{
   background-color: #388087;
-  color: black;
    border-radius: 30px;
+   color: black;
    border:none;
 }
 .sign-in{
   background-color: #388087;
+  color: white;
+}
+.sign-in.btn:hover{
+  background-color: navy;
+  color: white;
+}
+.btn:hover{
+  background-color: #3C0084;
+  box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+    transform: translateY(-0.1em);
 }
 .head-txt{
   color: #388087;
 }
 .wherecanmove{
   border: #388087 1px solid;
+  background-color: transparent;
+}
+.wherecanmove.btn:hover{
+  background-color: #3880875e;
 }
 .box{
   background-color: #6FB9B8;
@@ -37,6 +51,36 @@ background: linear-gradient(180deg, #388087 30%, #3C0084 100%);
 .happy-stn{
   border-radius: 50px;
   border: #6FB9B8 2px solid;
+}
+.navbar .nav-link{
+  color: black;
+  font-weight: 300;
+}
+.nav-link:hover{
+  color: #6FB9B8;
+}
+.logo{
+  position: relative;
+  left: 0;
+}
+.corner-content {
+  position: absolute;
+  padding: 10px;
+}
+.top-left {
+  top: 0;
+  left: 0;
+}
+.top-right {
+  top: 0;
+  right: 0;
+}
+.mid{
+  background-color: transparent;
+  padding: 5%;
+}
+.icon{
+  color: #EF476F
 }
 /* For drop in the navbar */
 .navbar .nav-item .dropdown-menu{ display: none; }

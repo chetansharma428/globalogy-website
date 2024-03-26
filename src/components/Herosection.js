@@ -18,7 +18,7 @@ const Herosection = () => {
     return (
         <div>
             <div class="container justify-content-center p-4">
-                <div class="row d-flex">
+                <div class="row d-flex g-2">
                     <div class="col d-flex align-items-center">
                         <div
                             class="col-sm-12 col d-flex justify-content-center align-items-start g-2 flex-column"
@@ -47,15 +47,21 @@ const Herosection = () => {
 
                             </div>
                             <div class="col">
-                                <h1 class="h1 head-txt fw-bold">
+                                <h1 class="display-4 head-txt fw-bold">
                                     Go Global With Globalogy
                                 </h1>
                             </div>
                             <div class="col">
-                                <h5 class="h5 head-txt">
+                                <h5 class="h6 head-txt">
                                     Global Career, Better Salary, Life Abroad, and all things good <br />
                                     - we help YOU realize YOUR DREAMS. So, are you ready to level up, Buttercup?.
                                 </h5>
+                            </div>
+                            <div
+                                class="col d-flex justify-content-center gap-2 w-100 p-4"
+                            >
+                                <button class="btn btn-danger text-light">View Courses</button>
+                                <button class="wherecanmove btn d-flex flew-row align-items-center">where can I move ? <img src={arrow} /></button>
                             </div>
                         </div>
                     </div>
@@ -70,12 +76,7 @@ const Herosection = () => {
                         />
                     </div>
                 </div>
-                <div
-                    class="col d-flex justify-content-center align-items-center gap-2"
-                >
-                    <button class="btn btn-danger text-light">View Courses</button>
-                    <button class="wherecanmove btn btn-danger bg-transparent d-flex flew-row align-items-center">where can I move ? <img src={arrow} /></button>
-                </div>
+
             </div>
             <div
                 class="row justify-content-center align-items-center g-2 flex-row p-2"
@@ -103,7 +104,7 @@ const Herosection = () => {
                                 <img src={yt} />
                             </div>
                             <div class="col">
-                                <p>Subscribers on Youtube</p>
+                                <a href="https://www.youtube.com/@NidhiNagori29" data-toggle="tooltip" data-placement="top" title="Follow">Subscribers on Youtube</a>
                             </div>
                         </div>
                         <div class="box d-flex align-items-center flex-column gap-2 p-4 rounded ">
@@ -112,7 +113,7 @@ const Herosection = () => {
                                 <img src={twitter} />
                             </div>
                             <div class="col">
-                                <p>Followers On Twitter</p>
+                                <a href="https://twitter.com/nidhinagori29?lang=en" data-toggle="tooltip" data-placement="top" title="Follow">Followers On Twitter</a>
                             </div>
                         </div>
                         <div class="box d-flex align-items-center flex-column gap-2 p-3 rounded ">
@@ -121,7 +122,7 @@ const Herosection = () => {
                                 <img src={insta} />
                             </div>
                             <div class="col">
-                                <p>Followers on Instagram</p>
+                                <a href="https://www.instagram.com/nidhinagori29/?hl=en" data-toggle="tooltip" data-placement="top" title="Follow">Followers on Instagram</a>
                             </div>
                         </div>
                         <div class="box d-flex align-items-center flex-column gap-2 p-3 rounded ">
@@ -130,7 +131,7 @@ const Herosection = () => {
                                 <img src={linkedin} />
                             </div>
                             <div class="col">
-                                <p>Followers on LinkedIn</p>
+                                <a href="https://www.linkedin.com/in/nidhinagori29/?originalSubdomain=ca" data-toggle="tooltip" data-placement="top" title="Follow">Followers on LinkedIn</a>
                             </div>
                         </div>
                     </div>

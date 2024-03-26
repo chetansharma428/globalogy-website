@@ -1,9 +1,13 @@
 import React from 'react'
 import Herosection from './Herosection'
+import Featuressection from './Featuressection'
 
 const Homepage = () => {
   return (
-    <Herosection/>
+    <div>
+      <Herosection />
+      <Featuressection />
+    </div>
   )
 }
 

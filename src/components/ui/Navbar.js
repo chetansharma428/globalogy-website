@@ -23,7 +23,7 @@ const Navbar = () => {
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-evenly" id="navbarSupportedContent">
-              <ul class="navbar-nav fw-bold">
+              <ul class="navbar-nav">
                 <li class="nav-item px-2 ">
                   <a class="nav-link" href="/">Home</a>
                 </li>
@@ -46,7 +46,7 @@ const Navbar = () => {
                 </li>
               </ul>
               <div class="d-flex ms-lg-2">
-                <button class="sign-in btn fw-bold">Sign Up</button>
+                <button class="sign-in btn">Sign Up</button>
               </div>
             </div>
             <DarkModeToggle
