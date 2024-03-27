@@ -6,6 +6,7 @@ import './index.css';
 import Homepage from './components/Homepage';
 import Navbar from './components/ui/Navbar';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <NextUIProvider>

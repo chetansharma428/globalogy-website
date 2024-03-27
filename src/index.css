@@ -20,6 +20,7 @@ background: linear-gradient(180deg, #388087 30%, #3C0084 100%);
    border-radius: 30px;
    color: black;
    border:none;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .sign-in{
   background-color: #388087;
@@ -31,7 +32,7 @@ background: linear-gradient(180deg, #388087 30%, #3C0084 100%);
 }
 .btn:hover{
   background-color: #3C0084;
-  box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     transform: translateY(-0.1em);
 }
 .head-txt{
@@ -46,7 +47,7 @@ background: linear-gradient(180deg, #388087 30%, #3C0084 100%);
 }
 .box{
   background-color: #6FB9B8;
-  box-shadow: #388087 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .happy-stn{
   border-radius: 50px;
@@ -76,14 +77,39 @@ background: linear-gradient(180deg, #388087 30%, #3C0084 100%);
   right: 0;
 }
 .mid{
-  background-color: transparent;
   padding: 5%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 10px;
 }
 .icon{
   color: #EF476F
+  
+}
+.filter-green{
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(113%) contrast(119%);
+}
+.glow {
+  box-shadow: #ff89019e 0 0 60px 23px;
+  border-radius: 50%;
+}
+.logo img{
+  width: 64px;
+  height: 64px;
+}
+.graph{
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.qualification{
+  background-color: #116466;
+  color: white;
+  border-radius: 30px;
 }
 /* For drop in the navbar */
-.navbar .nav-item .dropdown-menu{ display: none; }
-.navbar .nav-item:hover .dropdown-menu{ display: block; }
+/* .navbar .nav-item .dropdown-menu{ display: none; }
+.navbar .nav-item:hover .dropdown-menu{ display: block; } */
 /* For Dark mode & Light mode */
+
+
+/* Owl Carousel */
 
