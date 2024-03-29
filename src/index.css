@@ -105,9 +105,51 @@ background: linear-gradient(180deg, #388087 30%, #3C0084 100%);
   color: white;
   border-radius: 30px;
 }
+.icon-frm{
+  border-radius: 50%;
+  background-color: #7B8FD9;
+}
+.icon-frm img{
+  filter: brightness(0) invert(1);
+  width: 18px;
+  height: 18px;
+}
+.icon-rct{
+  border-radius: 50%;
+  background-color: #23C45C;
+}
+.icon-rct img{
+  filter: brightness(0) invert(1);
+  width: 18px;
+  height: 18px;
+}
+.icon-suit{
+  border-radius: 50%;
+  background-color: #EF476F;
+}
+.icon-suit img{
+  filter: brightness(0) invert(1);
+  width: 18px;
+  height: 18px;
+}
+.mid-new{
+  padding: 5%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 50%;
+}
+
+.tex{
+  position: relative;
+  background-image: url(../src/assests/images/texture.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 10px;
+  top: -100px;
+  border-radius: 10px;
+}
 /* For drop in the navbar */
-/* .navbar .nav-item .dropdown-menu{ display: none; }
-.navbar .nav-item:hover .dropdown-menu{ display: block; } */
+.navbar .nav-item .dropdown-menu{ display: none; }
+.navbar .nav-item:hover .dropdown-menu{ display: block; }
 /* For Dark mode & Light mode */
 
 

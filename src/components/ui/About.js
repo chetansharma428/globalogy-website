@@ -1,5 +1,10 @@
 import React from "react";
+
+
 import dp from "../../assests/images/about-banner.png";
+import roll from '../../assests/images/rolling.png'
+import vogue from '../../assests/images/vogue.png'
+import insider from '../../assests/images/insider.png'
 
 const About = () => {
   return (
@@ -11,7 +16,7 @@ const About = () => {
           </div>
           <div class="col">
             <div class="row d-flex justify-content-center align-items-center g-2 gap-4">
-              <div class="col-lg-6 col-xsm-12">
+              <div class="mid col-lg-6 col-xsm-12">
                 <div class="row justify-content-center align-items-center g-2 flex-column gap-2">
                   <div class="col">
                     <div class="h1 head-txt fw-bold text-center">
@@ -38,6 +43,40 @@ const About = () => {
                       in the hearts of her audience. That is how Globalogy was
                       born.
                     </div>
+                  </div>
+                  <div class="col">
+                    <div class="col h3">
+                        Featured in:
+                    </div>
+                    <div
+                        class="row justify-content-center align-items-center g-2"
+                    >
+                        <div class="col">
+                            <img
+                                src={roll}
+                                class="img-fluid rounded-top"
+                                alt=""
+                            />
+                            
+                        </div>
+                        <div class="col">
+                            <img
+                                src={insider}
+                                class="img-fluid rounded-top"
+                                alt=""
+                            />
+                            
+                        </div>
+                        <div class="col">
+                            <img
+                                src={vogue}
+                                class="img-fluid rounded-top"
+                                alt=""
+                            />
+                            
+                        </div>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
