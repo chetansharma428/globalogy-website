@@ -13,7 +13,7 @@ const Competitive = () => {
                 <div class="h2">
                 Globalogy Advantages: Your Competitive Edge
                 </div>
-                <div class="h6 text-muted">
+                <div class="h6 sub-text">
                 Explore the unique benefits that set Globalogy apart, giving you the competitive edge in your Carrier push.
                 </div>
             </div>

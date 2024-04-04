@@ -38,7 +38,7 @@ const Featuressection = () => {
                     <div class="h5">Apply: Build, Play, Create</div>
                   </div>
                   <div class="col fw-bold text-muted">
-                    <div class="h6">
+                    <div class="h6 sub-text">
                       Bring ideas to life in CodeHelp's Apply. Build projects,
                       play in boot playgrounds—all in your browser.
                     </div>
@@ -54,7 +54,7 @@ const Featuressection = () => {
                     <div class="h5">Grow: Elevate Your Career</div>
                   </div>
                   <div class="col fw-bold text-muted">
-                    <div class="h6">
+                    <div class="h6 sub-text">
                       Climb with Globalogy’s mentorship and achieve career
                       success.
                     </div>
@@ -70,7 +70,7 @@ const Featuressection = () => {
                     <div class="h4">Best Global Carrier Learning Choice?</div>
                   </div>
                   <div class="col fw-bold text-muted">
-                    <div class="h6">
+                    <div class="h6 sub-text">
                       Choose Globalogy for an seemless Experience.
                     </div>
                   </div>
@@ -105,7 +105,7 @@ const Featuressection = () => {
                   <div class="h5">Community Learning Experience</div>
                 </div>
                 <div class="col fw-bold text-muted">
-                  <div class="h6">
+                  <div class="h6 sub-text">
                     Emphasize that you connect with very advanced likely minded
                     people to ensure high-quality, up-to-date content.
                   </div>
@@ -121,7 +121,7 @@ const Featuressection = () => {
                   <div class="h4">Empowering People, Enabling Dreams</div>
                 </div>
                 <div class="col fw-bold text-muted">
-                  <div class="h6">
+                  <div class="h6 sub-text">
                     Unveil the essence of Globalogy: a community-driven platform
                     dedicated to empowering people of all levels. Discover who
                     we are and how we're shaping the future of abroad journey.
@@ -145,7 +145,7 @@ const Featuressection = () => {
         </div>
       </div>
       <div class="row d-flex justify-content-center align-items-center py-4 d-flex flex-column gap-4">
-        <div class="col-6 justify-content-center align-items-center">
+        <div class="col-8 justify-content-center align-items-center">
           <h1 class="h2 text-center fw-bold">
             First Ed-tech Start-Up to feature in the Time Square, New York
           </h1>

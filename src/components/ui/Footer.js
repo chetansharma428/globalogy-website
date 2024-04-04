@@ -15,7 +15,7 @@ const Footer = () => {
                     <div class="h2 fw-bold text-light">What would you like to learn? Talk to us today</div>
                 </div>
                 <div class="col-5 d-flex justify-content-center align-items-center">
-                    <button class="btn" style={{background : "white", color:"#116466"}}>
+                    <button class="btn">
                         Get Started
                     </button>
                 </div>

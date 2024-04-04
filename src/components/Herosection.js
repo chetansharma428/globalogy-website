@@ -58,7 +58,7 @@ const Herosection = () => {
               <div class="col d-flex justify-content-center gap-2 w-100 p-4">
                 <button class="btn btn-danger text-light">View Courses</button>
                 <button class="wherecanmove btn d-flex flew-row align-items-center">
-                  where can I move ? <img src={arrow} />
+                 <a>where can I move ?</a><img src={arrow} />
                 </button>
               </div>
             </div>
@@ -85,7 +85,7 @@ const Herosection = () => {
         <div class="row">
           <div class="col d-flex justify-content-center align-items-center flex-wrap  gap-4 py-4">
             <div class="box d-flex align-items-center flex-column gap-2 p-4 rounded ">
-              <div class="col d-flex flex-row align-items-center">
+              <div class="col d-flex flex-row align-items-center gap-1">
                 <h1 class="fw-bold">264K+</h1>
                 <img src={yt} />
               </div>
@@ -101,7 +101,7 @@ const Herosection = () => {
               </div>
             </div>
             <div class="box d-flex align-items-center flex-column gap-2 p-4 rounded ">
-              <div class="col d-flex flex-row align-items-center">
+              <div class="col d-flex flex-row align-items-center gap-2">
                 <h1 class="fw-bold">6K+</h1>
                 <img src={twitter} />
               </div>
@@ -117,7 +117,7 @@ const Herosection = () => {
               </div>
             </div>
             <div class="box d-flex align-items-center flex-column gap-2 p-3 rounded ">
-              <div class="col d-flex flex-row align-items-center">
+              <div class="col d-flex flex-row align-items-center gap-2">
                 <h1 class="fw-bold">1.2M+</h1>
                 <img src={insta} />
               </div>
@@ -133,7 +133,7 @@ const Herosection = () => {
               </div>
             </div>
             <div class="box d-flex align-items-center flex-column gap-2 p-3 rounded ">
-              <div class="col d-flex flex-row align-items-center">
+              <div class="col d-flex flex-row align-items-center ">
                 <h1 class="fw-bold">264K+</h1>
                 <img src={linkedin} />
               </div>

@@ -16,7 +16,7 @@ import profilepic from "../../assests/images/profile-pic.png";
 const Testimonials = () => {
   return (
     <div>
-      <div class="container-fluid bg-light" style={{ padding: "50px 0px" }}>
+      <div class="container-fluid bg-light" style={{ padding: "50px 0px" , color:"black"}}>
         <div class="container py-4">
           <div class="row d-flex justify-content-center align-items-center g-2 flex-column gap-4 ">
             <div class="col d-flex justify-content-center align-items-center flex-column">
