@@ -6,7 +6,6 @@
     "@emotion/react": "^11.11.4",
     "@mantine/core": "^7.7.1",
     "@mantine/hooks": "^7.7.1",
-    "@modulz/radix-icons": "^4.0.0",
     "@nextui-org/navbar": "^2.0.27",
     "@nextui-org/react": "^2.2.10",
     "@popperjs/core": "^2.11.8",
