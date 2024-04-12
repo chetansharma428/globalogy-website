@@ -1,7 +1,6 @@
 import React from "react";
 
 import m_icon from "../../assests/images/mail-icon.png";
-import texture from "../../assests/images/texture.png";
 const Footer = () => {
   return (
     <div>
@@ -15,7 +14,7 @@ const Footer = () => {
                     <div class="h2 fw-bold text-light">What would you like to learn? Talk to us today</div>
                 </div>
                 <div class="col-5 d-flex justify-content-center align-items-center">
-                    <button class="btn">
+                    <button class="btn text-light">
                         Get Started
                     </button>
                 </div>

@@ -1,20 +1,38 @@
 import React from "react";
-import flag1 from "../assests/images/Flag_of_Argentina-512x320 1.png";
-import flag2 from "../assests/images/Flag_of_Australia-512x256 1.png";
-import flag3 from "../assests/images/Flag_of_Canada-512x256 1.png";
-import flag4 from "../assests/images/Flag_of_England-512x307 1.png";
-import dp from "../assests/images/banner-with-pic-removebg-preview 1.png";
-import arrow from "../assests/images/Vector.svg";
-import users from "../assests/images/user 1.png";
-import insta from "../assests/images/3d_circle_with_instagram_symbol_isolated_on_a_transparent_background-removebg-preview 1.png";
-import twitter from "../assests/images/glossy-round-black-white-twitter-logo-isolated-transparent-background_125540-3693-removebg-preview 1.png";
-import yt from "../assests/images/ytb.png";
-import linkedin from "../assests/images/lknd.png";
+import arrow from "../../assests/images/Vector.svg";
 
-import { Heading5 } from "lucide-react";
-import { Button } from "bootstrap";
-
-const Herosection = () => {
+const Herosection = (props) => {
+  const {
+    header,
+    subhead1,
+    subhead2,
+    headerbutton,
+    subheaderbutton,
+    dp,
+    flag1,
+    flag2,
+    flag3,
+    flag4,
+    users,
+    insta,
+    twitter,
+    yt,
+    linkedin,
+    studentnum,
+    box1header,
+    box1subhead,
+    box2header,
+    box2subhead,
+    box3header,
+    box3subhead,
+    box4header,
+    box4subhead,
+    li1,
+    li2,
+    li3,
+    li4,
+  } = props.data[0];
+  console.log(flag1);
   return (
     <div>
       <div class="container justify-content-center p-4">
@@ -44,21 +62,29 @@ const Herosection = () => {
                 />
               </div>
               <div class="col">
-                <h1 class="display-4 head-txt fw-bold">
-                  Go Global With Globalogy
-                </h1>
+                <h1 class="display-4 head-txt fw-bold">{header}</h1>
               </div>
               <div class="col">
                 <h5 class="h6 head-txt">
-                  Global Career, Better Salary, Life Abroad, and all things good{" "}
-                  <br />- we help YOU realize YOUR DREAMS. So, are you ready to
-                  level up, Buttercup?.
+                  {subhead1} <br />
+                  {subhead2}
                 </h5>
+                <div>
+                  <ol class="h6 head-txt">
+                    <li>{li1}</li>
+                    <li>{li2}</li>
+                    <li>{li3}</li>
+                    <li>{li4}</li>
+                  </ol>
+                </div>
               </div>
               <div class="col d-flex justify-content-center gap-2 w-100 p-4">
-                <button class="btn btn-danger text-light">View Courses</button>
+                <button class="btn btn-danger text-light">
+                  {headerbutton}
+                </button>
                 <button class="wherecanmove btn d-flex flew-row align-items-center">
-                 <a>where can I move ?</a><img src={arrow} />
+                  <a>{subheaderbutton}</a>
+                  <img src={arrow} />
                 </button>
               </div>
             </div>
@@ -77,7 +103,7 @@ const Herosection = () => {
                 <img src={users} class="img-fluid rounded-top" alt="" />
               </div>
               <div>
-                <p>35000+ Happy Students</p>
+                <p>{studentnum}</p>
               </div>
             </div>
           </div>
@@ -86,7 +112,7 @@ const Herosection = () => {
           <div class="col d-flex justify-content-center align-items-center flex-wrap  gap-4 py-4">
             <div class="box d-flex align-items-center flex-column gap-2 p-4 rounded ">
               <div class="col d-flex flex-row align-items-center gap-1">
-                <h1 class="fw-bold">264K+</h1>
+                <h1 class="fw-bold">{box1header}</h1>
                 <img src={yt} />
               </div>
               <div class="col">
@@ -96,13 +122,13 @@ const Herosection = () => {
                   data-placement="top"
                   title="Follow"
                 >
-                  Subscribers on Youtube
+                  {box1subhead}
                 </a>
               </div>
             </div>
             <div class="box d-flex align-items-center flex-column gap-2 p-4 rounded ">
               <div class="col d-flex flex-row align-items-center gap-2">
-                <h1 class="fw-bold">6K+</h1>
+                <h1 class="fw-bold">{box2header}</h1>
                 <img src={twitter} />
               </div>
               <div class="col">
@@ -112,13 +138,13 @@ const Herosection = () => {
                   data-placement="top"
                   title="Follow"
                 >
-                  Followers On Twitter
+                  {box2subhead}
                 </a>
               </div>
             </div>
             <div class="box d-flex align-items-center flex-column gap-2 p-3 rounded ">
               <div class="col d-flex flex-row align-items-center gap-2">
-                <h1 class="fw-bold">1.2M+</h1>
+                <h1 class="fw-bold">{box3header}</h1>
                 <img src={insta} />
               </div>
               <div class="col">
@@ -128,13 +154,13 @@ const Herosection = () => {
                   data-placement="top"
                   title="Follow"
                 >
-                  Followers on Instagram
+                  {box3subhead}
                 </a>
               </div>
             </div>
             <div class="box d-flex align-items-center flex-column gap-2 p-3 rounded ">
               <div class="col d-flex flex-row align-items-center ">
-                <h1 class="fw-bold">264K+</h1>
+                <h1 class="fw-bold">{box4header}</h1>
                 <img src={linkedin} />
               </div>
               <div class="col">
@@ -144,7 +170,7 @@ const Herosection = () => {
                   data-placement="top"
                   title="Follow"
                 >
-                  Followers on LinkedIn
+                  {box4subhead}
                 </a>
               </div>
             </div>

@@ -14,7 +14,7 @@ a{
   padding-left: var(--mantine-spacing-md);
   padding-right: var(--mantine-spacing-md);
   text-decoration: none;
-  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  /* color: light-dark(var(--mantine-color-black), var(--mantine-color-white)); */
   font-weight: 500;
   font-size: var(--mantine-font-size-sm);
 
@@ -48,30 +48,8 @@ a{
 }
 
 /* dark mode toggler */
-.icon {
-  width: rem(22px);
-  height: rem(22px);
-}
 
-.dark {
-  @mixin dark {
-    display: none;
-  }
 
-  @mixin light {
-    display: block;
-  }
-}
-
-.light {
-  @mixin light {
-    display: none;
-  }
-
-  @mixin dark {
-    display: block;
-  }
-}
 /* The switch - the box around the slider */
 /* .switch {
   font-size: 17px;

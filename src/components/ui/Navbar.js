@@ -39,16 +39,19 @@ const mockdata = [
     icon: IconNotification,
     title: "Visa Support Service",
     description: "Our Visa Support Service",
+    link: "/visasupport",
   },
   {
     icon: IconChartPie3,
     title: "Job Support Service",
     description: "Our Job Support Service",
+    link: "/jobsupport",
   },
   {
     icon: IconBook,
     title: "Courses",
     description: "Our Top Courses",
+    link: "/courses",
   },
 ];
 
@@ -173,28 +176,28 @@ const Navbar = () => {
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const theme = useMantineTheme();
   const { setColorScheme } = useMantineColorScheme();
-  const computedColorScheme = useComputedColorScheme("light", {
-    getInitialValueInEffect: true,
-  });
+  const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
 
   const links = mockdata.map((item) => (
-    <UnstyledButton className={classes.subLink} key={item.title}>
-      <Group wrap="nowrap" align="flex-start">
-        <ThemeIcon size={34} variant="default" radius="md">
-          <item.icon
-            style={{ width: rem(22), height: rem(22) }}
-            color={theme.colors.blue[6]}
-          />
-        </ThemeIcon>
-        <div>
-          <Text size="sm" fw={500}>
-            {item.title}
-          </Text>
-          <Text size="xs" c="dimmed">
-            {item.description}
-          </Text>
-        </div>
-      </Group>
+    <UnstyledButton className={classes.subLink}>
+      <a href={item.link}>
+        <Group wrap="nowrap" align="flex-start">
+          <ThemeIcon size={34} variant="default" radius="md">
+            <item.icon
+              style={{ width: rem(22), height: rem(22) }}
+              color={theme.colors.blue[6]}
+            />
+          </ThemeIcon>
+          <div>
+            <Text size="sm" fw={500}>
+              {item.title}
+            </Text>
+            <Text size="xs" c="dimmed">
+              {item.description}
+            </Text>
+          </div>
+        </Group>
+      </a>
     </UnstyledButton>
   ));
 
@@ -203,9 +206,11 @@ const Navbar = () => {
       <div
         class="alert alert-dismissible fade show m-0 border-0 text-center text-light"
         role="alert"
-      > 
-        <strong>Off-to Australia!</strong> You should check new Masterclass <span class="px-1"><button class="check btn btn-dark fw-bold"> Check-it-out</button></span>
-        
+      >
+        <strong>Off-to Australia!</strong> You should check new Masterclass{" "}
+        <span class="px-1">
+          <button class="check btn btn-dark fw-bold"> Check-it-out</button>
+        </span>
         <button
           type="button"
           class="btn-close"
@@ -229,9 +234,10 @@ const Navbar = () => {
               <p class="text-uppercase fw-bold text-2xl mb-0">Globalogy</p>
             </div>
             <Group h="100%" gap={0} visibleFrom="sm">
-              <a href="#" className={classes.link}>
+              <a href="/" className={classes.link}>
                 Home
               </a>
+
               <HoverCard
                 width={600}
                 position="bottom"
@@ -258,9 +264,9 @@ const Navbar = () => {
                 >
                   <Group justify="space-between" px="md">
                     <Text fw={400}>Services</Text>
-                    <Anchor href="#" fz="xs">
+                    {/* <Anchor href="#" fz="xs">
                       View all
-                    </Anchor>
+                    </Anchor> */}
                   </Group>
 
                   <Divider my="sm" />
@@ -273,37 +279,48 @@ const Navbar = () => {
               <a href="#" className={classes.link}>
                 Testimonials
               </a>
-              <a href="#" className={classes.link}>
+              <a href="https://globalogy.in/blog/" className={classes.link}>
                 Blog
               </a>
-              <a href="#" className={classes.link}>
+              <a href="/contact" className={classes.link}>
                 Contact
               </a>
             </Group>
             <Group visibleFrom="sm">
-              <Button class="btn text-light">Log in</Button>
-              <Button color="cyan">Sign up</Button>
-              <ActionIcon
-                onClick={() =>
-                  setColorScheme(
-                    computedColorScheme === "light" ? "dark" : "light"
-                  )
-                }
-                variant="default"
-                size="xl"
-                aria-label="Toggle color scheme"
-                style={{ backgroundColor: "transparent", padding: "8px"}}
-                class="mid mode-btn"
+              {/* <Button
+                class="btn text-light"
+                href="https://app.globalogy.in/web/login"
               >
-                <IconSun
-                  class="light"
-                  stroke={1.5}
-                />
-                <IconMoon
-                  class="dark"
-                  stroke={1.5}
-                />
-              </ActionIcon>
+                Log in
+              </Button> */}
+              <Button
+                class="btn text-light"
+                href="https://app.globalogy.in/web/login"
+              >
+                Sign up
+              </Button>
+              <Group justify="center">
+                <ActionIcon
+                  onClick={() => {
+                    setColorScheme(computedColorScheme === "light" ? "dark" : "light");
+                    document.documentElement.classList.toggle("dark-mode");
+                  }}
+                  variant="default"
+                  size="xl"
+                  aria-label="Toggle color scheme"
+                  style={{ backgroundColor: "transparent", padding: "8px"}}
+                  class="mid mode-btn"
+                >
+                  <IconSun
+                    class="light icon"
+                    stroke={1.5}
+                  />
+                  <IconMoon
+                    class="dark icon"
+                    stroke={1.5}
+                  />
+                </ActionIcon>
+              </Group>
             </Group>
             <Burger
               opened={drawerOpened}
@@ -324,14 +341,12 @@ const Navbar = () => {
           <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
             <Divider my="sm" />
 
-            <a href="#" className={classes.link}>
+            <a href="/" className={classes.link}>
               Home
             </a>
             <UnstyledButton className={classes.link} onClick={toggleLinks}>
               <Center inline>
-                <Box component="span" class="px-3">
-                  Sevices
-                </Box>
+                <Box component="span">Sevices</Box>
                 <IconChevronDown
                   style={{ width: rem(16), height: rem(16) }}
                   color={theme.colors.blue[6]}
@@ -342,37 +357,48 @@ const Navbar = () => {
             <a href="#" className={classes.link}>
               Testimonials
             </a>
-            <a href="#" className={classes.link}>
+            <a href="https://globalogy.in/blog/" className={classes.link}>
               Blog
             </a>
-            <a href="#" className={classes.link}>
-              Contact
+            <a href="/contact">
+              <button className={classes.link}>Contact</button>
             </a>
             <Divider my="sm" />
             <Group justify="center" grow pb="xl" px="md">
-              <Button class="btn log-in">Log in</Button>
-              <Button color="cyan">Sign up</Button>
-              <ActionIcon
-                onClick={() =>
-                  setColorScheme(
-                    computedColorScheme === "light" ? "dark" : "light"
-                  )
-                }
-                variant="default"
-                size="xl"
-                aria-label="Toggle color scheme"
-                style={{ backgroundColor: "transparent", padding: "8px"}}
-                class="mid mode-btn"
+              {/* <Button
+                class="btn log-in"
+                href="https://app.globalogy.in/web/login"
               >
-                <IconSun
-                  className={cx(classes.icon, classes.light)}
-                  stroke={1.5}
-                />
-                <IconMoon
-                  className={cx(classes.icon, classes.dark)}
-                  stroke={1.5}
-                />
-              </ActionIcon>
+                Log in
+              </Button> */}
+              <Button
+                class="btn text-light"
+                href="https://app.globalogy.in/web/login"
+              >
+                Sign up
+              </Button>
+              <Group justify="center">
+                <ActionIcon
+                  onClick={() => {
+                    setColorScheme(computedColorScheme === "light" ? "dark" : "light");
+                    document.documentElement.classList.toggle("dark-mode");
+                  }}
+                  variant="default"
+                  size="xl"
+                  aria-label="Toggle color scheme"
+                  style={{ backgroundColor: "transparent", padding: "8px"}}
+                  class="mid mode-btn"
+                >
+                  <IconSun
+                    class="light icon"
+                    stroke={1.5}
+                  />
+                  <IconMoon
+                    class="dark icon"
+                    stroke={1.5}
+                  />
+                </ActionIcon>
+              </Group>
             </Group>
           </ScrollArea>
         </Drawer>

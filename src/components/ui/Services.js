@@ -31,7 +31,7 @@ const Services = () => {
                 .<img src={visasupport} class="img-fluid " alt="" />
               </div>
               <div class="col">
-                <div class="h6 text-danger">Work Visa Support</div>
+                <div class="h4 text-danger fw-bold">Work Visa Support</div>
               </div>
               <div class="col">
                 <p>
@@ -63,7 +63,7 @@ const Services = () => {
                 .<img src={jobsupport} class="img-fluid " alt="" />
               </div>
               <div class="col">
-                <div class="h6 text-primary">Job Support Service</div>
+                <div class="h4 text-primary fw-bold">Job Support Service</div>
               </div>
               <div class="col">
                 <p>
