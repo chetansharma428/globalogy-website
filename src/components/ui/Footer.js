@@ -99,6 +99,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
+          <div class="col d-flex justify-content-center align-items-center mt-4">
+            <div class="text-light text-center">Copyright © 2024 globalogy.in . All Rights Reserved.</div>
+          </div>
         </div>
       </div>
     </div>

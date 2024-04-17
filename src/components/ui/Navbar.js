@@ -9,7 +9,6 @@ import {
   Text,
   SimpleGrid,
   ThemeIcon,
-  Anchor,
   Divider,
   Center,
   Box,
@@ -32,7 +31,6 @@ import {
   IconSun,
   IconMoon,
 } from "@tabler/icons-react";
-import cx from "clsx";
 
 const mockdata = [
   {
@@ -56,127 +54,14 @@ const mockdata = [
 ];
 
 const Navbar = () => {
-  // const [isDarkMode, setIsDarkMode] = React.useState(() => false);
-  // return (
-  //   <div class="sticky-top header-bar">
-  //     <div
-  //       class="alert alert-dismissible fade show m-0 border-0 text-center text-light"
-  //       role="alert"
-  //     >
-  //       <strong>Off-to Australia!</strong> You should check new Masterclass
-  //       <button class="check btn btn-dark fw-bold"> Check-it-out</button>
-  //       <button
-  //         type="button"
-  //         class="btn-close"
-  //         data-bs-dismiss="alert"
-  //         aria-label="Close"
-  //       >
-  //         X
-  //       </button>
-  //     </div>
-  //     <div class="container-fluid p-0">
-  //       <nav class="navbar navbar-expand-lg navbar-light shadow">
-  //         <div class="container">
-  //           <a class="navbar-brand d-flex align-items-center" href="#">
-  //             <img
-  //               src="https://assets-global.website-files.com/641aff1f42be5c6f6a912b8d/64885d09846b08b720f88dc8_123.png"
-  //               width="48"
-  //               height="48"
-  //               class="d-inline-block align-top"
-  //               alt="Globalogy Logo"
-  //             />
-  //             <p class="text-uppercase font-semibold text-2xl mb-0">
-  //               Globalogy
-  //             </p>
-  //           </a>
-  //           <button
-  //             class="navbar-toggler collapsed"
-  //             type="button"
-  //             data-bs-toggle="collapse"
-  //             data-bs-target="#navbarSupportedContent"
-  //             aria-controls="navbarSupportedContent"
-  //             aria-expanded="false"
-  //             aria-label="Toggle navigation"
-  //           >
-  //             <span class="navbar-toggler-icon"></span>
-  //           </button>
-  //           <div
-  //             class="collapse navbar-collapse justify-content-evenly"
-  //             id="navbarSupportedContent"
-  //           >
-  //             <ul class="navbar-nav">
-  //               <li class="nav-item px-2 ">
-  //                 <a class="nav-link" href="/">
-  //                   Home
-  //                 </a>
-  //               </li>
-  //               <li class="nav-item px-2">
-  //                 <a class="nav-link" href="/#courses">
-  //                   Testimonials
-  //                 </a>
-  //               </li>
-  //               <li class="nav-item dropdown">
-  //                 <a
-  //                   class="nav-link  dropdown-toggle"
-  //                   href="#"
-  //                   data-bs-toggle="dropdown"
-  //                 >
-  //                   {" "}
-  //                   Sevices{" "}
-  //                 </a>
-  //                 <ul class="dropdown-menu">
-  //                   <li>
-  //                     <a class="dropdown-item" href="#">
-  //                       {" "}
-  //                       Job Support Sevices{" "}
-  //                     </a>
-  //                   </li>
-  //                   <li>
-  //                     <a class="dropdown-item" href="#">
-  //                       {" "}
-  //                       Visa Support Sevices{" "}
-  //                     </a>
-  //                   </li>
-  //                   <li>
-  //                     <a class="dropdown-item" href="#">
-  //                       {" "}
-  //                       Courses{" "}
-  //                     </a>
-  //                   </li>
-  //                 </ul>
-  //               </li>
-  //               <li class="nav-item px-2">
-  //                 <a class="nav-link" href="/contact">
-  //                   Blog
-  //                 </a>
-  //               </li>
-  //               <li class="nav-item px-2">
-  //                 <a class="nav-link" href="/articles">
-  //                   Contact
-  //                 </a>
-  //               </li>
-  //             </ul>
-  //             <div class="d-flex ms-lg-2">
-  //               <button class="sign-in btn">Sign Up</button>
-  //             </div>
-  //             <DarkModeToggle
-  //             onChange={setIsDarkMode}
-  //             checked={isDarkMode}
-  //             size={80}
-  //           />
-  //           </div>
-  //         </div>
-  //       </nav>
-  //     </div>
-  //   </div>
-  // );
-
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const theme = useMantineTheme();
   const { setColorScheme } = useMantineColorScheme();
-  const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
+  const computedColorScheme = useComputedColorScheme("light", {
+    getInitialValueInEffect: true,
+  });
 
   const links = mockdata.map((item) => (
     <UnstyledButton className={classes.subLink}>
@@ -200,6 +85,24 @@ const Navbar = () => {
       </a>
     </UnstyledButton>
   ));
+  // const navLinkEls = document.querySelectorAll('.Navbar_link__jz8zd');
+  // const windowPathname = window.location.pathname;
+  // console.log(navLinkEls);
+
+  // navLinkEls.forEach((navLinkEl) => {
+  //   const navLinkpathname = new URL(navLinkEl.href).pathname;
+  //   if (!navLinkEl.classList.contains(navLinkpathname)) {
+  //     // If it doesn't contain the class, add it
+  //     console.log("findout");
+  //   }
+
+  //   // console.log('Window Pathname:', windowPathname);
+  //   // console.log('Navlink Pathname:', navLinkpathname);
+  //   // if((windowPathname === navLinkpathname) || (windowPathname === '/index.html' && navLinkpathname === '/')){
+  //   //   navLinkEl.classList.add('active');
+  //   //   console.log('Active class added');
+  //   // }
+  // });
 
   return (
     <Box class="head-bar sticky-top">
@@ -230,8 +133,9 @@ const Navbar = () => {
                 height="48"
                 class="d-inline-block align-top"
                 alt="Globalogy Logo"
+                href="/"
               />
-              <p class="text-uppercase fw-bold text-2xl mb-0">Globalogy</p>
+              <a class="text-uppercase fw-bold text-2xl mb-0" href="/">Globalogy</a>
             </div>
             <Group h="100%" gap={0} visibleFrom="sm">
               <a href="/" className={classes.link}>
@@ -302,23 +206,37 @@ const Navbar = () => {
               <Group justify="center">
                 <ActionIcon
                   onClick={() => {
-                    setColorScheme(computedColorScheme === "light" ? "dark" : "light");
+                    setColorScheme(
+                      computedColorScheme === "light" ? "dark" : "light"
+                    );
                     document.documentElement.classList.toggle("dark-mode");
                   }}
                   variant="default"
                   size="xl"
                   aria-label="Toggle color scheme"
-                  style={{ backgroundColor: "transparent", padding: "8px"}}
+                  style={{
+                    backgroundColor: "transparent",
+                    padding: "5px",
+                  }}
                   class="mid mode-btn"
                 >
-                  <IconSun
-                    class="light icon"
-                    stroke={1.5}
-                  />
-                  <IconMoon
-                    class="dark icon"
-                    stroke={1.5}
-                  />
+                  <span class="moon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 384 512"
+                    >
+                      <path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path>
+                    </svg>
+                  </span>
+                  <span class="sun">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <g fill="#ffd43b">
+                        <circle r="5" cy="12" cx="12"></circle>
+                        <path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="slider"></span>
                 </ActionIcon>
               </Group>
             </Group>
@@ -380,23 +298,34 @@ const Navbar = () => {
               <Group justify="center">
                 <ActionIcon
                   onClick={() => {
-                    setColorScheme(computedColorScheme === "light" ? "dark" : "light");
+                    setColorScheme(
+                      computedColorScheme === "light" ? "dark" : "light"
+                    );
                     document.documentElement.classList.toggle("dark-mode");
                   }}
                   variant="default"
                   size="xl"
                   aria-label="Toggle color scheme"
-                  style={{ backgroundColor: "transparent", padding: "8px"}}
+                  style={{ backgroundColor: "transparent", padding: "5px" }}
                   class="mid mode-btn"
                 >
-                  <IconSun
-                    class="light icon"
-                    stroke={1.5}
-                  />
-                  <IconMoon
-                    class="dark icon"
-                    stroke={1.5}
-                  />
+                  <span class="moon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 384 512"
+                    >
+                      <path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path>
+                    </svg>
+                  </span>
+                  <span class="sun">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <g fill="#ffd43b">
+                        <circle r="5" cy="12" cx="12"></circle>
+                        <path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="slider"></span>
                 </ActionIcon>
               </Group>
             </Group>

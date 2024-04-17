@@ -29,6 +29,9 @@
     backdrop-filter: blur(15px);
     background-color: #badfe75c;
   }
+  #active{
+    color: var(--button-background-light);
+  }
   /* vertical Stepper */
 .stepper {
   .line {
@@ -44,7 +47,6 @@
 }
 }
 [data-mantine-color-scheme='dark']{
-  transition: 500;
   --mantine-color-body: var(--background-color-dark) !important;
   --mantine-color-text: var(--text-color-dark) !important;
   .btn{
@@ -56,6 +58,9 @@
       var(--button-background-dark)0%,
       #3c0084 100%
     );  
+  }
+  .active{
+    color: var(--button-background-dark);
   }
   .box {
     background-color: var(--alert-background-gradient-dark);
@@ -271,18 +276,117 @@ background: linear-gradient(180deg, rgba(255,73,40,1) 30%, rgba(40,62,255,1) 100
 .btn-close{
   color: white;
 }
+.light.icon,
+.dark.icon {
+  transition: opacity 0.5s ease; /* adding transition for smooth opacity change */
+  display: inline-block; /* both icons are initially displayed */
+}
+
 .light.icon {
-  display: none; /* hide light icon by default */
+  opacity: 1; /* light icon is initially fully visible */
 }
 
 .dark.icon {
-  display: inline-block; /* show dark icon by default */
+  opacity: 0; /* dark icon is initially fully transparent */
 }
 
 .dark-mode .light.icon {
-  display: inline-block; /* show light icon in dark mode */
+  opacity: 0; /* light icon becomes fully transparent in dark mode */
 }
 
 .dark-mode .dark.icon {
-  display: none; /* hide dark icon in dark mode */
+  opacity: 1; /* dark icon becomes fully visible in dark mode */
 }
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  
+  cursor: pointer;
+  
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+
+.sun svg {
+  
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #2b3782;
+  
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+ 
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+ 
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+
+

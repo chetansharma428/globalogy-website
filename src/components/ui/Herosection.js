@@ -32,7 +32,6 @@ const Herosection = (props) => {
     li3,
     li4,
   } = props.data[0];
-  console.log(flag1);
   return (
     <div>
       <div class="container justify-content-center p-4">
@@ -79,19 +78,19 @@ const Herosection = (props) => {
                 </div>
               </div>
               <div class="col d-flex justify-content-center gap-2 w-100 p-4">
-                <button class="btn btn-danger text-light">
+                <div class="btn text-light">
                   {headerbutton}
-                </button>
+                </div>
                 <button class="wherecanmove btn d-flex flew-row align-items-center">
                   <a>{subheaderbutton}</a>
-                  <img src={arrow} />
+                  <img src={arrow} alt="arrow"/>
                 </button>
               </div>
             </div>
           </div>
 
           <div class="banner col-sm-12 col-lg-4 d-flex justify-content-center align-items-center g-2">
-            <img src={dp} class="img-fluid" alt="" />
+            <img src={dp} class="img-fluid" alt="Nidhi Nagori" />
           </div>
         </div>
       </div>
@@ -113,7 +112,7 @@ const Herosection = (props) => {
             <div class="box d-flex align-items-center flex-column gap-2 p-4 rounded ">
               <div class="col d-flex flex-row align-items-center gap-1">
                 <h1 class="fw-bold">{box1header}</h1>
-                <img src={yt} />
+                <img src={yt}/>
               </div>
               <div class="col">
                 <a

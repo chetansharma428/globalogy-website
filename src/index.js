@@ -49,6 +49,7 @@ const router = createBrowserRouter([
     element: <Courses />,
   },
 ]);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <MantineProvider theme={theme}>
@@ -61,6 +62,7 @@ root.render(
     </NextUIProvider>
   </MantineProvider>
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

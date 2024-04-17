@@ -1,15 +1,47 @@
 import React from "react";
+import glowrocket from "../../assests/images/glowrocket.png";
 
 const Verticalstepper = (props) => {
-    const {header, subhead, stepheader, step1, point1, step2, point2, point3, point4, step3, point5, step4, point6, step5, point7, point8, step6, point9, point10, step7, point11} = props.data[1];
+  const {
+    header,
+    subhead,
+    stepheader,
+    step1,
+    point1,
+    step2,
+    point2,
+    point3,
+    point4,
+    step3,
+    point5,
+    step4,
+    point6,
+    step5,
+    point7,
+    point8,
+    step6,
+    point9,
+    point10,
+    step7,
+    point11,
+  } = props.data[1];
   return (
     <div class="container">
-      <div class="col d-flex justify-content-center align-items-center gap-2 flex-column mid">
-        <div class="row d-flex justify-content-center align-items-center gap-2">
-          <div class="col h1 fw-bold text-center ">
-            {header}
+      <div class="row d-flex justify-content-center align-items-center gap-2 flex-column mid">
+        <div class="d-flex justify-content-center align-items-center gap-2">
+          <div class=" d-flex justify-content-start">
+            <div class="">
+              <img
+                src={glowrocket}
+                class="img-fluid rounded-top"
+                alt="rocket"
+              />
+            </div>
           </div>
-          <p class="text-center h5">{subhead}</p>
+          <div class="d-flex justify-content-center align-items-center flex-column">
+            <div class="col h1 fw-bold text-center ">{header}</div>
+            <p class="text-center h5">{subhead}</p>
+          </div>
         </div>
         <div class="stepper d-flex flex-column mt-5 ml-2">
           <div class="h5 py-3">
@@ -36,15 +68,9 @@ const Verticalstepper = (props) => {
             </div>
             <div class="px-2">
               <div class="h5">{step2}</div>
-              <li class="lead  pb-3">
-                {point2}
-              </li>
-              <li class="lead  pb-3">
-                {point3}
-              </li>
-              <li class="lead  pb-3">
-              {point4}
-              </li>
+              <li class="lead  pb-3">{point2}</li>
+              <li class="lead  pb-3">{point3}</li>
+              <li class="lead  pb-3">{point4}</li>
             </div>
           </div>
           <div class="d-flex mb-1">
