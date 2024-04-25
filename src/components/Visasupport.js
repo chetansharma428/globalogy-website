@@ -1,5 +1,4 @@
 import React from 'react'
-import Herosection from './ui/Herosection';
 import Services from './ui/Services';
 import About from './ui/About';
 import Competitive from './ui/Competitive';
@@ -9,19 +8,18 @@ import Bottomform from './ui/Bottomform';
 import Testimonials from './ui/Testimonials';
 import Social from './ui/Social';
 import Footer from './ui/Footer';
+import Support from './Support';
 
 const Visasupport = () => {
   const data =[
     {
       header:"Visa Support Service",
-      subhead1:"We do EVERYTHING for you:",
-      
-      li1:"● Building your professional profile from scratch (Resume, LinkedIn, etc.)",
-      li2:"● Identifying the right countries for you",
-      li3:"● Doing job applications",
-      li4:"● Networking on your behalf",
-      headerbutton:"View Courses",
-      subheaderbutton:"Connect Now",
+      subhead1:"We do Everything for you:",
+      li1:"Building your professional profile from scratch (Resume, LinkedIn, etc.)",
+      li2:"Identifying the right countries for you",
+      li3:"Doing job applications",
+      li4:"Networking on your behalf",
+      subheaderbutton:"Connect Now!",
       dp:require("../assests/images/Visasupportdp.png"),
       users:require("../assests/images/user 1.png"),
       studentnum:"35000+ Happy Students",
@@ -60,7 +58,7 @@ const Visasupport = () => {
   ]
   return (
     <div>
-      <Herosection data={data}/>
+      <Support data={data}/>
       <Verticalstepper data={data}/>
       <Services/>
       <About/>

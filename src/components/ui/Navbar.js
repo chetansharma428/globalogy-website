@@ -28,8 +28,6 @@ import {
   IconBook,
   IconChartPie3,
   IconChevronDown,
-  IconSun,
-  IconMoon,
 } from "@tabler/icons-react";
 
 const mockdata = [
@@ -62,7 +60,6 @@ const Navbar = () => {
   const computedColorScheme = useComputedColorScheme("light", {
     getInitialValueInEffect: true,
   });
-
   const links = mockdata.map((item) => (
     <UnstyledButton className={classes.subLink}>
       <a href={item.link}>
@@ -85,23 +82,26 @@ const Navbar = () => {
       </a>
     </UnstyledButton>
   ));
-  // const navLinkEls = document.querySelectorAll('.Navbar_link__jz8zd');
+  // const navLinkEls = document.getElementById('navEle');
   // const windowPathname = window.location.pathname;
   // console.log(navLinkEls);
 
-  // navLinkEls.forEach((navLinkEl) => {
-  //   const navLinkpathname = new URL(navLinkEl.href).pathname;
-  //   if (!navLinkEl.classList.contains(navLinkpathname)) {
-  //     // If it doesn't contain the class, add it
-  //     console.log("findout");
-  //   }
+  // // navLinkEls.forEach((navLinkEl) => {
+  // //   const navLinkpathname = new URL(navLinkEl.href).pathname;
+  // //   if (!navLinkEl.classList.contains(navLinkpathname)) {
+  // //     // If it doesn't contain the class, add it
+  // //     console.log("findout");
+  // //   }
 
-  //   // console.log('Window Pathname:', windowPathname);
-  //   // console.log('Navlink Pathname:', navLinkpathname);
-  //   // if((windowPathname === navLinkpathname) || (windowPathname === '/index.html' && navLinkpathname === '/')){
-  //   //   navLinkEl.classList.add('active');
-  //   //   console.log('Active class added');
-  //   // }
+  //   console.log('Window Pathname:', windowPathname);
+  //   console.log('Navlink Pathname:', navLinkpathname);
+  // if((windowPathname === navLinkEls) || (windowPathname === '/index.html' && navLinkEls === '/')){
+  // navLinkEls.classList.add('active');
+  // navLinkEls.style.color='blue'
+  // console.log('Active class added');
+  // }
+  // navLinkEls.addEventListener("change", (event) => {
+  //   event.target.style.color='blue';
   // });
 
   return (
@@ -123,10 +123,10 @@ const Navbar = () => {
           X
         </button>
       </div>
-      <Box class="mid rounded-0 navbar-back" p={20} fz="xl">
+      <Box class="rounded-0 navbar-back" p={20} fz="lg">
         <header className={classes.header}>
           <Group justify="space-between" h="100%">
-            <div class="d-flex flex-row justify-content-center align-items-center">
+            <div class="d-flex flex-row justify-content-center align-items-center logotext">
               <img
                 src="https://assets-global.website-files.com/641aff1f42be5c6f6a912b8d/64885d09846b08b720f88dc8_123.png"
                 width="48"
@@ -135,10 +135,12 @@ const Navbar = () => {
                 alt="Globalogy Logo"
                 href="/"
               />
-              <a class="text-uppercase fw-bold text-2xl mb-0" href="/">Globalogy</a>
+              <a class="mb-0 h2 " style={{fontFamily:"Pacifico, cursive"}} href="/">
+                Globalogy
+              </a>
             </div>
-            <Group h="100%" gap={0} visibleFrom="sm">
-              <a href="/" className={classes.link}>
+            <Group h="100%" gap={0} visibleFrom="md">
+              <a href="/" className={classes.link} id="navEle">
                 Home
               </a>
 
@@ -168,9 +170,6 @@ const Navbar = () => {
                 >
                   <Group justify="space-between" px="md">
                     <Text fw={400}>Services</Text>
-                    {/* <Anchor href="#" fz="xs">
-                      View all
-                    </Anchor> */}
                   </Group>
 
                   <Divider my="sm" />
@@ -180,29 +179,40 @@ const Navbar = () => {
                   </SimpleGrid>
                 </HoverCard.Dropdown>
               </HoverCard>
-              <a href="#" className={classes.link}>
-                Testimonials
-              </a>
-              <a href="https://globalogy.in/blog/" className={classes.link}>
+              <div id="navEle">
+                <button
+                  className={classes.link}
+                  onClick={() => {
+                    const element = document.getElementById("testimonialID");
+                    element.scrollIntoView({
+                      behavior: "smooth",
+                      block: "center",
+                    });
+                    const navLinkEls = document.getElementById("navEle");
+                    navLinkEls.style.color = "blue";
+                  }}
+                >
+                  Testimonials
+                </button>
+              </div>
+              <a
+                href="https://globalogy.in/blog/"
+                className={classes.link}
+                id="navEle"
+              >
                 Blog
               </a>
-              <a href="/contact" className={classes.link}>
+              <a href="/contact" className={classes.link} id="navEle">
                 Contact
               </a>
             </Group>
             <Group visibleFrom="sm">
-              {/* <Button
-                class="btn text-light"
-                href="https://app.globalogy.in/web/login"
-              >
-                Log in
-              </Button> */}
-              <Button
-                class="btn text-light"
+              <a
+                class="btn text-light fw-bold"
                 href="https://app.globalogy.in/web/login"
               >
                 Sign up
-              </Button>
+              </a>
               <Group justify="center">
                 <ActionIcon
                   onClick={() => {
@@ -217,6 +227,7 @@ const Navbar = () => {
                   style={{
                     backgroundColor: "transparent",
                     padding: "5px",
+                    border: "2px solid #00A5CF",
                   }}
                   class="mid mode-btn"
                 >
@@ -243,7 +254,7 @@ const Navbar = () => {
             <Burger
               opened={drawerOpened}
               onClick={toggleDrawer}
-              hiddenFrom="sm"
+              hiddenFrom="md"
             />
           </Group>
         </header>
@@ -272,9 +283,20 @@ const Navbar = () => {
               </Center>
             </UnstyledButton>
             <Collapse in={linksOpened}>{links}</Collapse>
-            <a href="#" className={classes.link}>
-              Testimonials
-            </a>
+            <div>
+              <button
+                className={classes.link}
+                onClick={() => {
+                  const element = document.getElementById("testimonialID");
+                  element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
+                }}
+              >
+                Testimonials
+              </button>
+            </div>
             <a href="https://globalogy.in/blog/" className={classes.link}>
               Blog
             </a>

@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { NextUIProvider } from "@nextui-org/react";
 import { createTheme, MantineProvider } from "@mantine/core";
 import {
   createBrowserRouter,
   RouterProvider,
-  BrowserRouter as Router,
 } from "react-router-dom";
 import "@mantine/core/styles.css";
 import "animate.css";
+import '@mantine/notifications/styles.css';
+import { Notifications } from '@mantine/notifications';
 
 import "./index.css";
 import Homepage from "./components/Homepage";
@@ -22,6 +22,7 @@ import Visasupport from "./components/Visasupport";
 
 const theme = createTheme({
   fontFamily: "Inter, sans-serif",
+  // fontFamily: "Arimo, sans-serif",
 });
 const router = createBrowserRouter([
   {
@@ -53,13 +54,12 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <MantineProvider theme={theme}>
-    <NextUIProvider>
+    <Notifications position="top-right" zIndex={100000}/>
       <React.StrictMode>
-          <Navbar />
+        <Navbar />
         <RouterProvider router={router} />
         <Facingissue />
       </React.StrictMode>
-    </NextUIProvider>
   </MantineProvider>
 );
 

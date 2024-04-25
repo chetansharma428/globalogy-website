@@ -63,8 +63,8 @@ const Featuressection = () => {
               </div>
               <div class="col">
                 <div class="row justify-content-center align-items-center g-2 d-flex flex-column">
-                  <div class="col icon">
-                    <div class="h5">Why We're Your</div>
+                  <div class="col">
+                    <div class="h5 fw-normal text-danger">Why We're Your</div>
                   </div>
                   <div class="col">
                     <div class="h4">Best Global Carrier Learning Choice?</div>
@@ -114,8 +114,8 @@ const Featuressection = () => {
             </div>
             <div class="col">
               <div class="row justify-content-center align-items-center g-2 d-flex flex-column">
-                <div class="col icon">
-                  <div class="h5">Who are We</div>
+                <div class="col">
+                  <div class="h5 text-danger">Who are We</div>
                 </div>
                 <div class="col">
                   <div class="h4">Empowering People, Enabling Dreams</div>
@@ -146,7 +146,7 @@ const Featuressection = () => {
       </div>
       <div class="row d-flex justify-content-center align-items-center py-4 d-flex flex-column gap-4">
         <div class="col-8 justify-content-center align-items-center">
-          <h1 class="h2 text-center fw-bold">
+          <h1 class="h2 text-center">
             First Ed-tech Start-Up to feature in the Time Square, New York
           </h1>
         </div>

@@ -185,7 +185,7 @@ const Achievements = () => {
                     </SwiperSlide>
                   </Swiper>
                 </div>
-                <div class="mid col-lg-4 d-flex justify-content-center align-items-center text-center">
+                {/* <div class="mid col-lg-4 d-flex justify-content-center align-items-center text-center">
                   <Swiper
                     // install Swiper modules
                     modules={[
@@ -267,19 +267,19 @@ const Achievements = () => {
                       </div>
                     </SwiperSlide>
                   </Swiper>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
           <div class="col">
             <div class="row justify-content-center align-items-center g-2 d-flex flex-column">
               <div class="col">
-                <div class="h5 text-danger">Achievements</div>
+                <div class="h4 text-danger fw-bold">Achievements</div>
               </div>
               <div class="col">
                 <div class="h3">Globalogy students: Powering Top Giants</div>
               </div>
-              <div class="col">
+              <div class="col h6 fw-normal">
                 <p>
                   Meet our proud alumni shaping the future at major Giant
                   companies. Discover the impact Globalogy has had on their

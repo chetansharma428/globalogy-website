@@ -15,7 +15,7 @@ const Homepage = () => {
     {
       header:"Go Global With Globalogy",
       subhead1:"Global Career, Better Salary, Life Abroad, and all things good",
-      subhead2:"we help YOU realize YOUR DREAMS. So, are you ready to level up, Buttercup?.",
+      subhead2:"we help you realize your Dreams. So, are you ready to level up, Buttercup?.",
       headerbutton:"View Courses",
       subheaderbutton:"where can I move ?",
       dp:require("../assests/images/banner-with-pic-removebg-preview 1.png"),

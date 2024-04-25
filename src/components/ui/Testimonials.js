@@ -16,7 +16,7 @@ import profilepic from "../../assests/images/profile-pic.png";
 const Testimonials = () => {
   return (
     <div>
-      <div class="container-fluid bg-light" style={{ padding: "50px 0px" , color:"black"}}>
+      <div class="container-fluid bg-light" style={{ padding: "50px 0px" , color:"black"}}  id="testimonialID">
         <div class="container py-4">
           <div class="row d-flex justify-content-center align-items-center g-2 flex-column gap-4 ">
             <div class="col d-flex justify-content-center align-items-center flex-column">
@@ -220,7 +220,7 @@ const Testimonials = () => {
                     ]}
                     spaceBetween={50}
                     slidesPerView={1}
-                    navigation
+                    
                     autoplay={{ delay: 1500 }}
                     loop={true}
                     pagination={{ clickable: true }}
@@ -384,7 +384,7 @@ const Testimonials = () => {
                     </SwiperSlide>
                   </Swiper>
                 </div>
-                <div class="mid col-lg-4 d-flex justify-content-center align-items-center text-center">
+                {/* <div class="mid col-lg-4 d-flex justify-content-center align-items-center text-center">
                   <Swiper
                     // install Swiper modules
                     modules={[
@@ -396,7 +396,7 @@ const Testimonials = () => {
                     ]}
                     spaceBetween={50}
                     slidesPerView={1}
-                    navigation
+                    
                     autoplay={{ delay: 1500 }}
                     loop={true}
                     pagination={{ clickable: true }}
@@ -559,7 +559,7 @@ const Testimonials = () => {
                       </div>
                     </SwiperSlide>
                   </Swiper>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

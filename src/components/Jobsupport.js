@@ -9,19 +9,18 @@ import Bottomform from './ui/Bottomform';
 import Testimonials from './ui/Testimonials';
 import Social from './ui/Social';
 import Footer from './ui/Footer';
+import Support from './Support';
 
 const Jobsupport = () => {
   const data =[
     {
       header:"Job Support Service",
       subhead1:"We do EVERYTHING for you:",
-      
-      li1:"● Building your professional profile from scratch (Resume, LinkedIn, etc.)",
-      li2:"● Identifying the right countries for you",
-      li3:"● Doing job applications",
-      li4:"● Networking on your behalf",
-      headerbutton:"View Courses",
-      subheaderbutton:"where can I move ?",
+      li1:"Building your professional profile from scratch (Resume, LinkedIn, etc.)",
+      li2:"Identifying the right countries for you",
+      li3:"Doing job applications",
+      li4:"Networking on your behalf",
+      subheaderbutton:"Connect Now!",
       dp:require("../assests/images/JobSupportDp.png"),
       users:require("../assests/images/user 1.png"),
       studentnum:"35000+ Happy Students",
@@ -60,7 +59,7 @@ const Jobsupport = () => {
   ]
   return (
     <div>
-      <Herosection data={data}/>
+      <Support data={data}/>
       <Verticalstepper data={data}/>
       <Services/>
       <About/>

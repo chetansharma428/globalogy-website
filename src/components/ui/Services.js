@@ -3,7 +3,6 @@ import { Tilt } from "react-tilt";
 import visasupport from "../../assests/images/visa.png";
 import jobsupport from "../../assests/images/job.png";
 import glowarrow from "../../assests/images/glowarrow.png";
-import glowrocket from "../../assests/images/glowrocket.png";
 
 const Services = () => {
   const defaultOptions = {
@@ -40,7 +39,7 @@ const Services = () => {
                 <div class="col">
                   <div class="h4 text-danger fw-bold">Work Visa Support</div>
                 </div>
-                <div class="col">
+                <div class="col h6 fw-normal">
                   <p>
                     Want to move abroad without a job? There are countries that
                     allow you to move in with a Job Seeker Visa, Digital Nomad
@@ -53,7 +52,7 @@ const Services = () => {
                   <a
                     name=""
                     id=""
-                    class="btn btn-primary"
+                    class="btn btn-primary h6"
                     href="/visasupport"
                     role="button"
                   >
@@ -72,7 +71,7 @@ const Services = () => {
                 <div class="col">
                   <div class="h4 text-primary fw-bold">Job Support Service</div>
                 </div>
-                <div class="col">
+                <div class="col h6 fw-normal">
                   <p>
                     Want to move abroad with a job that aligns with your
                     expectations? We strategize your job search with our global

@@ -30,7 +30,7 @@ const About = () => {
                   </div>
 
                   <div class="col">
-                    <div class="h5">
+                    <div class="h6">
                       Our founder, Nidhi Nagori is a CA and a content creator
                       who inspires an audience of over 1 million people to seek
                       a global career. Having worked in more than 27 countries
