@@ -7,7 +7,6 @@ import Achievements from './ui/Achievements';
 import Bottomform from './ui/Bottomform';
 import Testimonials from './ui/Testimonials';
 import Social from './ui/Social';
-import Footer from './ui/Footer';
 import Support from './Support';
 
 const Visasupport = () => {
@@ -67,7 +66,6 @@ const Visasupport = () => {
       <Testimonials/>
       <Bottomform/>
       <Social/>
-      <Footer/>
     </div>
   )
 }

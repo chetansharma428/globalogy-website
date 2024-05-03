@@ -15,7 +15,7 @@ const Social = () => {
             <div class="col">
               <div class="row justify-content-center align-items-center g-2 flex-column">
                 <div class="col d-flex justify-content-center align-items-center">
-                  <div class="h3 fw-bold text-center">
+                  <div class="h3 fw-bold text-center text-dark">
                     Welcome to Our Globalogy Family
                   </div>
                 </div>

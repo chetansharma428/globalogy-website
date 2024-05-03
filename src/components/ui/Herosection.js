@@ -323,11 +323,12 @@ const Herosection = (props) => {
                   onClose={close}
                   centered
                   title="Immigration Calculator"
-                  size="80%"
+                  size="95%"
                   overlayProps={{
                     backgroundOpacity: 0.55,
                     blur: 3,
                   }}
+                  zIndex={10000}
                 >
                   <div class="container-fluid ">
                     <div class="cover-banner d-flex justify-content-center align-items-center">

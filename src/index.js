@@ -19,6 +19,7 @@ import Aboutus from "./components/Aboutus";
 import Jobsupport from "./components/Jobsupport";
 import Courses from "./components/Courses";
 import Visasupport from "./components/Visasupport";
+import Footer from "./components/ui/Footer";
 
 const theme = createTheme({
   fontFamily: "Inter, sans-serif",
@@ -59,6 +60,7 @@ root.render(
         <Navbar />
         <RouterProvider router={router} />
         <Facingissue />
+        <Footer/>
       </React.StrictMode>
   </MantineProvider>
 );

@@ -7,7 +7,6 @@ import About from './ui/About'
 import Testimonials from './ui/Testimonials'
 import Bottomform from './ui/Bottomform'
 import Social from './ui/Social'
-import Footer from './ui/Footer'
 import Featuressection from './Featuressection'
 
 const Homepage = () => {
@@ -50,7 +49,6 @@ const Homepage = () => {
       <Testimonials/>
       <Bottomform/>
       <Social/>
-      <Footer/>
     </div>
   )
 }

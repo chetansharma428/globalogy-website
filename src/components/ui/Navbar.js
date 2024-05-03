@@ -106,23 +106,26 @@ const Navbar = () => {
 
   return (
     <Box class="head-bar sticky-top">
+      <div class="alert d-flex justify-content-center mb-0 gap-4"> 
       <div
-        class="alert alert-dismissible fade show m-0 border-0 text-center text-light"
+        class=" alert-dismissible fade show m-0 border-0 text-center text-light"
         role="alert"
       >
         <strong>Off-to Australia!</strong> You should check new Masterclass{" "}
-        <span class="px-1">
+        <span class="">
           <button class="check btn btn-dark fw-bold"> Check-it-out</button>
         </span>
-        <button
+      </div>
+      <button
           type="button"
-          class="btn-close"
+          class="btn-close text-light"
           data-bs-dismiss="alert"
           aria-label="Close"
         >
           X
         </button>
       </div>
+      
       <Box class="rounded-0 navbar-back" p={20} fz="lg">
         <header className={classes.header}>
           <Group justify="space-between" h="100%">
@@ -261,15 +264,16 @@ const Navbar = () => {
         <Drawer
           opened={drawerOpened}
           onClose={closeDrawer}
-          size="100%"
+          position="top"
+          size="40%"
           padding="md"
           title="Globalogy"
-          hiddenFrom="sm"
+          hiddenFrom="md"
           zIndex={1000000}
+          overlayProps={{ backgroundOpacity: 0.5, blur: 4, }}
         >
           <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
-            <Divider my="sm" />
-
+            <Divider my="md" />
             <a href="/" className={classes.link}>
               Home
             </a>

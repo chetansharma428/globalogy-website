@@ -5,14 +5,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Pacifico&display=swap');
 
-
+/* // globalogy logo color pallet  */
+/* $kelly-green: #5CBA47ff;
+$delft-blue: #192D4Fff;
+$mantis: #79C045ff;
+$dark-spring-green: #217956ff; */
 :root{
   --background-color: #EDE8F5;
   --background-color-dark: black;
   --alert-background-light: #ADBBDA;
   --alert-background-gradient-dark: #ff4928;
-  --button-background-dark: #FF4928;
-  --button-background-light: #7091E6;
+  --button-background-dark: #5CBA47ff;
+  --button-background-light: #217956ff;
   --text-color-light: black;
   --text-color-dark: white;
   --button-hover-background: #b83720;
@@ -67,7 +71,7 @@
   }
   .box {
     background-color: transparent;
-    box-shadow: rgb(92 92 92 / 25%) 0px 30px 60px -20px, rgb(255 255 255 / 30%) 0px 30px 60px -30px, rgb(98 138 178 / 35%) 0px -2px 6px 0px inset;
+    box-shadow: rgb(255 255 255 / 30%) 0px 30px 0px -30px, rgb(98 138 178 / 35%) 0px -2px 3px 0px inset;
   }
   .mode-btn{
     background-color: #6247aa !important;
@@ -99,7 +103,7 @@
   .mid{
     /* box-shadow: inset 2px 2px 2px 2px #dcffa6, 0 2px 5px #000; */
     padding: 6%;
-    box-shadow: rgb(92 92 92 / 25%) 0px 30px 60px -20px, rgb(255 255 255 / 30%) 0px 30px 60px -30px, rgb(98 138 178 / 35%) 0px -2px 6px 0px inset;
+    box-shadow: rgb(255 255 255 / 30%) 0px 30px 0px -30px, rgb(98 138 178 / 35%) 0px -2px 3px 0px inset;
     /* box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px; */
     border-radius: 10px;
   }
@@ -168,19 +172,18 @@ background: linear-gradient(180deg, rgba(255,73,40,1) 30%, rgba(40,62,255,1) 100
   border: var(--alert-background-light) 1px solid;
   background-color: transparent;
   color: black;
+  border: 1px solid var(--button-background-light);
 }
 .wherecanmove.btn:hover {
   background-color: #3880875e;
+  
 }
 .box {
-  background-color: var(--alert-background-light);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .happy-stn {
   border-radius: 50px;
-  border: #8697C4 1px solid;
+  border: var(--button-background-light) 1px solid;
 }
 .navbar .nav-link {
   font-weight: 300;
@@ -261,6 +264,9 @@ background: linear-gradient(180deg, rgba(255,73,40,1) 30%, rgba(40,62,255,1) 100
   width: 18px;
   height: 18px;
 }
+.badge {
+  background-color: #23c45c;
+}
 .mid-new {
   padding: 5%;
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -282,46 +288,13 @@ background: linear-gradient(180deg, rgba(255,73,40,1) 30%, rgba(40,62,255,1) 100
 .btn-close{
   color: white;
 }
-.light.icon,
-.dark.icon {
-  transition: opacity 0.5s ease; /* adding transition for smooth opacity change */
-  display: inline-block; /* both icons are initially displayed */
-}
+
 .cover-banner{
   background-image: url("./assests/images/banner-with-pic 1.png");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 10px;
   border-radius: 10px;
-}
-.light.icon {
-  opacity: 1; /* light icon is initially fully visible */
-}
-
-.dark.icon {
-  opacity: 0; /* dark icon is initially fully transparent */
-}
-
-.dark-mode .light.icon {
-  opacity: 0; /* light icon becomes fully transparent in dark mode */
-}
-
-.dark-mode .dark.icon {
-  opacity: 1; /* dark icon becomes fully visible in dark mode */
-}
-
-.switch {
-  font-size: 17px;
-  position: relative;
-  display: inline-block;
-  width: 64px;
-  height: 34px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
 }
 
 .slider {
