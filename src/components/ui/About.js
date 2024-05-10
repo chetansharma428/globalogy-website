@@ -1,10 +1,9 @@
 import React from "react";
 
-
 import dp from "../../assests/images/about-banner.png";
-import roll from '../../assests/images/rolling.png'
-import vogue from '../../assests/images/vogue.png'
-import insider from '../../assests/images/insider.png'
+import roll from "../../assests/images/rolling.png";
+import vogue from "../../assests/images/vogue.png";
+import insider from "../../assests/images/insider.png";
 
 const About = () => {
   return (
@@ -12,11 +11,11 @@ const About = () => {
       <div class="container">
         <div class="row justify-content-center align-items-center g-2 flex-column py-4">
           <div class="col">
-            <div class="h2 fw-bold">About</div>
+            <div class="h2 fw-bold text-center">About</div>
           </div>
           <div class="col">
-            <div class="row d-flex justify-content-center align-items-center g-2 gap-4">
-              <div class="mid col-lg-6 col-xsm-12">
+            <div class="row d-flex justify-content-center align-items-center g-2 ">
+              <div class="col col-xsm-12 d-flex flex-row about">
                 <div class="row justify-content-center align-items-center g-2 flex-column gap-2">
                   <div class="col">
                     <div class="h1 head-txt fw-bold text-center">
@@ -45,44 +44,28 @@ const About = () => {
                     </div>
                   </div>
                   <div class="col">
-                    <div class="col h3">
-                        Featured in:
+                    <div class="col h3">Featured in:</div>
+                    <div class="row justify-content-center align-items-center g-2">
+                      <div class="col">
+                        <img src={roll} class="img-fluid rounded-top" alt="" />
+                      </div>
+                      <div class="col">
+                        <img
+                          src={insider}
+                          class="img-fluid rounded-top"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col">
+                        <img src={vogue} class="img-fluid rounded-top" alt="" />
+                      </div>
                     </div>
-                    <div
-                        class="row justify-content-center align-items-center g-2"
-                    >
-                        <div class="col">
-                            <img
-                                src={roll}
-                                class="img-fluid rounded-top"
-                                alt=""
-                            />
-                            
-                        </div>
-                        <div class="col">
-                            <img
-                                src={insider}
-                                class="img-fluid rounded-top"
-                                alt=""
-                            />
-                            
-                        </div>
-                        <div class="col">
-                            <img
-                                src={vogue}
-                                class="img-fluid rounded-top"
-                                alt=""
-                            />
-                            
-                        </div>
-                    </div>
-                    
                   </div>
                 </div>
               </div>
-              <div class="col justify-content-center d-flex">
-                <img src={dp} class="img-fluid text-center" alt="" />
-              </div>
+              <div class="col-lg-4 col-xsm-12 d-flex justify-content-center about-section">
+                  <img src={dp} class="" alt="" />
+                </div>
             </div>
           </div>
         </div>

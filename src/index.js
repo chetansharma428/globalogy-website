@@ -20,10 +20,14 @@ import Jobsupport from "./components/Jobsupport";
 import Courses from "./components/Courses";
 import Visasupport from "./components/Visasupport";
 import Footer from "./components/ui/Footer";
+import '@mantine/carousel/styles.css';
+
 
 const theme = createTheme({
-  fontFamily: "Inter, sans-serif",
+  // fontFamily: "Inter, sans-serif",
   // fontFamily: "Arimo, sans-serif",
+  // fontFamily: "Poppins, sans-serif",
+  fontFamily: "Lato, sans-serif",
 });
 const router = createBrowserRouter([
   {

@@ -1,24 +1,27 @@
 import React from "react";
+import { Carousel } from "@mantine/carousel";
+import {
+  Paper,
+  Card,
+  Image,
+  Text,
+  Badge,
+  Button,
+  Group,
+  Title,
+  Tabs,
+} from "@mantine/core";
+import classes from "./Navbar.module.css";
+
 import { Tilt } from "react-tilt";
 import visasupport from "../../assests/images/visa.png";
 import jobsupport from "../../assests/images/job.png";
 import glowarrow from "../../assests/images/glowarrow.png";
 
 const Services = () => {
-  const defaultOptions = {
-    reverse: false, // reverse the tilt direction
-    max: 25, // max tilt rotation (degrees)
-    perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
-    scale: 1, // 2 = 200%, 1.5 = 150%, etc..
-    speed: 1000, // Speed of the enter/exit transition
-    transition: true, // Set a transition on enter/exit.
-    axis: null, // What axis should be disabled. Can be X or Y.
-    reset: true, // If the tilt effect has to be reset on exit.
-    easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
-  };
   return (
     <div>
-      <div class="container" style={{ padding: "50px 0px" }}>
+      {/* <div class="container" style={{ padding: "50px 0px" }}>
         <div class="row d-flex justify-content-center align-items-center py-4">
           <div class="col-7 d-flex justify-content-end">
             <div class="h2 fw-bold">Our Services</div>
@@ -94,6 +97,271 @@ const Services = () => {
             </Tilt>
           </div>
         </div>
+      </div> */}
+      <div class="container">
+        <div class="h2 fw-bold d-flex justify-content-center py-4">
+          Popular Programs
+        </div>
+        <Tabs color="teal" defaultValue="first" variant="pills">
+          <Tabs.List justify="center" >
+            <Tabs.Tab value="first">
+              <Text size="md" fw={600}>Study</Text></Tabs.Tab>
+            <Tabs.Tab value="second">
+              <Text size="md" fw={600}>Teach</Text></Tabs.Tab>
+            <Tabs.Tab value="third">
+              <Text size="md" fw={600}>Internship</Text></Tabs.Tab>
+            <Tabs.Tab value="forth">
+              <Text size="md" fw={600}>Full Time</Text></Tabs.Tab>
+          </Tabs.List>
+          <Tabs.Panel value="first" pt="md">
+            <Carousel
+              withIndicators
+              slideSize={{ base: "100%", sm: "50%", md: "33.333333%" }}
+              slideGap={{ base: 0, sm: "md" }}
+              loop
+              align="start"
+            >
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="sm" className={classes.card2}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="md" className={classes.card2}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="md" className={classes.card2}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="md" className={classes.card2}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+            </Carousel>
+          </Tabs.Panel>
+          <Tabs.Panel value="second" pt="md">
+            <Carousel
+              withIndicators
+              slideSize={{ base: "100%", sm: "50%", md: "33.333333%" }}
+              slideGap={{ base: 0, sm: "md" }}
+              loop
+              align="start"
+            >
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="sm" className={classes.card1}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="md" className={classes.card1}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="md" className={classes.card1}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="md" className={classes.card1}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+            </Carousel>
+          </Tabs.Panel>
+          <Tabs.Panel value="third" pt="md">
+            <Carousel
+              withIndicators
+              slideSize={{ base: "100%", sm: "50%", md: "33.333333%" }}
+              slideGap={{ base: 0, sm: "md" }}
+              loop
+              align="start"
+            >
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="sm" className={classes.card3}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="md" className={classes.card3}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="md" className={classes.card3}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="md" className={classes.card3}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+            </Carousel>
+          </Tabs.Panel>
+          <Tabs.Panel value="forth" pt="md">
+            <Carousel
+              withIndicators
+              slideSize={{ base: "100%", sm: "50%", md: "33.333333%" }}
+              slideGap={{ base: 0, sm: "md" }}
+              loop
+              align="start"
+            >
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="md" className={classes.card4}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="md" className={classes.card4}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="md" className={classes.card4}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="md" className={classes.card4}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                      nature
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                      Best forests to visit in North America
+                    </Title>
+                  </div>
+                  <Button class="btn text-light fw-bold">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+            </Carousel>
+          </Tabs.Panel>
+        </Tabs>
       </div>
     </div>
   );

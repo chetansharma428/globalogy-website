@@ -10,8 +10,8 @@ const Bottomform = () => {
   return (
     <div>
       <div class="container-fluid bg-light">
-        <div class="container">
-          <div class="row d-flex justify-content-center align-items-center g-2 p-4">
+        <div class="container" style={{paddingBottom:"100px"}}>
+          <div class="row d-flex justify-content-center align-items-center g-2 ">
             <div class="col-lg-6 col-sm-12">
               <div class="mid row justify-content-center align-items-center g-2 flex-column gap-4" style={{padding: "4rem"}}>
                 <div class="col">

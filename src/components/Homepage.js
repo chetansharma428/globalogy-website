@@ -15,11 +15,15 @@ const Homepage = () => {
       header:"Go Global With Globalogy",
       subhead1:"Global Career, Better Salary, Life Abroad, and all things good",
       subhead2:"we help you realize your Dreams. So, are you ready to level up, Buttercup?.",
-      headerbutton:"View Courses",
+      headerbutton:"Explore Now",
+      dropdown1:"Program 1",
+      dropdown2:"Program 2",
+      dropdown3:"Program 3",
+      dropdown4:"Program 4",
       subheaderbutton:"where can I move ?",
       dp:require("../assests/images/banner-with-pic-removebg-preview 1.png"),
-      flag1:require('../assests/images/Flag_of_Argentina-512x320 1.png'),
-      flag2:require("../assests/images/Flag_of_Australia-512x256 1.png"),
+      flag1:require('../assests/images/eu-flag.png'),
+      flag2:require("../assests/images/Flag_of_the_United_Arab_Emirates.svg.png"),
       flag3:require("../assests/images/Flag_of_Canada-512x256 1.png"),
       flag4:require("../assests/images/Flag_of_England-512x307 1.png"),
       users:require("../assests/images/user 1.png"),
@@ -48,7 +52,6 @@ const Homepage = () => {
       <About/>
       <Testimonials/>
       <Bottomform/>
-      <Social/>
     </div>
   )
 }

@@ -6,7 +6,8 @@ import classes from "./Navbar.module.css";
 
 import { useDisclosure } from "@mantine/hooks";
 import { Modal } from "@mantine/core";
-import { notifications } from '@mantine/notifications';
+import { notifications } from "@mantine/notifications";
+// import Globe from "@/magicui/globe";
 
 const Herosection = (props) => {
   const {
@@ -15,6 +16,10 @@ const Herosection = (props) => {
     subhead2,
     headerbutton,
     subheaderbutton,
+    dropdown1,
+    dropdown2,
+    dropdown3,
+    dropdown4,
     dp,
     flag1,
     flag2,
@@ -69,29 +74,29 @@ const Herosection = (props) => {
     if (!validatePhoneNumber(phoneNumber)) {
       // alert("Invalid phone number. Please enter a valid phone number.");
       notifications.show({
-        color: 'red',
-        title: 'Invalid phone number.',
-        message: 'Please enter a valid phone number.',
+        color: "red",
+        title: "Invalid phone number.",
+        message: "Please enter a valid phone number.",
         classNames: classes,
-      })
+      });
       return;
     }
     if (!countryCodeRegex.test(countryCodeInput.value)) {
       // alert("Invalid country code. Please enter a valid country code.");
       notifications.show({
-        color: 'red',
-        title: 'Invalid country code.',
-        message: 'Please enter a valid country code.',
+        color: "red",
+        title: "Invalid country code.",
+        message: "Please enter a valid country code.",
         classNames: classes,
-      })
+      });
       return;
     }
     notifications.show({
-      title: 'Form Submitted',
-      message: 'You will be be contacted in 48 hours',
+      title: "Form Submitted",
+      message: "You will be be contacted in 48 hours",
       classNames: classes,
-      color:"green"
-    })
+      color: "green",
+    });
     // // check for phone number validation before POST request
 
     // const formData = [
@@ -267,263 +272,302 @@ const Herosection = (props) => {
     document.getElementById("result-container").innerHTML = responseMessage;
 
     document.getElementById("immigration-form").reset();
-    console.log("form")
-  }
+    console.log("form");
+  };
   return (
     <div>
-      <div class="container justify-content-center p-4">
-        <div class="row d-flex g-2">
-          <div class="col d-flex align-items-center">
-            <div class="col-sm-12 col d-flex justify-content-center align-items-start g-2 flex-column">
-              <div class="col d-flex flex-row justify-items-center gap-2">
-                <img
-                  src={flag1}
-                  class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
-                  alt=""
-                />
-                <img
-                  src={flag2}
-                  class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
-                  alt=""
-                />
-                <img
-                  src={flag3}
-                  class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
-                  alt=""
-                />
-                <img
-                  src={flag4}
-                  class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
-                  alt=""
-                />
-              </div>
-              <div class="col">
-                <h1 class="display-4 head-txt fw-bold">{header}</h1>
-              </div>
-              <div class="col">
-                <h5 class="h6 head-txt">
-                  {subhead1} <br />
-                  {subhead2}
-                </h5>
-                <div>
-                  <ol class="h6 head-txt">
-                    <li>{li1}</li>
-                    <li>{li2}</li>
-                    <li>{li3}</li>
-                    <li>{li4}</li>
-                  </ol>
+      <div class="container-fluid hero">
+        <div class="container justify-content-center header-hero">
+          <div class="row g-2">
+            {/* <div class="col"> */}
+              {/* <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background px-40 pb-40 pt-8 md:pb-60 md:shadow-xl">
+                <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+                  Globe
+                </span>
+                <Globe className="top-28" />
+                <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
+              </div> */}
+              <div class="col-sm-12 col g-2 flex-column d-flex justify-content-center">
+                <div class="col flex-row gap-2 flag d-flex justify-content-center align-items-center">
+                  <img
+                    src={flag1}
+                    class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
+                    alt=""
+                  />
+                  <img
+                    src={flag2}
+                    class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
+                    alt=""
+                  />
+                  <img
+                    src={flag3}
+                    class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
+                    alt=""
+                  />
+                  <img
+                    src={flag4}
+                    class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
+                    alt=""
+                  />
                 </div>
-              </div>
-              <div class="col d-flex justify-content-start gap-2 w-100 py-4">
-                <div class="btn text-light fw-bold">
-                  <a href="/courses">{headerbutton}</a>
+                <div class="col d-flex justify-content-center align-items-center">
+                  <h1 class="display-4 head-txt fw-bold text-center">{header}</h1>
                 </div>
-                <Modal
-                  opened={opened}
-                  onClose={close}
-                  centered
-                  title="Immigration Calculator"
-                  size="95%"
-                  overlayProps={{
-                    backgroundOpacity: 0.55,
-                    blur: 3,
-                  }}
-                  zIndex={10000}
-                >
-                  <div class="container-fluid ">
-                    <div class="cover-banner d-flex justify-content-center align-items-center">
-                      <div class="display-6 text-light">
-                        Move Abroad <br />
-                        <p class="h6">With out Advance Calculator</p>
+                <div class="col d-flex justify-content-center align-items-center">
+                  <h5 class="h5 head-txt text-center">
+                    {subhead1} <br />
+                    {subhead2}
+                  </h5>
+                  <div>
+                    <ol class="h6 head-txt">
+                      <li>{li1}</li>
+                      <li>{li2}</li>
+                      <li>{li3}</li>
+                      <li>{li4}</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="col d-flex justify-content-center gap-2 w-100 py-4">
+                  <div class="btn-group">
+                    <button
+                      type="button"
+                      class="btn text-light dropdown-toggle fw-bold"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      {headerbutton}
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          {dropdown1}
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          {dropdown2}
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          {dropdown3}
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          {dropdown4}
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  {/* <div class="btn text-light fw-bold">
+                    <a href="/courses">{headerbutton}</a>
+                  </div> */}
+                  <Modal
+                    opened={opened}
+                    onClose={close}
+                    centered
+                    title="Immigration Calculator"
+                    size="95%"
+                    overlayProps={{
+                      backgroundOpacity: 0.55,
+                      blur: 3,
+                    }}
+                    zIndex={10000}
+                  >
+                    <div class="container-fluid ">
+                      <div class="cover-banner d-flex justify-content-center align-items-center">
+                        <div class="display-6 text-light">
+                          Move Abroad <br />
+                          <p class="h6">With out Advance Calculator</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="container">
-                      <div class="row justify-content-center align-items-center g-2">
-                        <div class="col-lg-8 col-sm-12">
-                          <div class="row justify-content-center align-items-center g-2 py-2">
-                            <div class="col">
-                              <div class="h4 fw-bold">
-                                Immigration Calculator
+                      <div class="container">
+                        <div class="row justify-content-center align-items-center g-2">
+                          <div class="col-lg-8 col-sm-12">
+                            <div class="row justify-content-center align-items-center g-2 py-2">
+                              <div class="col">
+                                <div class="h4 fw-bold">
+                                  Immigration Calculator
+                                </div>
+                              </div>
+                              <div class="col d-flex justify-content-end">
+                                <img
+                                  src={airplane}
+                                  class="img-fluid rounded-top"
+                                  alt="airplane"
+                                />
                               </div>
                             </div>
-                            <div class="col d-flex justify-content-end">
-                              <img
-                                src={airplane}
-                                class="img-fluid rounded-top"
-                                alt="airplane"
-                              />
-                            </div>
-                          </div>
-                          <div class="row justify-content-center align-items-center g-2">
-                            <div class="col col-sm-12">
-                              <form
-                                id="immigration-form"
-                                onSubmit={handleSubmit}
-                                novalidate
-                              >
-                                <div class="row py-1">
-                                  <div class="col-sm-12 col-lg-6">
-                                    <label
-                                      for="Name"
-                                      class="form-label fw-bold"
-                                    >
-                                      Name
-                                    </label>
-                                    <input
-                                      type="text"
-                                      class="form-control"
-                                      placeholder="Name"
-                                      aria-label="Name"
-                                      id="name"
-                                      required
-                                    />
-                                  </div>
-                                  <div class="col-sm-12 col-lg-6">
-                                    <label
-                                      for="qualification"
-                                      class="form-label fw-bold"
-                                    >
-                                      Qualification
-                                    </label>
-                                    <select
-                                      class="form-select"
-                                      aria-label="Default select example"
-                                      id="qualification"
-                                      required
-                                    >
-                                      <option selected>Select a degree</option>
-                                      <option value="Masters">Masters</option>
-                                      <option value="Bachelors">
-                                        Bachelors
-                                      </option>
-                                      <option value="phD">phD</option>
-                                      <option value="CA">CA</option>
-                                      <option value="CPA">CPA</option>
-                                    </select>
-                                  </div>
-                                </div>
-                                <div class="row py-1">
-                                  <div class="col-sm-12 col-lg-6">
-                                    <div class="row justify-content-center align-items-center g-2">
-                                      <div class="col-sm-5 col-lg-5">
-                                        <label
-                                          for="countryCode"
-                                          class="form-label fw-bold h6"
-                                        >
-                                          Country Code
-                                        </label>
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                          placeholder="County Code"
-                                          aria-label="country code"
-                                          id="countryCode"
-                                          required
-                                        />
-                                      </div>
-                                      <div class="col-sm-7 col-lg-7">
-                                        <label
-                                          for="phone"
-                                          class="form-label fw-bold"
-                                        >
-                                          Phone Number
-                                        </label>
-                                        <input
-                                          class="form-control"                                
-                                          name="phone"
-                                          data-name="phone"
-                                          placeholder="Phone number"
-                                          
-                                          // type="number"
-                                          id="phone"
-                                          
-                                        />
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-sm-12 col-lg-6">
-                                    <label
-                                      for="field"
-                                      class="form-label fw-bold"
-                                    >
-                                      Field
-                                    </label>
-                                    <select
-                                      class="form-select"
-                                      aria-label="Default select example"
-                                      id="field"
-                                      required
-                                    >
-                                      <option selected>Select Field</option>
-                                      <option value="Finance">Finance</option>
-                                      <option value="Accounting">
-                                        Accounting
-                                      </option>
-                                      <option value="Banking">Banking</option>
-                                      <option value="Engineering">
-                                        Engineering
-                                      </option>
-                                      <option value="Life Science">
-                                        Life Science
-                                      </option>
-                                      <option value="HR">HR</option>
-                                      <option value="Advertising">
-                                        Advertising
-                                      </option>
-                                      <option value="Marketing">
-                                        Marketing
-                                      </option>
-                                      <option value="Education">
-                                        Education
-                                      </option>
-                                      <option value="IT">IT</option>
-                                      <option value="Cybersecurity">
-                                        Cybersecurity
-                                      </option>
-                                      <option value="Healthcare">
-                                        Healthcare
-                                      </option>
-                                      <option value="Other">Other</option>
-                                    </select>
-                                  </div>
-                                </div>
-                                <div class="row justify-content-center align-items-center g-2">
-                                  <div class="col-sm-12 col-lg-6">
-                                    <div class="mb-3">
+                            <div class="row justify-content-center align-items-center g-2">
+                              <div class="col col-sm-12">
+                                <form
+                                  id="immigration-form"
+                                  onSubmit={handleSubmit}
+                                  novalidate
+                                >
+                                  <div class="row py-1">
+                                    <div class="col-sm-12 col-lg-6">
                                       <label
-                                        for="exampleInputEmail1"
+                                        for="Name"
                                         class="form-label fw-bold"
                                       >
-                                        Email address
+                                        Name
                                       </label>
                                       <input
-                                        type="email"
+                                        type="text"
                                         class="form-control"
-                                        id="exampleInputEmail1"
-                                        aria-describedby="emailHelp"
-                                        placeholder="Type your email address"
+                                        placeholder="Name"
+                                        aria-label="Name"
+                                        id="name"
                                         required
                                       />
                                     </div>
-                                  </div>
-                                  <div class="col-sm-12 col-lg-6">
-                                    <div class="mb-2 py-1">
+                                    <div class="col-sm-12 col-lg-6">
                                       <label
-                                        for="exampleFormControlTextarea1"
+                                        for="qualification"
                                         class="form-label fw-bold"
                                       >
-                                        Message
+                                        Qualification
                                       </label>
-                                      <textarea
-                                        class="form-control"
-                                        id="form-message"
-                                        rows="3"
-                                      ></textarea>
+                                      <select
+                                        class="form-select"
+                                        aria-label="Default select example"
+                                        id="qualification"
+                                        required
+                                      >
+                                        <option selected>
+                                          Select a degree
+                                        </option>
+                                        <option value="Masters">Masters</option>
+                                        <option value="Bachelors">
+                                          Bachelors
+                                        </option>
+                                        <option value="phD">phD</option>
+                                        <option value="CA">CA</option>
+                                        <option value="CPA">CPA</option>
+                                      </select>
                                     </div>
                                   </div>
-                                </div>
-                                <div class="row justify-content-center align-items-center g-2">
-                                  {/* <div class="col">
+                                  <div class="row py-1">
+                                    <div class="col-sm-12 col-lg-6">
+                                      <div class="row justify-content-center align-items-center g-2">
+                                        <div class="col-sm-5 col-lg-5">
+                                          <label
+                                            for="countryCode"
+                                            class="form-label fw-bold h6"
+                                          >
+                                            Country Code
+                                          </label>
+                                          <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="County Code"
+                                            aria-label="country code"
+                                            id="countryCode"
+                                            required
+                                          />
+                                        </div>
+                                        <div class="col-sm-7 col-lg-7">
+                                          <label
+                                            for="phone"
+                                            class="form-label fw-bold"
+                                          >
+                                            Phone Number
+                                          </label>
+                                          <input
+                                            class="form-control"
+                                            name="phone"
+                                            data-name="phone"
+                                            placeholder="Phone number"
+                                            id="phone"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-6">
+                                      <label
+                                        for="field"
+                                        class="form-label fw-bold"
+                                      >
+                                        Field
+                                      </label>
+                                      <select
+                                        class="form-select"
+                                        aria-label="Default select example"
+                                        id="field"
+                                        required
+                                      >
+                                        <option selected>Select Field</option>
+                                        <option value="Finance">Finance</option>
+                                        <option value="Accounting">
+                                          Accounting
+                                        </option>
+                                        <option value="Banking">Banking</option>
+                                        <option value="Engineering">
+                                          Engineering
+                                        </option>
+                                        <option value="Life Science">
+                                          Life Science
+                                        </option>
+                                        <option value="HR">HR</option>
+                                        <option value="Advertising">
+                                          Advertising
+                                        </option>
+                                        <option value="Marketing">
+                                          Marketing
+                                        </option>
+                                        <option value="Education">
+                                          Education
+                                        </option>
+                                        <option value="IT">IT</option>
+                                        <option value="Cybersecurity">
+                                          Cybersecurity
+                                        </option>
+                                        <option value="Healthcare">
+                                          Healthcare
+                                        </option>
+                                        <option value="Other">Other</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="row justify-content-center align-items-center g-2">
+                                    <div class="col-sm-12 col-lg-6">
+                                      <div class="mb-3">
+                                        <label
+                                          for="exampleInputEmail1"
+                                          class="form-label fw-bold"
+                                        >
+                                          Email address
+                                        </label>
+                                        <input
+                                          type="email"
+                                          class="form-control"
+                                          id="exampleInputEmail1"
+                                          aria-describedby="emailHelp"
+                                          placeholder="Type your email address"
+                                          required
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-6">
+                                      <div class="mb-2 py-1">
+                                        <label
+                                          for="exampleFormControlTextarea1"
+                                          class="form-label fw-bold"
+                                        >
+                                          Message
+                                        </label>
+                                        <textarea
+                                          class="form-control"
+                                          id="form-message"
+                                          rows="3"
+                                        ></textarea>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row justify-content-center align-items-center g-2">
+                                    {/* <div class="col">
                                     <div class="mb-3 form-check">
                                       <input
                                         type="checkbox"
@@ -539,49 +583,49 @@ const Herosection = (props) => {
                                       </label>
                                     </div>
                                   </div> */}
-                                  <div class="col d-flex justify-content-center">
-                                    <button
-                                      type="submit"
-                                      class="btn d-flex text-light fw-bold"
-                                      // onClick={handleSubmit}
-                                    >
-                                      Submit
-                                      <img
-                                        src={paperplane}
-                                        class="img-fluid rounded-top px-1"
-                                        alt="paperplane"
-                                      />
-                                    </button>
+                                    <div class="col d-flex justify-content-center">
+                                      <button
+                                        type="submit"
+                                        class="btn d-flex text-light fw-bold"
+                                        // onClick={handleSubmit}
+                                      >
+                                        Submit
+                                        <img
+                                          src={paperplane}
+                                          class="img-fluid rounded-top px-1"
+                                          alt="paperplane"
+                                        />
+                                      </button>
+                                    </div>
                                   </div>
-                                </div>
-                              </form>
+                                </form>
+                              </div>
+                              <div
+                                id="result-container"
+                                class="result-container"
+                              ></div>
                             </div>
-                            <div
-                              id="result-container"
-                              class="result-container"
-                            ></div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </Modal>
-                <button
-                  onClick={open}
-                  class="wherecanmove btn d-flex flew-row align-items-center"
-                >
-                  <a>{subheaderbutton}</a>
-                  <img src={arrow} alt="arrow" />
-                </button>
+                  </Modal>
+                  <button
+                    onClick={open}
+                    class="wherecanmove btn d-flex flew-row align-items-center fw-bold"
+                  >
+                    <a>{subheaderbutton}</a>
+                    <img src={arrow} alt="arrow" />
+                  </button>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="banner col-sm-12 col-lg-4 d-flex justify-content-center align-items-center g-2">
+            {/* </div> */}
+            {/* <div class="banner col-sm-12 col-lg-4 d-flex justify-content-center align-items-center g-2">
             <img src={dp} class="img-fluid" alt="Nidhi Nagori" />
+          </div> */}
           </div>
         </div>
-      </div>
-      <div class="container flex-row p-2">
+        {/* <div class="container flex-row p-2">
         <div class="row d-flex justify-content-center align-items-center g-2">
           <div class=" col d-flex justify-content-center align-items-center ">
             <div class="happy-stn d-flex align-items-center justify-content-center p-2 gap-2">
@@ -662,6 +706,7 @@ const Herosection = (props) => {
             </div>
           </div>
         </div>
+      </div> */}
       </div>
     </div>
   );

@@ -106,26 +106,26 @@ const Navbar = () => {
 
   return (
     <Box class="head-bar sticky-top">
-      <div class="alert d-flex justify-content-center mb-0 gap-4"> 
-      <div
-        class=" alert-dismissible fade show m-0 border-0 text-center text-light"
-        role="alert"
-      >
-        <strong>Off-to Australia!</strong> You should check new Masterclass{" "}
-        <span class="">
-          <button class="check btn btn-dark fw-bold"> Check-it-out</button>
-        </span>
-      </div>
-      <button
-          type="button"
-          class="btn-close text-light"
-          data-bs-dismiss="alert"
-          aria-label="Close"
+      <div class="alert d-flex justify-content-center mb-0">
+        <div
+          class=" alert-dismissible fade show m-0 border-0 text-center text-light"
+          role="alert"
         >
-          X
-        </button>
+          <strong>Off-to Australia!</strong> You should check new Masterclass{" "}
+          <span class="">
+            <button class="check btn btn-dark fw-bold"> Check-it-out</button>
+          </span>
+        </div>
+        <div class="d-flex justify-content-end">
+          <button
+            type="button"
+            class="btn-close text-light"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
       </div>
-      
+
       <Box class="rounded-0 navbar-back" p={20} fz="lg">
         <header className={classes.header}>
           <Group justify="space-between" h="100%">
@@ -138,7 +138,11 @@ const Navbar = () => {
                 alt="Globalogy Logo"
                 href="/"
               />
-              <a class="mb-0 h2 " style={{fontFamily:"Pacifico, cursive"}} href="/">
+              <a
+                class="mb-0 h2 "
+                style={{ fontFamily: "Pacifico, cursive" }}
+                href="/"
+              >
                 Globalogy
               </a>
             </div>
@@ -209,6 +213,7 @@ const Navbar = () => {
                 Contact
               </a>
             </Group>
+
             <Group visibleFrom="sm">
               <a
                 class="btn text-light fw-bold"
@@ -216,7 +221,7 @@ const Navbar = () => {
               >
                 Sign up
               </a>
-              <Group justify="center">
+              {/* <Group justify="center">
                 <ActionIcon
                   onClick={() => {
                     setColorScheme(
@@ -252,7 +257,7 @@ const Navbar = () => {
                   </span>
                   <span class="slider"></span>
                 </ActionIcon>
-              </Group>
+              </Group> */}
             </Group>
             <Burger
               opened={drawerOpened}
@@ -270,7 +275,7 @@ const Navbar = () => {
           title="Globalogy"
           hiddenFrom="md"
           zIndex={1000000}
-          overlayProps={{ backgroundOpacity: 0.5, blur: 4, }}
+          overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
         >
           <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
             <Divider my="md" />
@@ -321,7 +326,7 @@ const Navbar = () => {
               >
                 Sign up
               </Button>
-              <Group justify="center">
+              {/* <Group justify="center">
                 <ActionIcon
                   onClick={() => {
                     setColorScheme(
@@ -353,7 +358,7 @@ const Navbar = () => {
                   </span>
                   <span class="slider"></span>
                 </ActionIcon>
-              </Group>
+              </Group> */}
             </Group>
           </ScrollArea>
         </Drawer>
