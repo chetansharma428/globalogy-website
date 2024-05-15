@@ -1,21 +1,21 @@
 import React from "react";
 
-import dp from "../../assests/images/about-banner.png";
+import dp from "../../assests/images/Nidhi.jpeg.jpg";
 import roll from "../../assests/images/rolling.png";
 import vogue from "../../assests/images/vogue.png";
 import insider from "../../assests/images/insider.png";
 
 const About = () => {
   return (
-    <div>
+    <div class="container-fluid bg-light py-4">
       <div class="container">
         <div class="row justify-content-center align-items-center g-2 flex-column py-4">
           <div class="col">
-            <div class="h2 fw-bold text-center">About</div>
+            <div class="h2 fw-bold text-center text-light">About</div>
           </div>
           <div class="col">
-            <div class="row d-flex justify-content-center align-items-center g-2 ">
-              <div class="col col-xsm-12 d-flex flex-row about">
+            <div class="row d-flex justify-content-center align-items-center g-2 gap-2 ">
+              <div class="col col-xsm-12 d-flex flex-column about">
                 <div class="row justify-content-center align-items-center g-2 flex-column gap-2">
                   <div class="col">
                     <div class="h1 head-txt fw-bold text-center">
@@ -63,9 +63,9 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-xsm-12 d-flex justify-content-center about-section">
-                  <img src={dp} class="" alt="" />
-                </div>
+              <div class="col-lg-5 col-xsm-12 d-flex justify-content-center about-section">
+                <img src={dp} class="rounded" alt=""  style={{height:"600px"}}/>
+              </div>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import paperplane from "../../assests/images/paperplane.png";
 import classes from "./Navbar.module.css";
 
 import { useDisclosure } from "@mantine/hooks";
-import { Modal } from "@mantine/core";
+import { Container, Title, Text, Button, Modal,Overlay } from "@mantine/core";
 import { notifications } from "@mantine/notifications";
 // import Globe from "@/magicui/globe";
 
@@ -274,10 +274,446 @@ const Herosection = (props) => {
     document.getElementById("immigration-form").reset();
     console.log("form");
   };
+  // return (
+  //   <div>
+  //     <div class="container-fluid hero">
+  //     <Overlay color="#000" opacity={0.65} zIndex={1} />
+  //       <div class="container justify-content-center header-hero">
+  //         <div class="row g-2">
+  //           {/* <div class="col"> */}
+  //             {/* <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background px-40 pb-40 pt-8 md:pb-60 md:shadow-xl">
+  //               <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+  //                 Globe
+  //               </span>
+  //               <Globe className="top-28" />
+  //               <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
+  //             </div> */}
+  //             <div class="col-sm-12 col g-2 flex-column d-flex justify-content-center">
+  //               <div class="col flex-row gap-2 flag d-flex justify-content-center align-items-center">
+  //                 <img
+  //                   src={flag1}
+  //                   class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
+  //                   alt=""
+  //                 />
+  //                 <img
+  //                   src={flag2}
+  //                   class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
+  //                   alt=""
+  //                 />
+  //                 <img
+  //                   src={flag3}
+  //                   class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
+  //                   alt=""
+  //                 />
+  //                 <img
+  //                   src={flag4}
+  //                   class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
+  //                   alt=""
+  //                 />
+  //               </div>
+  //               <div class="col d-flex justify-content-center align-items-center">
+  //                 <h1 class="display-3 head-txt fw-bold text-center">{header}</h1>
+  //               </div>
+  //               <div class="col d-flex justify-content-center align-items-center">
+  //                 <h5 class="h5 head-txt text-center">
+  //                   {subhead1} <br />
+  //                   {subhead2}
+  //                 </h5>
+  //                 <div>
+  //                   <ol class="h6 head-txt">
+  //                     <li>{li1}</li>
+  //                     <li>{li2}</li>
+  //                     <li>{li3}</li>
+  //                     <li>{li4}</li>
+  //                   </ol>
+  //                 </div>
+  //               </div>
+  //               <div class="col d-flex justify-content-center gap-2 w-100 py-4">
+                  
+  //                 {/* <div class="btn text-light fw-bold">
+  //                   <a href="/courses">{headerbutton}</a>
+  //                 </div> */}
+  //                 <Modal
+  //                   opened={opened}
+  //                   onClose={close}
+  //                   centered
+  //                   title="Immigration Calculator"
+  //                   size="95%"
+  //                   overlayProps={{
+  //                     backgroundOpacity: 0.55,
+  //                     blur: 3,
+  //                   }}
+  //                   zIndex={10000}
+  //                 >
+  //                   <div class="container-fluid ">
+  //                     <div class="cover-banner d-flex justify-content-center align-items-center">
+  //                       <div class="display-6 text-light">
+  //                         Move Abroad <br />
+  //                         <p class="h6">With out Advance Calculator</p>
+  //                       </div>
+  //                     </div>
+  //                     <div class="container">
+  //                       <div class="row justify-content-center align-items-center g-2">
+  //                         <div class="col-lg-8 col-sm-12">
+  //                           <div class="row justify-content-center align-items-center g-2 py-2">
+  //                             <div class="col">
+  //                               <div class="h4 fw-bold">
+  //                                 Immigration Calculator
+  //                               </div>
+  //                             </div>
+  //                             <div class="col d-flex justify-content-end">
+  //                               <img
+  //                                 src={airplane}
+  //                                 class="img-fluid rounded-top"
+  //                                 alt="airplane"
+  //                               />
+  //                             </div>
+  //                           </div>
+  //                           <div class="row justify-content-center align-items-center g-2">
+  //                             <div class="col col-sm-12">
+  //                               <form
+  //                                 id="immigration-form"
+  //                                 onSubmit={handleSubmit}
+  //                                 novalidate
+  //                               >
+  //                                 <div class="row py-1">
+  //                                   <div class="col-sm-12 col-lg-6">
+  //                                     <label
+  //                                       for="Name"
+  //                                       class="form-label fw-bold"
+  //                                     >
+  //                                       Name
+  //                                     </label>
+  //                                     <input
+  //                                       type="text"
+  //                                       class="form-control"
+  //                                       placeholder="Name"
+  //                                       aria-label="Name"
+  //                                       id="name"
+  //                                       required
+  //                                     />
+  //                                   </div>
+  //                                   <div class="col-sm-12 col-lg-6">
+  //                                     <label
+  //                                       for="qualification"
+  //                                       class="form-label fw-bold"
+  //                                     >
+  //                                       Qualification
+  //                                     </label>
+  //                                     <select
+  //                                       class="form-select"
+  //                                       aria-label="Default select example"
+  //                                       id="qualification"
+  //                                       required
+  //                                     >
+  //                                       <option selected>
+  //                                         Select a degree
+  //                                       </option>
+  //                                       <option value="Masters">Masters</option>
+  //                                       <option value="Bachelors">
+  //                                         Bachelors
+  //                                       </option>
+  //                                       <option value="phD">phD</option>
+  //                                       <option value="CA">CA</option>
+  //                                       <option value="CPA">CPA</option>
+  //                                     </select>
+  //                                   </div>
+  //                                 </div>
+  //                                 <div class="row py-1">
+  //                                   <div class="col-sm-12 col-lg-6">
+  //                                     <div class="row justify-content-center align-items-center g-2">
+  //                                       <div class="col-sm-5 col-lg-5">
+  //                                         <label
+  //                                           for="countryCode"
+  //                                           class="form-label fw-bold h6"
+  //                                         >
+  //                                           Country Code
+  //                                         </label>
+  //                                         <input
+  //                                           type="text"
+  //                                           class="form-control"
+  //                                           placeholder="County Code"
+  //                                           aria-label="country code"
+  //                                           id="countryCode"
+  //                                           required
+  //                                         />
+  //                                       </div>
+  //                                       <div class="col-sm-7 col-lg-7">
+  //                                         <label
+  //                                           for="phone"
+  //                                           class="form-label fw-bold"
+  //                                         >
+  //                                           Phone Number
+  //                                         </label>
+  //                                         <input
+  //                                           class="form-control"
+  //                                           name="phone"
+  //                                           data-name="phone"
+  //                                           placeholder="Phone number"
+  //                                           id="phone"
+  //                                         />
+  //                                       </div>
+  //                                     </div>
+  //                                   </div>
+  //                                   <div class="col-sm-12 col-lg-6">
+  //                                     <label
+  //                                       for="field"
+  //                                       class="form-label fw-bold"
+  //                                     >
+  //                                       Field
+  //                                     </label>
+  //                                     <select
+  //                                       class="form-select"
+  //                                       aria-label="Default select example"
+  //                                       id="field"
+  //                                       required
+  //                                     >
+  //                                       <option selected>Select Field</option>
+  //                                       <option value="Finance">Finance</option>
+  //                                       <option value="Accounting">
+  //                                         Accounting
+  //                                       </option>
+  //                                       <option value="Banking">Banking</option>
+  //                                       <option value="Engineering">
+  //                                         Engineering
+  //                                       </option>
+  //                                       <option value="Life Science">
+  //                                         Life Science
+  //                                       </option>
+  //                                       <option value="HR">HR</option>
+  //                                       <option value="Advertising">
+  //                                         Advertising
+  //                                       </option>
+  //                                       <option value="Marketing">
+  //                                         Marketing
+  //                                       </option>
+  //                                       <option value="Education">
+  //                                         Education
+  //                                       </option>
+  //                                       <option value="IT">IT</option>
+  //                                       <option value="Cybersecurity">
+  //                                         Cybersecurity
+  //                                       </option>
+  //                                       <option value="Healthcare">
+  //                                         Healthcare
+  //                                       </option>
+  //                                       <option value="Other">Other</option>
+  //                                     </select>
+  //                                   </div>
+  //                                 </div>
+  //                                 <div class="row justify-content-center align-items-center g-2">
+  //                                   <div class="col-sm-12 col-lg-6">
+  //                                     <div class="mb-3">
+  //                                       <label
+  //                                         for="exampleInputEmail1"
+  //                                         class="form-label fw-bold"
+  //                                       >
+  //                                         Email address
+  //                                       </label>
+  //                                       <input
+  //                                         type="email"
+  //                                         class="form-control"
+  //                                         id="exampleInputEmail1"
+  //                                         aria-describedby="emailHelp"
+  //                                         placeholder="Type your email address"
+  //                                         required
+  //                                       />
+  //                                     </div>
+  //                                   </div>
+  //                                   <div class="col-sm-12 col-lg-6">
+  //                                     <div class="mb-2 py-1">
+  //                                       <label
+  //                                         for="exampleFormControlTextarea1"
+  //                                         class="form-label fw-bold"
+  //                                       >
+  //                                         Message
+  //                                       </label>
+  //                                       <textarea
+  //                                         class="form-control"
+  //                                         id="form-message"
+  //                                         rows="3"
+  //                                       ></textarea>
+  //                                     </div>
+  //                                   </div>
+  //                                 </div>
+  //                                 <div class="row justify-content-center align-items-center g-2">
+  //                                   {/* <div class="col">
+  //                                   <div class="mb-3 form-check">
+  //                                     <input
+  //                                       type="checkbox"
+  //                                       class="form-check-input"
+  //                                       id="robotcheck"
+  //                                     />
+  //                                     <label
+  //                                       class="form-check-label"
+  //                                       for="robotcheck"
+  //                                       required
+  //                                     >
+  //                                       I'm not a Robot
+  //                                     </label>
+  //                                   </div>
+  //                                 </div> */}
+  //                                   <div class="col d-flex justify-content-center">
+  //                                     <button
+  //                                       type="submit"
+  //                                       class="btn d-flex text-light fw-bold"
+  //                                       // onClick={handleSubmit}
+  //                                     >
+  //                                       Submit
+  //                                       <img
+  //                                         src={paperplane}
+  //                                         class="img-fluid rounded-top px-1"
+  //                                         alt="paperplane"
+  //                                       />
+  //                                     </button>
+  //                                   </div>
+  //                                 </div>
+  //                               </form>
+  //                             </div>
+  //                             <div
+  //                               id="result-container"
+  //                               class="result-container"
+  //                             ></div>
+  //                           </div>
+  //                         </div>
+  //                       </div>
+  //                     </div>
+  //                   </div>
+  //                 </Modal>
+  //                 <a
+  //                   onClick={open}
+  //                   class="wherecanmove button-g btn d-flex flew-row align-items-center fw-bold"
+  //                 >
+  //                   <a>{subheaderbutton}</a>
+  //                   {/* <img src={arrow} alt="arrow" /> */}
+  //                   <div class="glare"></div>
+  //                 </a>
+  //               </div>
+  //             </div>
+  //           {/* </div> */}
+  //           {/* <div class="banner col-sm-12 col-lg-4 d-flex justify-content-center align-items-center g-2">
+  //           <img src={dp} class="img-fluid" alt="Nidhi Nagori" />
+  //         </div> */}
+  //         </div>
+  //       </div>
+  //       {/* <div class="container flex-row p-2">
+  //       <div class="row d-flex justify-content-center align-items-center g-2">
+  //         <div class=" col d-flex justify-content-center align-items-center ">
+  //           <div class="happy-stn d-flex align-items-center justify-content-center p-2 gap-2">
+  //             <div>
+  //               <img src={users} class="img-fluid rounded-top" alt="" />
+  //             </div>
+  //             <div>
+  //               <p class="h6">{studentnum}</p>
+  //             </div>
+  //           </div>
+  //         </div>
+  //       </div>
+  //       <div class="row">
+  //         <div class="col d-flex justify-content-center align-items-center flex-wrap  gap-4 py-4">
+  //           <div class="box d-flex align-items-center flex-column gap-2 p-4 rounded ">
+  //             <div class="col d-flex flex-row align-items-center gap-1">
+  //               <h1 class="fw-bold">{box1header}</h1>
+  //               <img src={yt} />
+  //             </div>
+  //             <div class="col h6">
+  //               <a
+  //                 href="https://www.youtube.com/@NidhiNagori29"
+  //                 data-toggle="tooltip"
+  //                 data-placement="top"
+  //                 title="Follow"
+  //               >
+  //                 {box1subhead}
+  //               </a>
+  //             </div>
+  //           </div>
+  //           <div class="box d-flex align-items-center flex-column gap-2 p-4 rounded ">
+  //             <div class="col d-flex flex-row align-items-center gap-2">
+  //               <h1 class="fw-bold">{box2header}</h1>
+  //               <img src={twitter} />
+  //             </div>
+  //             <div class="col h6">
+  //               <a
+  //                 href="https://twitter.com/nidhinagori29?lang=en"
+  //                 data-toggle="tooltip"
+  //                 data-placement="top"
+  //                 title="Follow"
+  //               >
+  //                 {box2subhead}
+  //               </a>
+  //             </div>
+  //           </div>
+  //           <div class="box d-flex align-items-center flex-column gap-2 p-3 rounded ">
+  //             <div class="col d-flex flex-row align-items-center gap-2">
+  //               <h1 class="fw-bold">{box3header}</h1>
+  //               <img src={insta} />
+  //             </div>
+  //             <div class="col h6">
+  //               <a
+  //                 href="https://www.instagram.com/nidhinagori29/?hl=en"
+  //                 data-toggle="tooltip"
+  //                 data-placement="top"
+  //                 title="Follow"
+  //               >
+  //                 {box3subhead}
+  //               </a>
+  //             </div>
+  //           </div>
+  //           <div class="box d-flex align-items-center flex-column gap-2 p-3 rounded ">
+  //             <div class="col d-flex flex-row align-items-center ">
+  //               <h1 class="fw-bold">{box4header}</h1>
+  //               <img src={linkedin} />
+  //             </div>
+  //             <div class="col h6">
+  //               <a
+  //                 href="https://www.linkedin.com/in/nidhinagori29/?originalSubdomain=ca"
+  //                 data-toggle="tooltip"
+  //                 data-placement="top"
+  //                 title="Follow"
+  //               >
+  //                 {box4subhead}
+  //               </a>
+  //             </div>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div> */}
+  //     </div>
+  //   </div>
+  // );
   return (
-    <div>
-      <div class="container-fluid hero">
-        <div class="container justify-content-center header-hero">
+    <div className={classes.root}>
+      <Container size="lg">
+        <div className={classes.inner}>
+          {/* <div className={classes.content}>
+            <Title className={classes.title}>
+              A{' '}
+              <Text
+                component="span"
+                inherit
+                variant="gradient"
+                gradient={{ from: 'pink', to: 'yellow' }}
+              >
+                fully featured
+              </Text>{' '}
+              React components library
+            </Title>
+
+            <Text className={classes.description} mt={30}>
+              Build fully functional accessible web applications with ease – Mantine includes more
+              than 100 customizable components and hooks to cover you in any situation
+            </Text>
+
+            <Button
+              variant="filled" color="#237B54"
+              size="xl"
+              className={classes.control}
+              mt={40}
+            >
+              Want to Move Abroad?
+              <div class="glare"></div>
+            </Button>
+          </div> */}
           <div class="row g-2">
             {/* <div class="col"> */}
               {/* <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background px-40 pb-40 pt-8 md:pb-60 md:shadow-xl">
@@ -290,31 +726,35 @@ const Herosection = (props) => {
               <div class="col-sm-12 col g-2 flex-column d-flex justify-content-center">
                 <div class="col flex-row gap-2 flag d-flex justify-content-center align-items-center">
                   <img
+                    src={flag3}
+                    class="img-fluid rounded animate__animated animate__bounce animate__repeat-2 2"
+                    alt=""
+                  />
+                  <img
                     src={flag1}
-                    class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
+                    class="img-fluid rounded animate__animated animate__bounce animate__repeat-2 2"
                     alt=""
                   />
                   <img
                     src={flag2}
-                    class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
-                    alt=""
-                  />
-                  <img
-                    src={flag3}
-                    class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
+                    class="img-fluid rounded animate__animated animate__bounce animate__repeat-2 2"
                     alt=""
                   />
                   <img
                     src={flag4}
-                    class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
+                    class="img-fluid rounded animate__animated animate__bounce animate__repeat-2 2"
                     alt=""
                   />
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
-                  <h1 class="display-4 head-txt fw-bold text-center">{header}</h1>
+                  <h1 class="display-3 head-txt text-light fw-bold text-center">Go Global with <Text component="span"
+                inherit 
+                // variant="gradient"
+                // gradient={{ from: 'pink', to: 'yellow' }}
+                >Globalogy</Text></h1>
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
-                  <h5 class="h5 head-txt text-center">
+                  <h5 class="h5 head-txt text-center text-light">
                     {subhead1} <br />
                     {subhead2}
                   </h5>
@@ -328,38 +768,7 @@ const Herosection = (props) => {
                   </div>
                 </div>
                 <div class="col d-flex justify-content-center gap-2 w-100 py-4">
-                  <div class="btn-group">
-                    <button
-                      type="button"
-                      class="btn text-light dropdown-toggle fw-bold"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      {headerbutton}
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          {dropdown1}
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          {dropdown2}
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          {dropdown3}
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          {dropdown4}
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  
                   {/* <div class="btn text-light fw-bold">
                     <a href="/courses">{headerbutton}</a>
                   </div> */}
@@ -375,7 +784,7 @@ const Herosection = (props) => {
                     }}
                     zIndex={10000}
                   >
-                    <div class="container-fluid ">
+                    <div class="container-fluid text-light">
                       <div class="cover-banner d-flex justify-content-center align-items-center">
                         <div class="display-6 text-light">
                           Move Abroad <br />
@@ -610,13 +1019,14 @@ const Herosection = (props) => {
                       </div>
                     </div>
                   </Modal>
-                  <button
+                  <a
                     onClick={open}
-                    class="wherecanmove btn d-flex flew-row align-items-center fw-bold"
+                    class="wherecanmove btn d-flex flew-row align-items-center fw-bold p-3"
                   >
                     <a>{subheaderbutton}</a>
-                    <img src={arrow} alt="arrow" />
-                  </button>
+                    {/* <img src={arrow} alt="arrow" /> */}
+                    <div class="glare"></div>
+                  </a>
                 </div>
               </div>
             {/* </div> */}
@@ -625,89 +1035,7 @@ const Herosection = (props) => {
           </div> */}
           </div>
         </div>
-        {/* <div class="container flex-row p-2">
-        <div class="row d-flex justify-content-center align-items-center g-2">
-          <div class=" col d-flex justify-content-center align-items-center ">
-            <div class="happy-stn d-flex align-items-center justify-content-center p-2 gap-2">
-              <div>
-                <img src={users} class="img-fluid rounded-top" alt="" />
-              </div>
-              <div>
-                <p class="h6">{studentnum}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col d-flex justify-content-center align-items-center flex-wrap  gap-4 py-4">
-            <div class="box d-flex align-items-center flex-column gap-2 p-4 rounded ">
-              <div class="col d-flex flex-row align-items-center gap-1">
-                <h1 class="fw-bold">{box1header}</h1>
-                <img src={yt} />
-              </div>
-              <div class="col h6">
-                <a
-                  href="https://www.youtube.com/@NidhiNagori29"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="Follow"
-                >
-                  {box1subhead}
-                </a>
-              </div>
-            </div>
-            <div class="box d-flex align-items-center flex-column gap-2 p-4 rounded ">
-              <div class="col d-flex flex-row align-items-center gap-2">
-                <h1 class="fw-bold">{box2header}</h1>
-                <img src={twitter} />
-              </div>
-              <div class="col h6">
-                <a
-                  href="https://twitter.com/nidhinagori29?lang=en"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="Follow"
-                >
-                  {box2subhead}
-                </a>
-              </div>
-            </div>
-            <div class="box d-flex align-items-center flex-column gap-2 p-3 rounded ">
-              <div class="col d-flex flex-row align-items-center gap-2">
-                <h1 class="fw-bold">{box3header}</h1>
-                <img src={insta} />
-              </div>
-              <div class="col h6">
-                <a
-                  href="https://www.instagram.com/nidhinagori29/?hl=en"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="Follow"
-                >
-                  {box3subhead}
-                </a>
-              </div>
-            </div>
-            <div class="box d-flex align-items-center flex-column gap-2 p-3 rounded ">
-              <div class="col d-flex flex-row align-items-center ">
-                <h1 class="fw-bold">{box4header}</h1>
-                <img src={linkedin} />
-              </div>
-              <div class="col h6">
-                <a
-                  href="https://www.linkedin.com/in/nidhinagori29/?originalSubdomain=ca"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="Follow"
-                >
-                  {box4subhead}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      </div>
+      </Container>
     </div>
   );
 };

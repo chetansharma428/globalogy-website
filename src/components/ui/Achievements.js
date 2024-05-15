@@ -13,7 +13,7 @@ import profilepic from "../../assests/images/profile-pic.png";
 
 const Achievements = () => {
   return (
-    <div>
+    <div class="container-fluid bg-light">
       <div class="container">
         <div class="row justify-content-center align-items-center g-2 gap-4 py-4">
           <div class="col-lg-6 col-sm-12">

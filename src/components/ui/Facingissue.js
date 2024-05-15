@@ -230,8 +230,8 @@ const Facingissue = () => {
     console.log("form")
   }
   return (
-    <div class="d-flex fixed-bottom justify-content-end mb-2 px-2">
-      <button class="btn d-flex flex-row gap-2 text-light" href="" onClick={open}>
+    <div class="d-flex justify-content-end mb-2 px-2">
+      <button class="btn button-g d-flex flex-row gap-2 text-light" href="" onClick={open}>
         <img
             src={emoji}
             class="img-fluid rounded-top"
@@ -446,7 +446,7 @@ const Facingissue = () => {
                                   <div class="col d-flex justify-content-center">
                                     <button
                                       type="submit"
-                                      class="btn d-flex text-light fw-bold"
+                                      class="btn button-g d-flex text-light fw-bold"
                                       // onClick={handleSubmit}
                                     >
                                       Submit

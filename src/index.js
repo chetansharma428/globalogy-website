@@ -63,7 +63,7 @@ root.render(
       <React.StrictMode>
         <Navbar />
         <RouterProvider router={router} />
-        <Facingissue />
+        {/* <Facingissue /> */}
         <Footer/>
       </React.StrictMode>
   </MantineProvider>

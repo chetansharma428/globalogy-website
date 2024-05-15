@@ -105,15 +105,16 @@ const Navbar = () => {
   // });
 
   return (
-    <Box class="head-bar sticky-top">
-      <div class="alert d-flex justify-content-center mb-0">
+    <div>
+    <div class="alert fixed-bottom d-flex justify-content-center mb-0">
         <div
           class=" alert-dismissible fade show m-0 border-0 text-center text-light"
           role="alert"
         >
           <strong>Off-to Australia!</strong> You should check new Masterclass{" "}
           <span class="">
-            <button class="check btn btn-dark fw-bold"> Check-it-out</button>
+            <button class="check btn button-g fw-bold"> Check-it-out
+            <div class="glare"></div></button>
           </span>
         </div>
         <div class="d-flex justify-content-end">
@@ -125,6 +126,7 @@ const Navbar = () => {
           ></button>
         </div>
       </div>
+    <Box class="head-bar">
 
       <Box class="rounded-0 navbar-back" p={20} fz="lg">
         <header className={classes.header}>
@@ -139,7 +141,7 @@ const Navbar = () => {
                 href="/"
               />
               <a
-                class="mb-0 h2 "
+                class="mb-0 h2 text-light "
                 style={{ fontFamily: "Pacifico, cursive" }}
                 href="/"
               >
@@ -216,7 +218,7 @@ const Navbar = () => {
 
             <Group visibleFrom="sm">
               <a
-                class="btn text-light fw-bold"
+                class="button-g btn fw-bold"
                 href="https://app.globalogy.in/web/login"
               >
                 Sign up
@@ -263,6 +265,7 @@ const Navbar = () => {
               opened={drawerOpened}
               onClick={toggleDrawer}
               hiddenFrom="md"
+              color="#00ff89"
             />
           </Group>
         </header>
@@ -272,10 +275,9 @@ const Navbar = () => {
           position="top"
           size="40%"
           padding="md"
-          title="Globalogy"
           hiddenFrom="md"
           zIndex={1000000}
-          overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
+          overlayProps={{ backgroundOpacity: 0.5, blur: 4, color:"white" }}
         >
           <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
             <Divider my="md" />
@@ -364,6 +366,7 @@ const Navbar = () => {
         </Drawer>
       </Box>
     </Box>
+    </div>
   );
 };
 

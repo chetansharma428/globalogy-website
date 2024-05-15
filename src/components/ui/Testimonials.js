@@ -16,15 +16,15 @@ import profilepic from "../../assests/images/profile-pic.png";
 const Testimonials = () => {
   return (
     <div>
-      <div class="container-fluid bg-light" style={{ padding: "50px 0px" , color:"black"}}  id="testimonialID">
+      <div class="container-fluid bg-light" style={{ padding: "50px 0px" , color:"black", background:"linear-gradient(176deg, #050d22 0%, #237b54 100%)"}}  id="testimonialID">
         <div class="container py-4">
           <div class="row d-flex justify-content-center align-items-center g-2 flex-column gap-4 ">
             <div class="col d-flex justify-content-center align-items-center flex-column">
               <div class="col">
-                <div class="h2 fw-bold">What our Student Says</div>
+                <div class="h2 fw-bold text-light">What our Clients Says</div>
               </div>
               <div class="col-10">
-                <p class="text-center">
+                <p class="text-center text-light">
                   Discover inspiration and insights through recent reviews from
                   our students. Their success stories reflect the transformative
                   journey of learning and growth with Globalogy.
@@ -32,7 +32,7 @@ const Testimonials = () => {
               </div>
             </div>
             <div class="col">
-              <div class="row d-flex justify-content-center align-items-center g-2 flex-row gap-2">
+              <div class="row d-flex justify-content-center align-items-center g-2 flex-row gap-4">
                 <div class="mid col-lg-4 d-flex justify-content-center align-items-center text-center">
                   <Swiper
                     // install Swiper modules

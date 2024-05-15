@@ -4,7 +4,7 @@ import chart from "../../assests/images/Image [object-cover] (1).png";
 
 const Competitive = () => {
   return (
-    <div>
+    <div class="container-fluid bg-light">
       <div class="container">
         <div class="row justify-content-center align-items-center flex-row g-2 py-4 gap-4">
           <div class="col-lg-6 col-sm-12 py-2">

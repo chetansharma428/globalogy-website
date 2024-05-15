@@ -17,6 +17,7 @@ a{
   /* color: light-dark(var(--mantine-color-black), var(--mantine-color-white)); */
   font-weight: 600;
   font-size: var(--mantine-font-size-md);
+  color: white;
 
   @media (max-width: $mantine-breakpoint-sm) {
     height: rem(42px);
@@ -124,4 +125,97 @@ a{
   opacity: 0.7;
   font-weight: 700;
   text-transform: uppercase;
+}
+.root {
+  background-color: #030a21;
+  background-size: cover;
+  background-position: center;
+  /* background-image:
+  url('../../assests/images/bg_dark.jpeg'); */
+  padding-top: calc(var(--mantine-spacing-xl) * 7);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 7);
+}
+
+.inner {
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+  }
+}
+
+.image {
+  @media (max-width: $mantine-breakpoint-md) {
+    display: none;
+  }
+}
+
+.content {
+  padding-top: calc(var(--mantine-spacing-xl) * 2);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 2);
+  margin-right: calc(var(--mantine-spacing-xl) * 3);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-right: 0;
+  }
+}
+
+.title {
+  color: var(--mantine-color-white);
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
+  font-weight: 900;
+  line-height: 1.05;
+  max-width: rem(500px);
+  font-size: rem(48px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    max-width: 100%;
+    font-size: rem(34px);
+    line-height: 1.15;
+  }
+}
+
+.description {
+  color: var(--mantine-color-white);
+  opacity: 0.75;
+  max-width: rem(500px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    max-width: 100%;
+  }
+}
+
+.control {
+  padding-left: rem(50px);
+  padding-right: rem(50px);
+  background-color: #237B54;
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
+  font-size: rem(22px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    width: 100%;
+  }
+}
+/* FAQ section */
+.wrapper {
+  padding-top: calc(var(--mantine-spacing-xl) * 2);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 2);
+}
+
+.title_fq {
+  margin-bottom: var(--mantine-spacing-md);
+  padding-left: var(--mantine-spacing-md);
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  font-weight: 700;
+
+}
+
+.item {
+  font-size: var(--mantine-font-size-md);
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-1));
 }

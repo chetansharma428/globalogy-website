@@ -8,6 +8,9 @@ import Testimonials from './ui/Testimonials'
 import Bottomform from './ui/Bottomform'
 import Social from './ui/Social'
 import Featuressection from './Featuressection'
+import Ratings from './ui/Ratings'
+import Featurevideo from './ui/Featurevideo'
+import { FaqWithImage } from './ui/Faq'
 
 const Homepage = () => {
   const data =[
@@ -20,12 +23,12 @@ const Homepage = () => {
       dropdown2:"Program 2",
       dropdown3:"Program 3",
       dropdown4:"Program 4",
-      subheaderbutton:"where can I move ?",
+      subheaderbutton:"Want to Move Abroad ?",
       dp:require("../assests/images/banner-with-pic-removebg-preview 1.png"),
       flag1:require('../assests/images/eu-flag.png'),
       flag2:require("../assests/images/Flag_of_the_United_Arab_Emirates.svg.png"),
-      flag3:require("../assests/images/Flag_of_Canada-512x256 1.png"),
-      flag4:require("../assests/images/Flag_of_England-512x307 1.png"),
+      flag3:require("../assests/images/flag_of_canada.jpg"),
+      flag4:require("../assests/images/australia.png"),
       users:require("../assests/images/user 1.png"),
       insta:require("../assests/images/3d_circle_with_instagram_symbol_isolated_on_a_transparent_background-removebg-preview 1.png"),
       twitter:require("../assests/images/glossy-round-black-white-twitter-logo-isolated-transparent-background_125540-3693-removebg-preview 1.png"),
@@ -45,13 +48,16 @@ const Homepage = () => {
   return (
     <div>
       <Herosection data={data}/>
+      <Ratings/>
       <Featuressection/>
       <Services/>
       <Competitive/>
-      <Achievements/>
+      {/* <Achievements/> */}
+      <Featurevideo/>
       <About/>
       <Testimonials/>
-      <Bottomform/>
+      {/* <Bottomform/> */}
+      <FaqWithImage/>
     </div>
   )
 }
