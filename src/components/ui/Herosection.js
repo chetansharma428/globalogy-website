@@ -1,44 +1,26 @@
-import React from "react";
-import arrow from "../../assests/images/Vector.svg";
-import airplane from "../../assests/images/airplane.png";
-import paperplane from "../../assests/images/paperplane.png";
-import classes from "./Navbar.module.css";
-
+import React, { useState } from "react";
 import { useDisclosure } from "@mantine/hooks";
-import { Container, Title, Text, Button, Modal,Overlay } from "@mantine/core";
+import {
+  Container,  
+  Text,
+  Modal,
+  Input,
+  Progress,
+  FileInput
+} from "@mantine/core";
 import { notifications } from "@mantine/notifications";
-// import Globe from "@/magicui/globe";
+
+import classes from "./Navbar.module.css";
 
 const Herosection = (props) => {
   const {
-    header,
     subhead1,
     subhead2,
-    headerbutton,
     subheaderbutton,
-    dropdown1,
-    dropdown2,
-    dropdown3,
-    dropdown4,
-    dp,
     flag1,
     flag2,
     flag3,
     flag4,
-    users,
-    insta,
-    twitter,
-    yt,
-    linkedin,
-    studentnum,
-    box1header,
-    box1subhead,
-    box2header,
-    box2subhead,
-    box3header,
-    box3subhead,
-    box4header,
-    box4subhead,
     li1,
     li2,
     li3,
@@ -274,765 +256,333 @@ const Herosection = (props) => {
     document.getElementById("immigration-form").reset();
     console.log("form");
   };
-  // return (
-  //   <div>
-  //     <div class="container-fluid hero">
-  //     <Overlay color="#000" opacity={0.65} zIndex={1} />
-  //       <div class="container justify-content-center header-hero">
-  //         <div class="row g-2">
-  //           {/* <div class="col"> */}
-  //             {/* <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background px-40 pb-40 pt-8 md:pb-60 md:shadow-xl">
-  //               <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-  //                 Globe
-  //               </span>
-  //               <Globe className="top-28" />
-  //               <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
-  //             </div> */}
-  //             <div class="col-sm-12 col g-2 flex-column d-flex justify-content-center">
-  //               <div class="col flex-row gap-2 flag d-flex justify-content-center align-items-center">
-  //                 <img
-  //                   src={flag1}
-  //                   class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
-  //                   alt=""
-  //                 />
-  //                 <img
-  //                   src={flag2}
-  //                   class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
-  //                   alt=""
-  //                 />
-  //                 <img
-  //                   src={flag3}
-  //                   class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
-  //                   alt=""
-  //                 />
-  //                 <img
-  //                   src={flag4}
-  //                   class="img-fluid rounded-top animate__animated animate__bounce animate__repeat-2 2"
-  //                   alt=""
-  //                 />
-  //               </div>
-  //               <div class="col d-flex justify-content-center align-items-center">
-  //                 <h1 class="display-3 head-txt fw-bold text-center">{header}</h1>
-  //               </div>
-  //               <div class="col d-flex justify-content-center align-items-center">
-  //                 <h5 class="h5 head-txt text-center">
-  //                   {subhead1} <br />
-  //                   {subhead2}
-  //                 </h5>
-  //                 <div>
-  //                   <ol class="h6 head-txt">
-  //                     <li>{li1}</li>
-  //                     <li>{li2}</li>
-  //                     <li>{li3}</li>
-  //                     <li>{li4}</li>
-  //                   </ol>
-  //                 </div>
-  //               </div>
-  //               <div class="col d-flex justify-content-center gap-2 w-100 py-4">
-                  
-  //                 {/* <div class="btn text-light fw-bold">
-  //                   <a href="/courses">{headerbutton}</a>
-  //                 </div> */}
-  //                 <Modal
-  //                   opened={opened}
-  //                   onClose={close}
-  //                   centered
-  //                   title="Immigration Calculator"
-  //                   size="95%"
-  //                   overlayProps={{
-  //                     backgroundOpacity: 0.55,
-  //                     blur: 3,
-  //                   }}
-  //                   zIndex={10000}
-  //                 >
-  //                   <div class="container-fluid ">
-  //                     <div class="cover-banner d-flex justify-content-center align-items-center">
-  //                       <div class="display-6 text-light">
-  //                         Move Abroad <br />
-  //                         <p class="h6">With out Advance Calculator</p>
-  //                       </div>
-  //                     </div>
-  //                     <div class="container">
-  //                       <div class="row justify-content-center align-items-center g-2">
-  //                         <div class="col-lg-8 col-sm-12">
-  //                           <div class="row justify-content-center align-items-center g-2 py-2">
-  //                             <div class="col">
-  //                               <div class="h4 fw-bold">
-  //                                 Immigration Calculator
-  //                               </div>
-  //                             </div>
-  //                             <div class="col d-flex justify-content-end">
-  //                               <img
-  //                                 src={airplane}
-  //                                 class="img-fluid rounded-top"
-  //                                 alt="airplane"
-  //                               />
-  //                             </div>
-  //                           </div>
-  //                           <div class="row justify-content-center align-items-center g-2">
-  //                             <div class="col col-sm-12">
-  //                               <form
-  //                                 id="immigration-form"
-  //                                 onSubmit={handleSubmit}
-  //                                 novalidate
-  //                               >
-  //                                 <div class="row py-1">
-  //                                   <div class="col-sm-12 col-lg-6">
-  //                                     <label
-  //                                       for="Name"
-  //                                       class="form-label fw-bold"
-  //                                     >
-  //                                       Name
-  //                                     </label>
-  //                                     <input
-  //                                       type="text"
-  //                                       class="form-control"
-  //                                       placeholder="Name"
-  //                                       aria-label="Name"
-  //                                       id="name"
-  //                                       required
-  //                                     />
-  //                                   </div>
-  //                                   <div class="col-sm-12 col-lg-6">
-  //                                     <label
-  //                                       for="qualification"
-  //                                       class="form-label fw-bold"
-  //                                     >
-  //                                       Qualification
-  //                                     </label>
-  //                                     <select
-  //                                       class="form-select"
-  //                                       aria-label="Default select example"
-  //                                       id="qualification"
-  //                                       required
-  //                                     >
-  //                                       <option selected>
-  //                                         Select a degree
-  //                                       </option>
-  //                                       <option value="Masters">Masters</option>
-  //                                       <option value="Bachelors">
-  //                                         Bachelors
-  //                                       </option>
-  //                                       <option value="phD">phD</option>
-  //                                       <option value="CA">CA</option>
-  //                                       <option value="CPA">CPA</option>
-  //                                     </select>
-  //                                   </div>
-  //                                 </div>
-  //                                 <div class="row py-1">
-  //                                   <div class="col-sm-12 col-lg-6">
-  //                                     <div class="row justify-content-center align-items-center g-2">
-  //                                       <div class="col-sm-5 col-lg-5">
-  //                                         <label
-  //                                           for="countryCode"
-  //                                           class="form-label fw-bold h6"
-  //                                         >
-  //                                           Country Code
-  //                                         </label>
-  //                                         <input
-  //                                           type="text"
-  //                                           class="form-control"
-  //                                           placeholder="County Code"
-  //                                           aria-label="country code"
-  //                                           id="countryCode"
-  //                                           required
-  //                                         />
-  //                                       </div>
-  //                                       <div class="col-sm-7 col-lg-7">
-  //                                         <label
-  //                                           for="phone"
-  //                                           class="form-label fw-bold"
-  //                                         >
-  //                                           Phone Number
-  //                                         </label>
-  //                                         <input
-  //                                           class="form-control"
-  //                                           name="phone"
-  //                                           data-name="phone"
-  //                                           placeholder="Phone number"
-  //                                           id="phone"
-  //                                         />
-  //                                       </div>
-  //                                     </div>
-  //                                   </div>
-  //                                   <div class="col-sm-12 col-lg-6">
-  //                                     <label
-  //                                       for="field"
-  //                                       class="form-label fw-bold"
-  //                                     >
-  //                                       Field
-  //                                     </label>
-  //                                     <select
-  //                                       class="form-select"
-  //                                       aria-label="Default select example"
-  //                                       id="field"
-  //                                       required
-  //                                     >
-  //                                       <option selected>Select Field</option>
-  //                                       <option value="Finance">Finance</option>
-  //                                       <option value="Accounting">
-  //                                         Accounting
-  //                                       </option>
-  //                                       <option value="Banking">Banking</option>
-  //                                       <option value="Engineering">
-  //                                         Engineering
-  //                                       </option>
-  //                                       <option value="Life Science">
-  //                                         Life Science
-  //                                       </option>
-  //                                       <option value="HR">HR</option>
-  //                                       <option value="Advertising">
-  //                                         Advertising
-  //                                       </option>
-  //                                       <option value="Marketing">
-  //                                         Marketing
-  //                                       </option>
-  //                                       <option value="Education">
-  //                                         Education
-  //                                       </option>
-  //                                       <option value="IT">IT</option>
-  //                                       <option value="Cybersecurity">
-  //                                         Cybersecurity
-  //                                       </option>
-  //                                       <option value="Healthcare">
-  //                                         Healthcare
-  //                                       </option>
-  //                                       <option value="Other">Other</option>
-  //                                     </select>
-  //                                   </div>
-  //                                 </div>
-  //                                 <div class="row justify-content-center align-items-center g-2">
-  //                                   <div class="col-sm-12 col-lg-6">
-  //                                     <div class="mb-3">
-  //                                       <label
-  //                                         for="exampleInputEmail1"
-  //                                         class="form-label fw-bold"
-  //                                       >
-  //                                         Email address
-  //                                       </label>
-  //                                       <input
-  //                                         type="email"
-  //                                         class="form-control"
-  //                                         id="exampleInputEmail1"
-  //                                         aria-describedby="emailHelp"
-  //                                         placeholder="Type your email address"
-  //                                         required
-  //                                       />
-  //                                     </div>
-  //                                   </div>
-  //                                   <div class="col-sm-12 col-lg-6">
-  //                                     <div class="mb-2 py-1">
-  //                                       <label
-  //                                         for="exampleFormControlTextarea1"
-  //                                         class="form-label fw-bold"
-  //                                       >
-  //                                         Message
-  //                                       </label>
-  //                                       <textarea
-  //                                         class="form-control"
-  //                                         id="form-message"
-  //                                         rows="3"
-  //                                       ></textarea>
-  //                                     </div>
-  //                                   </div>
-  //                                 </div>
-  //                                 <div class="row justify-content-center align-items-center g-2">
-  //                                   {/* <div class="col">
-  //                                   <div class="mb-3 form-check">
-  //                                     <input
-  //                                       type="checkbox"
-  //                                       class="form-check-input"
-  //                                       id="robotcheck"
-  //                                     />
-  //                                     <label
-  //                                       class="form-check-label"
-  //                                       for="robotcheck"
-  //                                       required
-  //                                     >
-  //                                       I'm not a Robot
-  //                                     </label>
-  //                                   </div>
-  //                                 </div> */}
-  //                                   <div class="col d-flex justify-content-center">
-  //                                     <button
-  //                                       type="submit"
-  //                                       class="btn d-flex text-light fw-bold"
-  //                                       // onClick={handleSubmit}
-  //                                     >
-  //                                       Submit
-  //                                       <img
-  //                                         src={paperplane}
-  //                                         class="img-fluid rounded-top px-1"
-  //                                         alt="paperplane"
-  //                                       />
-  //                                     </button>
-  //                                   </div>
-  //                                 </div>
-  //                               </form>
-  //                             </div>
-  //                             <div
-  //                               id="result-container"
-  //                               class="result-container"
-  //                             ></div>
-  //                           </div>
-  //                         </div>
-  //                       </div>
-  //                     </div>
-  //                   </div>
-  //                 </Modal>
-  //                 <a
-  //                   onClick={open}
-  //                   class="wherecanmove button-g btn d-flex flew-row align-items-center fw-bold"
-  //                 >
-  //                   <a>{subheaderbutton}</a>
-  //                   {/* <img src={arrow} alt="arrow" /> */}
-  //                   <div class="glare"></div>
-  //                 </a>
-  //               </div>
-  //             </div>
-  //           {/* </div> */}
-  //           {/* <div class="banner col-sm-12 col-lg-4 d-flex justify-content-center align-items-center g-2">
-  //           <img src={dp} class="img-fluid" alt="Nidhi Nagori" />
-  //         </div> */}
-  //         </div>
-  //       </div>
-  //       {/* <div class="container flex-row p-2">
-  //       <div class="row d-flex justify-content-center align-items-center g-2">
-  //         <div class=" col d-flex justify-content-center align-items-center ">
-  //           <div class="happy-stn d-flex align-items-center justify-content-center p-2 gap-2">
-  //             <div>
-  //               <img src={users} class="img-fluid rounded-top" alt="" />
-  //             </div>
-  //             <div>
-  //               <p class="h6">{studentnum}</p>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </div>
-  //       <div class="row">
-  //         <div class="col d-flex justify-content-center align-items-center flex-wrap  gap-4 py-4">
-  //           <div class="box d-flex align-items-center flex-column gap-2 p-4 rounded ">
-  //             <div class="col d-flex flex-row align-items-center gap-1">
-  //               <h1 class="fw-bold">{box1header}</h1>
-  //               <img src={yt} />
-  //             </div>
-  //             <div class="col h6">
-  //               <a
-  //                 href="https://www.youtube.com/@NidhiNagori29"
-  //                 data-toggle="tooltip"
-  //                 data-placement="top"
-  //                 title="Follow"
-  //               >
-  //                 {box1subhead}
-  //               </a>
-  //             </div>
-  //           </div>
-  //           <div class="box d-flex align-items-center flex-column gap-2 p-4 rounded ">
-  //             <div class="col d-flex flex-row align-items-center gap-2">
-  //               <h1 class="fw-bold">{box2header}</h1>
-  //               <img src={twitter} />
-  //             </div>
-  //             <div class="col h6">
-  //               <a
-  //                 href="https://twitter.com/nidhinagori29?lang=en"
-  //                 data-toggle="tooltip"
-  //                 data-placement="top"
-  //                 title="Follow"
-  //               >
-  //                 {box2subhead}
-  //               </a>
-  //             </div>
-  //           </div>
-  //           <div class="box d-flex align-items-center flex-column gap-2 p-3 rounded ">
-  //             <div class="col d-flex flex-row align-items-center gap-2">
-  //               <h1 class="fw-bold">{box3header}</h1>
-  //               <img src={insta} />
-  //             </div>
-  //             <div class="col h6">
-  //               <a
-  //                 href="https://www.instagram.com/nidhinagori29/?hl=en"
-  //                 data-toggle="tooltip"
-  //                 data-placement="top"
-  //                 title="Follow"
-  //               >
-  //                 {box3subhead}
-  //               </a>
-  //             </div>
-  //           </div>
-  //           <div class="box d-flex align-items-center flex-column gap-2 p-3 rounded ">
-  //             <div class="col d-flex flex-row align-items-center ">
-  //               <h1 class="fw-bold">{box4header}</h1>
-  //               <img src={linkedin} />
-  //             </div>
-  //             <div class="col h6">
-  //               <a
-  //                 href="https://www.linkedin.com/in/nidhinagori29/?originalSubdomain=ca"
-  //                 data-toggle="tooltip"
-  //                 data-placement="top"
-  //                 title="Follow"
-  //               >
-  //                 {box4subhead}
-  //               </a>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div> */}
-  //     </div>
-  //   </div>
-  // );
+    const [currentQuestion, setCurrentQuestion] = useState(1);
+    const [answer1, setAnswers1] = useState({});
+    const [answer2, setAnswers2] = useState({});
+    const [answer3, setAnswers3] = useState({});
+    const [selectedOption1, setSelectedOption1] = useState(null);
+    const [selectedOption2, setSelectedOption2] = useState(null);
+    const [selectedOption3, setSelectedOption3] = useState(null);
+    const [resume, setResume] = useState(null);
+  
+    const questions = [
+      {
+        id: 1,
+        text1: "Enter Your Email Address",
+        type1: "email",
+        placeholder1: "Enter Email",
+        text2: "Please Enter Your Full Name",
+        type2: "text",
+        placeholder2: "Full Name",
+        text3: "Please Enter Your Contact Number",
+        type3: "number",
+        placeholder3: "Also mention your country code - +91 - for India"
+      },
+      {
+        id: 2,
+        text1: "Highest Level of Education",
+        type1: "mcq",
+        options1: ["Class 10th", "Class 12th", "Diploma", "Bachelors", "Masters/PhD", "Other:"],
+        text2: "Are you an International Student, currently?",
+        type2: "mcq",
+        options2: ["Yes", "No"],
+        text3: "Do you already have or will you be able to get a Post Study Work Visa?",
+        type3: "mcq",
+        options3: ["Yes", "No"],
+      },
+      {
+        id: 3,
+        text1: "No. of Years of Work Experience",
+        type1: "text",
+        placeholder1: "After you've stopped studying",
+        text2: "Current Designation",
+        type2: "text",
+        placeholder2: "Please Enter",
+        text3: "Upload Resume",
+        type3: "file",
+        placeholder3: "Upload Resume Here"
+      },
+      {
+        id: 4,
+        text1: "Current Location (City Name)",
+        type1: "text",
+        placeholder1: "City Name",
+        text2: "Current Location (Country Name)",
+        type2: "text",
+        placeholder2: "Country Name",
+        text3: "Please share your queries, feedback & suggestions, here.",
+        type3: "text",
+        placeholder3: "Please Enter"
+      },
+      // Add more questions as needed
+    ];
+  
+    const handleNextQuestion = () => {
+      setCurrentQuestion(currentQuestion + 1);
+    };
+  
+    const handlePreviousQuestion = () => {
+      if (currentQuestion > 1) {
+        setCurrentQuestion(currentQuestion - 1);
+      } else {
+        setCurrentQuestion(currentQuestion);
+      }
+    };
+  
+    const handleOptionChange1 = (e) => {
+      setSelectedOption1(e.target.value);
+    };
+  
+    const handleOptionChange2 = (e) => {
+      setSelectedOption2(e.target.value);
+    };
+  
+    const handleOptionChange3 = (e) => {
+      setSelectedOption3(e.target.value);
+    };
+  
+    const handleResumeChange = (e) => {
+      setResume(e.target.files[0]);
+    };
+  
+    const renderQuestion = () => {
+      const current = questions.find(question => question.id === currentQuestion);
+      if (current.type1 === "mcq") {
+        return (
+          <Container size="xs" className="text-light">
+            <div
+              className="progress-bar"
+              style={{
+                width: `${((currentQuestion - 1) / questions.length) * 100}%`,
+              }}
+            ></div>
+            <div className="mb-2">
+              <h2 className="h3 py-4">{current.text1}</h2>
+              <form>
+                {current.options1.map((option1, index1) => (
+                  <div key={index1} className="h5 p-2 option-butn">
+                    <input
+                      className=""
+                      type="radio"
+                      id={`options1${index1}`}
+                      name="option1"
+                      value={option1}
+                      onChange={handleOptionChange1}
+                      checked={selectedOption1 === option1} // Check if this option is selected
+                    />
+                    <label htmlFor={`options1${index1}`} className="option1 px-2">
+                      {option1}
+                    </label>
+                  </div>
+                ))}
+              </form>
+            </div>
+            <div className="mb-2">
+              <h2 className="h3 py-4">{current.text2}</h2>
+              <form>
+                {current.options2.map((option2, index2) => (
+                  <div key={index2} className="h5 p-2 option-butn">
+                    <input
+                      className=""
+                      type="radio"
+                      id={`option2${index2}`}
+                      name="option2"
+                      value={option2}
+                      onChange={handleOptionChange2}
+                      checked={selectedOption2 === option2} // Check if this option is selected
+                    />
+                    <label htmlFor={`option2${index2}`} className="option2 px-2">
+                      {option2}
+                    </label>
+                  </div>
+                ))}
+              </form>
+            </div>
+            <div className="mb-2">
+              <h2 className="h3 py-4">{current.text3}</h2>
+              <form>
+                {current.options3.map((option3, index) => (
+                  <div key={index} className="h5 p-2 option-butn">
+                    <input
+                      className=""
+                      type="radio"
+                      id={`option3${index}`}
+                      name="option3"
+                      value={option3}
+                      onChange={handleOptionChange3}
+                      checked={selectedOption3 === option3} // Check if this option is selected
+                    />
+                    <label htmlFor={`option3${index}`} className="option px-2">
+                      {option3}
+                    </label>
+                  </div>
+                ))}
+              </form>
+            </div>
+            <div className="d-flex flex-row gap-4">
+              <button onClick={handleNextQuestion} className="button-g btn text-light fw-bold">Next</button>
+              <button onClick={handlePreviousQuestion} className="button-g btn text-light fw-bold">Back</button>
+            </div>
+          </Container>
+        );
+      } else if (current.type3 === "file") {
+        return (
+          <Container className="text-light">
+            <div className="progress-bar" style={{ width: `${((currentQuestion - 1) / questions.length) * 100}%` }}></div>
+            <div>
+              <h2 className="h3 mb-4">{current.text1}<span className="required">*</span></h2>
+              <div className="mb-4">
+                <Input
+                  radius="md"
+                  placeholder={current.placeholder1}
+                  value={answer1[currentQuestion] || ''}
+                  onChange={(e) => setAnswers1({ ...answer1, [currentQuestion]: e.target.value })}
+                />
+              </div>
+            </div>
+            <div>
+              <h2 className="h3 mb-4">{current.text2}<span className="required">*</span></h2>
+              <div className="mb-4">
+                <Input
+                  radius="md"
+                  placeholder={current.placeholder2}
+                  value={answer2[currentQuestion] || ''}
+                  onChange={(e) => setAnswers2({ ...answer2, [currentQuestion]: e.target.value })}
+                />
+              </div>
+            </div>
+            <div>
+              <h2 className="h3 mb-4">{current.text3}<span className="required">*</span></h2>
+              <div className="mb-4">
+              <FileInput label="Upload files" placeholder="Upload files" multiple />
+              </div>
+            </div>
+            <div className="d-flex flex-row gap-4">
+              <button onClick={handleNextQuestion} className="button-g btn text-light fw-bold">Next</button>
+              <button onClick={handlePreviousQuestion} className="button-g btn text-light fw-bold">Back</button>
+            </div>
+          </Container>
+        );
+    } else {
+      return (
+        <Container class="text-light" >
+            <div className="progress-bar" style={{ width: `${(currentQuestion - 1) / questions.length * 100}%` }}></div>
+            <div>
+              <h2 class="h3 mb-4">{current.text1}<span class="required">*</span></h2>
+              <div class="mb-4">
+              <Input radius="md" placeholder={current.placeholder1} value={answer1[currentQuestion] || ''}
+                  onChange={(e) => setAnswers1({ ...answer1, [currentQuestion]: e.target.value })} />
+              </div>
+            </div>
+            <div>
+              <h2 class="h3 mb-4">{current.text2}<span class="required">*</span></h2>
+              <div class="mb-4">
+              <Input radius="md" placeholder={current.placeholder2} value={answer2[currentQuestion] || ''}
+                  onChange={(e) => setAnswers2({ ...answer2, [currentQuestion]: e.target.value })} />
+              </div>
+            </div>
+            <div>
+              <h2 class="h3 mb-4">{current.text3}<span class="required">*</span></h2>
+              <div class="mb-4">
+              <Input radius="md" placeholder={current.placeholder3} value={answer3[currentQuestion] || ''}
+                  onChange={(e) => setAnswers3({ ...answer3, [currentQuestion]: e.target.value })} />
+              </div>
+            </div>
+            <div class="d-flex flex-row gap-4">
+            <button onClick={handleNextQuestion} class="button-g btn text-light fw-bold">Next</button>
+            <button onClick={handlePreviousQuestion} class="button-g btn text-light fw-bold">Back</button>
+            </div>
+        </Container>
+    );
+    }
+  };
+
   return (
     <div className={classes.root}>
       <Container size="lg">
         <div className={classes.inner}>
-          {/* <div className={classes.content}>
-            <Title className={classes.title}>
-              A{' '}
-              <Text
-                component="span"
-                inherit
-                variant="gradient"
-                gradient={{ from: 'pink', to: 'yellow' }}
-              >
-                fully featured
-              </Text>{' '}
-              React components library
-            </Title>
-
-            <Text className={classes.description} mt={30}>
-              Build fully functional accessible web applications with ease – Mantine includes more
-              than 100 customizable components and hooks to cover you in any situation
-            </Text>
-
-            <Button
-              variant="filled" color="#237B54"
-              size="xl"
-              className={classes.control}
-              mt={40}
-            >
-              Want to Move Abroad?
-              <div class="glare"></div>
-            </Button>
-          </div> */}
           <div class="row g-2">
-            {/* <div class="col"> */}
-              {/* <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background px-40 pb-40 pt-8 md:pb-60 md:shadow-xl">
-                <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-                  Globe
-                </span>
-                <Globe className="top-28" />
-                <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
-              </div> */}
-              <div class="col-sm-12 col g-2 flex-column d-flex justify-content-center">
-                <div class="col flex-row gap-2 flag d-flex justify-content-center align-items-center">
-                  <img
-                    src={flag3}
-                    class="img-fluid rounded animate__animated animate__bounce animate__repeat-2 2"
-                    alt=""
-                  />
-                  <img
-                    src={flag1}
-                    class="img-fluid rounded animate__animated animate__bounce animate__repeat-2 2"
-                    alt=""
-                  />
-                  <img
-                    src={flag2}
-                    class="img-fluid rounded animate__animated animate__bounce animate__repeat-2 2"
-                    alt=""
-                  />
-                  <img
-                    src={flag4}
-                    class="img-fluid rounded animate__animated animate__bounce animate__repeat-2 2"
-                    alt=""
-                  />
-                </div>
-                <div class="col d-flex justify-content-center align-items-center">
-                  <h1 class="display-3 head-txt text-light fw-bold text-center">Go Global with <Text component="span"
-                inherit 
-                // variant="gradient"
-                // gradient={{ from: 'pink', to: 'yellow' }}
-                >Globalogy</Text></h1>
-                </div>
-                <div class="col d-flex justify-content-center align-items-center">
-                  <h5 class="h5 head-txt text-center text-light">
-                    {subhead1} <br />
-                    {subhead2}
-                  </h5>
-                  <div>
-                    <ol class="h6 head-txt">
-                      <li>{li1}</li>
-                      <li>{li2}</li>
-                      <li>{li3}</li>
-                      <li>{li4}</li>
-                    </ol>
-                  </div>
-                </div>
-                <div class="col d-flex justify-content-center gap-2 w-100 py-4">
-                  
-                  {/* <div class="btn text-light fw-bold">
-                    <a href="/courses">{headerbutton}</a>
-                  </div> */}
-                  <Modal
-                    opened={opened}
-                    onClose={close}
-                    centered
-                    title="Immigration Calculator"
-                    size="95%"
-                    overlayProps={{
-                      backgroundOpacity: 0.55,
-                      blur: 3,
-                    }}
-                    zIndex={10000}
+            <div class="col-sm-12 col g-2 flex-column d-flex justify-content-center">
+              <div class="col flex-row gap-2 flag d-flex justify-content-center align-items-center">
+                <img
+                  src={flag3}
+                  class="img-fluid rounded animate__animated animate__bounce animate__repeat-2 2"
+                  alt=""
+                />
+                <img
+                  src={flag1}
+                  class="img-fluid rounded animate__animated animate__bounce animate__repeat-2 2"
+                  alt=""
+                />
+                <img
+                  src={flag2}
+                  class="img-fluid rounded animate__animated animate__bounce animate__repeat-2 2"
+                  alt=""
+                />
+                <img
+                  src={flag4}
+                  class="img-fluid rounded animate__animated animate__bounce animate__repeat-2 2"
+                  alt=""
+                />
+              </div>
+              <div class="col d-flex justify-content-center align-items-center">
+                <h1 class="display-3 head-txt text-light fw-bold text-center">
+                  Go Global with{" "}
+                  <Text
+                    component="span"
+                    inherit
                   >
-                    <div class="container-fluid text-light">
-                      <div class="cover-banner d-flex justify-content-center align-items-center">
-                        <div class="display-6 text-light">
-                          Move Abroad <br />
-                          <p class="h6">With out Advance Calculator</p>
-                        </div>
-                      </div>
-                      <div class="container">
-                        <div class="row justify-content-center align-items-center g-2">
-                          <div class="col-lg-8 col-sm-12">
-                            <div class="row justify-content-center align-items-center g-2 py-2">
-                              <div class="col">
-                                <div class="h4 fw-bold">
-                                  Immigration Calculator
-                                </div>
-                              </div>
-                              <div class="col d-flex justify-content-end">
-                                <img
-                                  src={airplane}
-                                  class="img-fluid rounded-top"
-                                  alt="airplane"
-                                />
-                              </div>
-                            </div>
-                            <div class="row justify-content-center align-items-center g-2">
-                              <div class="col col-sm-12">
-                                <form
-                                  id="immigration-form"
-                                  onSubmit={handleSubmit}
-                                  novalidate
-                                >
-                                  <div class="row py-1">
-                                    <div class="col-sm-12 col-lg-6">
-                                      <label
-                                        for="Name"
-                                        class="form-label fw-bold"
-                                      >
-                                        Name
-                                      </label>
-                                      <input
-                                        type="text"
-                                        class="form-control"
-                                        placeholder="Name"
-                                        aria-label="Name"
-                                        id="name"
-                                        required
-                                      />
-                                    </div>
-                                    <div class="col-sm-12 col-lg-6">
-                                      <label
-                                        for="qualification"
-                                        class="form-label fw-bold"
-                                      >
-                                        Qualification
-                                      </label>
-                                      <select
-                                        class="form-select"
-                                        aria-label="Default select example"
-                                        id="qualification"
-                                        required
-                                      >
-                                        <option selected>
-                                          Select a degree
-                                        </option>
-                                        <option value="Masters">Masters</option>
-                                        <option value="Bachelors">
-                                          Bachelors
-                                        </option>
-                                        <option value="phD">phD</option>
-                                        <option value="CA">CA</option>
-                                        <option value="CPA">CPA</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="row py-1">
-                                    <div class="col-sm-12 col-lg-6">
-                                      <div class="row justify-content-center align-items-center g-2">
-                                        <div class="col-sm-5 col-lg-5">
-                                          <label
-                                            for="countryCode"
-                                            class="form-label fw-bold h6"
-                                          >
-                                            Country Code
-                                          </label>
-                                          <input
-                                            type="text"
-                                            class="form-control"
-                                            placeholder="County Code"
-                                            aria-label="country code"
-                                            id="countryCode"
-                                            required
-                                          />
-                                        </div>
-                                        <div class="col-sm-7 col-lg-7">
-                                          <label
-                                            for="phone"
-                                            class="form-label fw-bold"
-                                          >
-                                            Phone Number
-                                          </label>
-                                          <input
-                                            class="form-control"
-                                            name="phone"
-                                            data-name="phone"
-                                            placeholder="Phone number"
-                                            id="phone"
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-6">
-                                      <label
-                                        for="field"
-                                        class="form-label fw-bold"
-                                      >
-                                        Field
-                                      </label>
-                                      <select
-                                        class="form-select"
-                                        aria-label="Default select example"
-                                        id="field"
-                                        required
-                                      >
-                                        <option selected>Select Field</option>
-                                        <option value="Finance">Finance</option>
-                                        <option value="Accounting">
-                                          Accounting
-                                        </option>
-                                        <option value="Banking">Banking</option>
-                                        <option value="Engineering">
-                                          Engineering
-                                        </option>
-                                        <option value="Life Science">
-                                          Life Science
-                                        </option>
-                                        <option value="HR">HR</option>
-                                        <option value="Advertising">
-                                          Advertising
-                                        </option>
-                                        <option value="Marketing">
-                                          Marketing
-                                        </option>
-                                        <option value="Education">
-                                          Education
-                                        </option>
-                                        <option value="IT">IT</option>
-                                        <option value="Cybersecurity">
-                                          Cybersecurity
-                                        </option>
-                                        <option value="Healthcare">
-                                          Healthcare
-                                        </option>
-                                        <option value="Other">Other</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                  <div class="row justify-content-center align-items-center g-2">
-                                    <div class="col-sm-12 col-lg-6">
-                                      <div class="mb-3">
-                                        <label
-                                          for="exampleInputEmail1"
-                                          class="form-label fw-bold"
-                                        >
-                                          Email address
-                                        </label>
-                                        <input
-                                          type="email"
-                                          class="form-control"
-                                          id="exampleInputEmail1"
-                                          aria-describedby="emailHelp"
-                                          placeholder="Type your email address"
-                                          required
-                                        />
-                                      </div>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-6">
-                                      <div class="mb-2 py-1">
-                                        <label
-                                          for="exampleFormControlTextarea1"
-                                          class="form-label fw-bold"
-                                        >
-                                          Message
-                                        </label>
-                                        <textarea
-                                          class="form-control"
-                                          id="form-message"
-                                          rows="3"
-                                        ></textarea>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row justify-content-center align-items-center g-2">
-                                    {/* <div class="col">
-                                    <div class="mb-3 form-check">
-                                      <input
-                                        type="checkbox"
-                                        class="form-check-input"
-                                        id="robotcheck"
-                                      />
-                                      <label
-                                        class="form-check-label"
-                                        for="robotcheck"
-                                        required
-                                      >
-                                        I'm not a Robot
-                                      </label>
-                                    </div>
-                                  </div> */}
-                                    <div class="col d-flex justify-content-center">
-                                      <button
-                                        type="submit"
-                                        class="btn d-flex text-light fw-bold"
-                                        // onClick={handleSubmit}
-                                      >
-                                        Submit
-                                        <img
-                                          src={paperplane}
-                                          class="img-fluid rounded-top px-1"
-                                          alt="paperplane"
-                                        />
-                                      </button>
-                                    </div>
-                                  </div>
-                                </form>
-                              </div>
-                              <div
-                                id="result-container"
-                                class="result-container"
-                              ></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Modal>
-                  <a
-                    onClick={open}
-                    class="wherecanmove btn d-flex flew-row align-items-center fw-bold p-3"
-                  >
-                    <a>{subheaderbutton}</a>
-                    {/* <img src={arrow} alt="arrow" /> */}
-                    <div class="glare"></div>
-                  </a>
+                    Globalogy
+                  </Text>
+                </h1>
+              </div>
+              <div class="col d-flex justify-content-center align-items-center">
+                <h5 class="h5 head-txt text-center text-light">
+                  {subhead1} <br />
+                  {subhead2}
+                </h5>
+                <div>
+                  <ol class="h6 head-txt">
+                    <li>{li1}</li>
+                    <li>{li2}</li>
+                    <li>{li3}</li>
+                    <li>{li4}</li>
+                  </ol>
                 </div>
               </div>
-            {/* </div> */}
-            {/* <div class="banner col-sm-12 col-lg-4 d-flex justify-content-center align-items-center g-2">
-            <img src={dp} class="img-fluid" alt="Nidhi Nagori" />
-          </div> */}
+              <div class="col d-flex justify-content-center gap-2 w-100 py-4">
+                <Modal
+                  opened={opened}
+                  onClose={close}
+                  centered
+                  title="Questions"
+                  size="90%"
+                  overlayProps={{
+                    backgroundOpacity: 0.55,
+                    blur: 3,
+                  }}
+                  zIndex={10000}
+                >
+                  <div className="progress-wrapper">
+                  <Progress color="green" value={((currentQuestion - 1) / questions.length) * 100} striped animated />;
+                  </div>
+                  <Container mt="3rem">
+                    {currentQuestion <= questions.length ? (
+                      renderQuestion()
+                    ) : (
+                      <p class="h3 d-flex justify-content-center align-items-center text-light">Thank you for answering all questions!</p>
+                    )}
+                  </Container>
+                </Modal>
+                <a
+                  onClick={open}
+                  class="wherecanmove btn d-flex flew-row align-items-center fw-bold p-3"
+                >
+                  <a>{subheaderbutton}</a>
+                  <div class="glare"></div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </Container>

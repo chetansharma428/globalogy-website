@@ -9,7 +9,7 @@ import hovermaster3 from "../assests/images/hovermaster3.webp";
 import master4 from "../assests/images/master4.webp";
 import hovermaster4 from "../assests/images/hovermaster4.webp";
 
-const Featuressection = () => {
+const Featuredsection = () => {
   return (
     <div class="container-fluid test p-4 bg-light">
       <div class="container">
@@ -135,4 +135,4 @@ const Featuressection = () => {
   );
 };
 
-export default Featuressection;
+export default Featuredsection;

@@ -7,7 +7,7 @@ import About from './ui/About'
 import Testimonials from './ui/Testimonials'
 import Bottomform from './ui/Bottomform'
 import Social from './ui/Social'
-import Featuressection from './Featuressection'
+import Featuredsection from './Featuredsection'
 import Ratings from './ui/Ratings'
 import Featurevideo from './ui/Featurevideo'
 import { FaqWithImage } from './ui/Faq'
@@ -49,7 +49,7 @@ const Homepage = () => {
     <div>
       <Herosection data={data}/>
       <Ratings/>
-      <Featuressection/>
+      <Featuredsection/>
       <Services/>
       <Competitive/>
       {/* <Achievements/> */}

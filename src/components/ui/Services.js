@@ -51,13 +51,12 @@ const Services = () => {
                     />
                   </Card.Section>
 
-                  <Group justify="space-between" mt="md" mb="xs">
+                  <Group justify="space-between" mt="md" >
                     <Text class="h5 fw-bold">Netherlands Masterclass</Text>
                     <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
                       Newly added
                     </Badge>
                   </Group>
-
                   <Text size="sm">
                     A comprehensive 2-hour Masterclass on Australia covering
                     Immigration, Visa Sponsorship, Job Applications, Lifestyle,
