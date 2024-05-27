@@ -51,7 +51,7 @@ $dark-spring-green: #217956ff; */
     background-color: var(--button-background-light);
   }
 }
-[data-mantine-color-scheme="dark"] {
+/* [data-mantine-color-scheme="dark"] {
   --mantine-color-body: var(--background-color-dark) !important;
   --mantine-color-text: var(--text-color-dark) !important;
   .btn {
@@ -104,11 +104,9 @@ $dark-spring-green: #217956ff; */
     border-bottom: 2px solid white;
   }
   .mid {
-    /* box-shadow: inset 2px 2px 2px 2px #dcffa6, 0 2px 5px #000; */
     padding: 6%;
     box-shadow: rgb(255 255 255 / 30%) 0px 30px 0px -30px,
       rgb(98 138 178 / 35%) 0px -2px 3px 0px inset;
-    /* box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px; */
     border-radius: 10px;
     background-color: white;
   }
@@ -116,8 +114,8 @@ $dark-spring-green: #217956ff; */
     backdrop-filter: blur(15px);
     background-color: #00000063;
   }
-  /* vertical Stepper dark mode*/
-  .stepper {
+  vertical Stepper dark mode
+  /* .stepper {
     .line {
       width: 2px;
       background-color: var(--alert-background-gradient-dark) !important;
@@ -129,8 +127,8 @@ $dark-spring-green: #217956ff; */
 
   .stepper-col {
     background-color: var(--alert-background-gradient-dark);
-  }
-}
+  } 
+} */
 /* Dark Mode .alert{
   background: rgb(255,73,40);
 background: linear-gradient(180deg, rgba(255,73,40,1) 30%, rgba(40,62,255,1) 100%);
