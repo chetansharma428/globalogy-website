@@ -133,7 +133,7 @@ a{
   /* background-image:
   url('../../assests/images/bg_dark.jpeg'); */
   padding-top: calc(var(--mantine-spacing-xl) * 5);
-  padding-bottom: calc(var(--mantine-spacing-xl) * 10);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 11);
 }
 
 .inner {
