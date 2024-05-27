@@ -11,7 +11,7 @@ const About = () => {
       <div class="container">
         <div class="row justify-content-center align-items-center g-2 flex-column py-4">
           <div class="col">
-            <div class="h2 fw-bold text-center text-light">About</div>
+            <div class="h2 fw-bold text-center text-dark">About the Founder</div>
           </div>
           <div class="col">
             <div class="row d-flex justify-content-center align-items-center g-2 gap-2 ">
@@ -64,7 +64,8 @@ const About = () => {
                 </div>
               </div>
               <div class="col-lg-5 col-xsm-12 d-flex justify-content-center about-section">
-                <img src={dp} class="rounded" alt=""  style={{height:"600px"}}/>
+                <a href="https://www.linkedin.com/in/nidhinagori29/?originalSubdomain=ca">
+                <img src={dp} class="rounded" alt="nidhi nagori"  style={{height:"580px"}}/></a>
               </div>
             </div>
           </div>

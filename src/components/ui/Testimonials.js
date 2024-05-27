@@ -33,7 +33,7 @@ const Testimonials = () => {
             </div>
             <div class="col">
               <div class="row d-flex justify-content-center align-items-center g-2 flex-row gap-4">
-                <div class="mid col-lg-4 d-flex justify-content-center align-items-center text-center">
+                <div class="mid col-lg-3 col-sm-12 d-flex justify-content-center align-items-center text-center">
                   <Swiper
                     // install Swiper modules
                     modules={[
@@ -45,10 +45,11 @@ const Testimonials = () => {
                     ]}
                     spaceBetween={50}
                     slidesPerView={1}
-                    autoplay={{ delay: 1500 }}
+                    autoplay={{ delay: 3000, disableOnInteraction: "true" }}
                     loop={true}
                     pagination={{ clickable: true }}
                     scrollbar={{ draggable: true }}
+                    navigation
                   >
                     <SwiperSlide>
                       <div class="row d-flex justify-content-center align-items-center g-2 flex-column gap-2 ">
@@ -124,91 +125,13 @@ const Testimonials = () => {
                             interviews, but they did. And it all happened
                             because of your masterclass. What magic are you
                             spreading through your courses? :0
-                          </p>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div class="row d-flex justify-content-center align-items-center g-2 flex-column gap-2 ">
-                        <div class="col d-flex justify-content-center align-items-center g-2 gap-1">
-                          <img
-                            src={profilepic}
-                            class="img-fluid rounded-top"
-                            alt=""
-                          />
-                          <p class="fw-bold">Chetan</p>
-                        </div>
-                        <div class="col">
-                          <p class="text-center">Full-Stack Developer</p>
-                        </div>
-                        <div class="col">
-                          <p>
-                            The call was worth every penny and second. The way
-                            Nidhi understood the concerns and gave suggestions
-                            was so effective. I was confused about my career and
-                            my move to the UK, but the call with Nidhi made a
-                            lot of things clear. Thank you for your time, Nidhi.
-                            I’d highly recommend everyone who wants to move
-                            abroad and is confused to consult with you. :)
-                          </p>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div class="row d-flex justify-content-center align-items-center g-2 flex-column gap-2 ">
-                        <div class="col d-flex justify-content-center align-items-center g-2 gap-1">
-                          <img
-                            src={profilepic}
-                            class="img-fluid rounded-top"
-                            alt=""
-                          />
-                          <p class="fw-bold">Chetan</p>
-                        </div>
-                        <div class="col">
-                          <p class="text-center">Full-Stack Developer</p>
-                        </div>
-                        <div class="col">
-                          <p>
-                            Within a week of applying your methods, I got an
-                            internship and had an interview. I always thought
-                            that since I didn't have conventional work
-                            experience, companies wouldn't consider me for
-                            interviews, but they did. And it all happened
-                            because of your masterclass. What magic are you
-                            spreading through your courses? :0
-                          </p>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div class="row d-flex justify-content-center align-items-center g-2 flex-column gap-2 ">
-                        <div class="col d-flex justify-content-center align-items-center g-2 gap-1">
-                          <img
-                            src={profilepic}
-                            class="img-fluid rounded-top"
-                            alt=""
-                          />
-                          <p class="fw-bold">Chetan</p>
-                        </div>
-                        <div class="col">
-                          <p class="text-center">Full-Stack Developer</p>
-                        </div>
-                        <div class="col">
-                          <p>
-                            The call was worth every penny and second. The way
-                            Nidhi understood the concerns and gave suggestions
-                            was so effective. I was confused about my career and
-                            my move to the UK, but the call with Nidhi made a
-                            lot of things clear. Thank you for your time, Nidhi.
-                            I’d highly recommend everyone who wants to move
-                            abroad and is confused to consult with you. :)
                           </p>
                         </div>
                       </div>
                     </SwiperSlide>
                   </Swiper>
                 </div>
-                <div class="mid col-lg-4 d-flex justify-content-center align-items-center text-center">
+                <div class="mid col-lg-3 col-sm-12 d-flex justify-content-center align-items-center text-center">
                   <Swiper
                     // install Swiper modules
                     modules={[
@@ -220,11 +143,11 @@ const Testimonials = () => {
                     ]}
                     spaceBetween={50}
                     slidesPerView={1}
-                    
                     autoplay={{ delay: 1500 }}
                     loop={true}
                     pagination={{ clickable: true }}
                     scrollbar={{ draggable: true }}
+                    navigation
                   >
                     <SwiperSlide>
                       <div class="row d-flex justify-content-center align-items-center g-2 flex-column gap-2 ">
@@ -300,91 +223,13 @@ const Testimonials = () => {
                             interviews, but they did. And it all happened
                             because of your masterclass. What magic are you
                             spreading through your courses? :0
-                          </p>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div class="row d-flex justify-content-center align-items-center g-2 flex-column gap-2 ">
-                        <div class="col d-flex justify-content-center align-items-center g-2 gap-1">
-                          <img
-                            src={profilepic}
-                            class="img-fluid rounded-top"
-                            alt=""
-                          />
-                          <p class="fw-bold">Chetan</p>
-                        </div>
-                        <div class="col">
-                          <p class="text-center">Full-Stack Developer</p>
-                        </div>
-                        <div class="col">
-                          <p>
-                            The call was worth every penny and second. The way
-                            Nidhi understood the concerns and gave suggestions
-                            was so effective. I was confused about my career and
-                            my move to the UK, but the call with Nidhi made a
-                            lot of things clear. Thank you for your time, Nidhi.
-                            I’d highly recommend everyone who wants to move
-                            abroad and is confused to consult with you. :)
-                          </p>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div class="row d-flex justify-content-center align-items-center g-2 flex-column gap-2 ">
-                        <div class="col d-flex justify-content-center align-items-center g-2 gap-1">
-                          <img
-                            src={profilepic}
-                            class="img-fluid rounded-top"
-                            alt=""
-                          />
-                          <p class="fw-bold">Chetan</p>
-                        </div>
-                        <div class="col">
-                          <p class="text-center">Full-Stack Developer</p>
-                        </div>
-                        <div class="col">
-                          <p>
-                            Within a week of applying your methods, I got an
-                            internship and had an interview. I always thought
-                            that since I didn't have conventional work
-                            experience, companies wouldn't consider me for
-                            interviews, but they did. And it all happened
-                            because of your masterclass. What magic are you
-                            spreading through your courses? :0
-                          </p>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div class="row d-flex justify-content-center align-items-center g-2 flex-column gap-2 ">
-                        <div class="col d-flex justify-content-center align-items-center g-2 gap-1">
-                          <img
-                            src={profilepic}
-                            class="img-fluid rounded-top"
-                            alt=""
-                          />
-                          <p class="fw-bold">Chetan</p>
-                        </div>
-                        <div class="col">
-                          <p class="text-center">Full-Stack Developer</p>
-                        </div>
-                        <div class="col">
-                          <p>
-                            The call was worth every penny and second. The way
-                            Nidhi understood the concerns and gave suggestions
-                            was so effective. I was confused about my career and
-                            my move to the UK, but the call with Nidhi made a
-                            lot of things clear. Thank you for your time, Nidhi.
-                            I’d highly recommend everyone who wants to move
-                            abroad and is confused to consult with you. :)
                           </p>
                         </div>
                       </div>
                     </SwiperSlide>
                   </Swiper>
                 </div>
-                {/* <div class="mid col-lg-4 d-flex justify-content-center align-items-center text-center">
+                <div class="mid col-lg-3 col-sm-12 d-flex justify-content-center align-items-center text-center">
                   <Swiper
                     // install Swiper modules
                     modules={[
@@ -396,11 +241,11 @@ const Testimonials = () => {
                     ]}
                     spaceBetween={50}
                     slidesPerView={1}
-                    
                     autoplay={{ delay: 1500 }}
                     loop={true}
                     pagination={{ clickable: true }}
                     scrollbar={{ draggable: true }}
+                    navigation
                   >
                     <SwiperSlide>
                       <div class="row d-flex justify-content-center align-items-center g-2 flex-column gap-2 ">
@@ -480,86 +325,8 @@ const Testimonials = () => {
                         </div>
                       </div>
                     </SwiperSlide>
-                    <SwiperSlide>
-                      <div class="row d-flex justify-content-center align-items-center g-2 flex-column gap-2 ">
-                        <div class="col d-flex justify-content-center align-items-center g-2 gap-1">
-                          <img
-                            src={profilepic}
-                            class="img-fluid rounded-top"
-                            alt=""
-                          />
-                          <p class="fw-bold">Chetan</p>
-                        </div>
-                        <div class="col">
-                          <p class="text-center">Full-Stack Developer</p>
-                        </div>
-                        <div class="col">
-                          <p>
-                            The call was worth every penny and second. The way
-                            Nidhi understood the concerns and gave suggestions
-                            was so effective. I was confused about my career and
-                            my move to the UK, but the call with Nidhi made a
-                            lot of things clear. Thank you for your time, Nidhi.
-                            I’d highly recommend everyone who wants to move
-                            abroad and is confused to consult with you. :)
-                          </p>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div class="row d-flex justify-content-center align-items-center g-2 flex-column gap-2 ">
-                        <div class="col d-flex justify-content-center align-items-center g-2 gap-1">
-                          <img
-                            src={profilepic}
-                            class="img-fluid rounded-top"
-                            alt=""
-                          />
-                          <p class="fw-bold">Chetan</p>
-                        </div>
-                        <div class="col">
-                          <p class="text-center">Full-Stack Developer</p>
-                        </div>
-                        <div class="col">
-                          <p>
-                            Within a week of applying your methods, I got an
-                            internship and had an interview. I always thought
-                            that since I didn't have conventional work
-                            experience, companies wouldn't consider me for
-                            interviews, but they did. And it all happened
-                            because of your masterclass. What magic are you
-                            spreading through your courses? :0
-                          </p>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div class="row d-flex justify-content-center align-items-center g-2 flex-column gap-2 ">
-                        <div class="col d-flex justify-content-center align-items-center g-2 gap-1">
-                          <img
-                            src={profilepic}
-                            class="img-fluid rounded-top"
-                            alt=""
-                          />
-                          <p class="fw-bold">Chetan</p>
-                        </div>
-                        <div class="col">
-                          <p class="text-center">Full-Stack Developer</p>
-                        </div>
-                        <div class="col">
-                          <p>
-                            The call was worth every penny and second. The way
-                            Nidhi understood the concerns and gave suggestions
-                            was so effective. I was confused about my career and
-                            my move to the UK, but the call with Nidhi made a
-                            lot of things clear. Thank you for your time, Nidhi.
-                            I’d highly recommend everyone who wants to move
-                            abroad and is confused to consult with you. :)
-                          </p>
-                        </div>
-                      </div>
-                    </SwiperSlide>
                   </Swiper>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>

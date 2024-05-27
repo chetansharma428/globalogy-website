@@ -46,7 +46,7 @@ const Featuredsection = () => {
                         class="product-icon-hovermaster"
                       />
                       <div class="program-name h3 fw-bold">Job Support Service</div>
-                      <a href="">see this program </a>
+                      <a href="">Know more about the Service</a>
                     </div>
                   </div>
                 </div>
@@ -69,8 +69,8 @@ const Featuredsection = () => {
                         alt="grand-master-key"
                         class="product-icon-hovermaster"
                       />
-                      <div class="program-name h3 fw-bold">Visa Support Service</div>
-                      <a href="">see this program </a>
+                      <div class="program-name h3 fw-bold">Visa Support Service & PR</div>
+                      <a href="">Know more about the Service</a>
                     </div>
                   </div>
                 </div>
@@ -96,7 +96,7 @@ const Featuredsection = () => {
                       <div class="program-name h3 fw-bold">
                       Come To Canada
                       </div>
-                      <a href="">see this program </a>
+                      <a href="">Know more about the Service</a>
                     </div>
                   </div>
                 </div>
@@ -120,9 +120,9 @@ const Featuredsection = () => {
                         class="product-icon-hovermaster"
                       />
                       <div class="program-name h3 fw-bold">
-                        Essential Jobs
+                        Direct Job Placement
                       </div>
-                      <a href="">see this program </a>
+                      <a href="">Know more about the Service</a>
                     </div>
                   </div>
                 </div>

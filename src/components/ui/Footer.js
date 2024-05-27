@@ -14,11 +14,11 @@ const Footer = () => {
                 </div>
               </div>
               <div class="col-5 d-flex justify-content-center align-items-center">
-                <button class="btn text-light">Get Started</button>
+                <button class="btn button-g text-light">Get Started</button>
               </div>
             </div>
           </div>
-          <div class="row d-flex justify-content-center align-items-center g-2 text-light">
+          <div class="row d-flex justify-content-center align-items-start g-2 text-light pb-4">
             <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-center">
               <div class="row justify-content-center align-items-center g-2 flex-column text-center">
                 <div class="col d-flex justify-content-center align-items-center flex-row">
@@ -78,7 +78,7 @@ const Footer = () => {
               </div>
             </div>
             <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-center ">
-              <div class="row d-flex justify-content-center align-items-center g-2 flex-column text-center py-4">
+              <div class="row d-flex justify-content-center align-items-center g-2 flex-column text-center">
                 {" "}
                 <div class="py-1 fw-bold">Get in Touch</div>
                 <a

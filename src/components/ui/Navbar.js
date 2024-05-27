@@ -32,16 +32,16 @@ import {
 
 const mockdata = [
   {
-    icon: IconNotification,
-    title: "Visa Support Service",
-    description: "JSV-Austria, UAE, Germany, Sweden, Portugal || PR-Australia & Canada",
-    link: "/visasupport",
-  },
-  {
     icon: IconChartPie3,
     title: "Job Support Service & PR",
     description: "White Collar Jobs",
     link: "/jobsupport",
+  },
+  {
+    icon: IconNotification,
+    title: "Visa Support Service",
+    description: "JSV-Austria, UAE, Germany, Sweden, Portugal || PR-Australia & Canada",
+    link: "/visasupport",
   },
   {
     icon:  IconBook,

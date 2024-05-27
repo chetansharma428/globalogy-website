@@ -24,12 +24,12 @@ const Services = () => {
         <Tabs color="#237B54" defaultValue="first" variant="pills">
           <Tabs.List justify="center" class="d-flex justify-content-center align-items-center gap-4" >
             <Tabs.Tab value="first">
-              <Text size="lg" fw={600}>Masterclass</Text>
+              <Text size="md" fw={600}>Masterclass</Text>
               </Tabs.Tab>
             <Tabs.Tab value="second">
-              <Text size="lg" fw={600}>Courses</Text></Tabs.Tab>
+              <Text size="md" fw={600}>Campus Ambasador</Text></Tabs.Tab>
             <Tabs.Tab value="third">
-              <Text size="lg" fw={600}>Blogs</Text></Tabs.Tab>
+              <Text size="md" fw={600}>Blogs</Text></Tabs.Tab>
             {/* <Tabs.Tab value="forth">
               <Text size="lg" fw={600}>Full Time</Text></Tabs.Tab> */}
           </Tabs.List>

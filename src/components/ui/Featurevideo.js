@@ -7,7 +7,8 @@ const Featurevideo = () => {
       <div class="container ">
         <div class="row justify-content-center align-items-center flex-row g-2">
           <div class="col-lg-6 col-sm-12">
-            <div class="h2 text-light fw-bold d-flex justify-content-center"> <span class="border-1 p-2 rounded text-center">FEATURED VIDEO OF THE MONTH</span></div>
+            <div class="h3 text-light fw-bold d-flex justify-content-center"> <span class="border-1 p-2 rounded text-center">WHICH COUNTRY ARE WE TALKING ABOUT?</span></div>
+            <div class="h3 text-light text-center">Germany</div>
           </div>
           <div class="col-lg-6 col-sm-12 player-wrapper">
             <ReactPlayer

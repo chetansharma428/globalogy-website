@@ -132,8 +132,8 @@ a{
   background-position: center;
   /* background-image:
   url('../../assests/images/bg_dark.jpeg'); */
-  padding-top: calc(var(--mantine-spacing-xl) * 9);
-  padding-bottom: calc(var(--mantine-spacing-xl) * 7);
+  padding-top: calc(var(--mantine-spacing-xl) * 5);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 10);
 }
 
 .inner {
