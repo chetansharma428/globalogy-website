@@ -10,9 +10,21 @@ import {
   Group,
   Title,
   Tabs,
-  Space
+  Space,
 } from "@mantine/core";
-import classes from "./Navbar.module.css"
+import { IconArrowRight, IconArrowLeft } from '@tabler/icons-react';
+import classes from "./Navbar.module.css";
+import dubai from "../../assests/images/Dubai.png";
+import australia from "../../assests/images/Australia-mst.png";
+import Luxembourg from "../../assests/images/Lux-mst.jpg";
+import netherlands from "../../assests/images/netherlands-mst.png";
+import uk from "../../assests/images/uk-mst.png";
+import lnkd from "../../assests/images/LinkedIn-mst.png";
+import canada from "../../assests/images/canada-mst.jpg";
+import global from "../../assests/images/global-mst.jpg";
+import profilebuilding from "../../assests/images/profilebuilding-mst.jpg";
+import ireland from "../../assests/images/Ireland-mst.png";
+import timer from "../../assests/images/fast-time.png"
 
 const Services = () => {
   return (
@@ -22,14 +34,25 @@ const Services = () => {
           Popular Programs
         </div> */}
         <Tabs color="#237B54" defaultValue="first" variant="pills">
-          <Tabs.List justify="center" class="d-flex justify-content-center align-items-center gap-4" >
+          <Tabs.List
+            justify="center"
+            class="d-flex justify-content-center align-items-center gap-4"
+          >
             <Tabs.Tab value="first">
-              <Text size="md" fw={600}>Masterclass</Text>
-              </Tabs.Tab>
+              <Text size="md" fw={600}>
+                Masterclass
+              </Text>
+            </Tabs.Tab>
             <Tabs.Tab value="second">
-              <Text size="md" fw={600}>Campus Ambasador</Text></Tabs.Tab>
+              <Text size="md" fw={600}>
+                Campus Ambasador
+              </Text>
+            </Tabs.Tab>
             <Tabs.Tab value="third">
-              <Text size="md" fw={600}>Blogs</Text></Tabs.Tab>
+              <Text size="md" fw={600}>
+                Blogs
+              </Text>
+            </Tabs.Tab>
             {/* <Tabs.Tab value="forth">
               <Text size="lg" fw={600}>Full Time</Text></Tabs.Tab> */}
           </Tabs.List>
@@ -40,18 +63,20 @@ const Services = () => {
               slideGap={{ base: 0, sm: "md" }}
               loop
               align="start"
+              nextControlIcon={<IconArrowRight />}
+              previousControlIcon={<IconArrowLeft />}
             >
               <Carousel.Slide>
-              <Card shadow="sm" padding="lg" radius="md" withBorder>
+                {/* DUBAI MASTERCLASS */}
+                {/* <Card shadow="sm" padding="lg" radius="md" withBorder>
                   <Card.Section component="a" href="https://mantine.dev/">
                     <Image
                       src="https://assets-global.website-files.com/641aff1f42be5c6f6a912b8d/64cb62b128252df1fdab2e0a_-times-square-5-efe6a1a378ab406245c45704d8cf9eaf.png"
-                      height={160}
+                      height={133}
                       alt="Norway"
                     />
                   </Card.Section>
-
-                  <Group justify="space-between" mt="md" >
+                  <Group justify="space-between" mt="md">
                     <Text class="h5 fw-bold">Netherlands Masterclass</Text>
                     <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
                       Newly added
@@ -73,118 +98,378 @@ const Services = () => {
                       Get Started
                     </Button>
                   </div>
-                </Card>
+                </Card> */}
+                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                  <img class="card-img-top" src={dubai} alt="Card image cap" />
+                  <div class="card-body d-flex justify-content-center flex-column">
+                    <div class="d-flex justify-content-between align-items-center ">
+                      <h5 class="card-title fw-bold h5">Dubai Masterclass</h5>
+                      <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
+                        Newly added
+                      </Badge>
+                    </div>
+                    <div class="d-flex justify-content-around flex-column">
+                      <p class="card-text h6">
+                        In a comprehensive Masterclass on Dubai, unlock the
+                        secrets of building a global career in the City of Gold.
+                        Learn about immigration, visa sponsorship, job market
+                        scenarios, job hunting strategies, insider tips, and
+                        much more from the experts.
+                      </p>
+                      <div>
+                        <a href="#" class="btn button-g">
+                          Go somewhere
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </Carousel.Slide>
               <Carousel.Slide>
-              <Card shadow="sm" padding="lg" radius="md" withBorder>
-                  <Card.Section component="a" href="https://mantine.dev/">
-                    <Image
-                      src="https://assets-global.website-files.com/641aff1f42be5c6f6a912b8d/6603db39b4acd36d57400f3e_Australia%20Mssterclass.png"
-                      height={160}
-                      alt="Norway"
-                    />
-                  </Card.Section>
-
-                  <Group justify="space-between" mt="md" mb="xs">
-                    <Text class="h5 fw-bold">Australia Masterclass</Text>
-                    <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
-                      Newly added
-                    </Badge>
-                  </Group>
-
-                  <Text size="sm">
-                    A comprehensive 2-hour Masterclass on Australia covering
-                    Immigration, Visa Sponsorship, Job Applications, Lifestyle,
-                    and more!
-                  </Text>
-                  <div>
-                    <Button
-                      color="blue"
-                      fullWidth
-                      mt="md"
-                      radius="md"
-                      class="btn button-g fw-bold"
-                    >
-                      Get Started
-                    </Button>
+                {/* AUSTRALIA MASTERCLASS */}
+                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                  <img
+                    class="card-img-top"
+                    src={australia}
+                    alt="Card image cap"
+                  />
+                  <div class="card-body d-flex justify-content-center flex-column">
+                    <div class="d-flex justify-content-between align-items-center ">
+                      <h5 class="card-title fw-bold h5">
+                        Australia Masterclass
+                      </h5>
+                      <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
+                        Newly added
+                      </Badge>
+                    </div>
+                    <div class="d-flex justify-content-around flex-column">
+                      <p class="card-text h6">
+                        A comprehensive 2-hour Masterclass on Australia covering
+                        Immigration, Visa Sponsorship, Job Applications,
+                        Lifestyle, and more!
+                      </p>
+                      <div>
+                        <a href="#" class="btn button-g">
+                          Go somewhere
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </Card>
+                </div>
               </Carousel.Slide>
               <Carousel.Slide>
-              <Card shadow="sm" padding="lg" radius="md" withBorder>
-                  <Card.Section component="a" href="https://mantine.dev/">
-                    <Image
-                      src="https://assets-global.website-files.com/641aff1f42be5c6f6a912b8d/64cb851dd4f6301b864d6ed6_-62cbd7020cf2f2bdf82782ad_scaled_cover-819536fbcc6138a42265c42f36203353.jpg"
-                      height={160}
-                      alt="Norway"
-                    />
-                  </Card.Section>
-
-                  <Group justify="space-between" mt="md" mb="xs">
-                    <Text class="h5 fw-bold">The Ireland Masterclass</Text>
-                    <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
-                      Newly added
-                    </Badge>
-                  </Group>
-
-                  <Text size="sm">
-                    A comprehensive 2-hour Masterclass on Australia covering
-                    Immigration, Visa Sponsorship, Job Applications, Lifestyle,
-                    and more!
-                  </Text>
-                  <div>
-                    <Button
-                      color="blue"
-                      fullWidth
-                      mt="md"
-                      radius="md"
-                      class="btn button-g fw-bold"
-                    >
-                      Get Started
-                    </Button>
+                {/* Luxembourg Masterclass*/}
+                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                  <img
+                    class="card-img-top"
+                    src={Luxembourg}
+                    alt="Card image cap"
+                  />
+                  <div class="card-body d-flex justify-content-center flex-column">
+                    <div class="d-flex justify-content-between align-items-center ">
+                      <h5 class="card-title h5 fw-bold">
+                        Luxembourg & France Masterclass
+                      </h5>
+                      <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
+                        Newly added
+                      </Badge>
+                    </div>
+                    <div class="d-flex justify-content-around flex-column">
+                      <p class="card-text h6">
+                        A Masterclass to cover everything from Immigration, Visa
+                        Sponsorships, Job Application, to Life in Luxembourg and
+                        France!
+                      </p>
+                      <div>
+                        <a href="#" class="btn button-g">
+                          Go somewhere
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </Card>
+                </div>
               </Carousel.Slide>
               <Carousel.Slide>
-              <Card shadow="sm" padding="lg" radius="md" withBorder>
-                  <Card.Section component="a" href="https://mantine.dev/">
-                    <Image
-                      src="https://assets-global.website-files.com/641aff1f42be5c6f6a912b8d/65d3272b71e9fd3b54a7b253_-whatsapp-image-2024-02-09-at-18-230437b343d0e41d2193212e7fd8cc5a.jpg"
-                      height={160}
-                      alt="Norway"
-                    />
-                  </Card.Section>
-
-                  <Group justify="space-between" mt="md" mb="xs">
-                    <Text class="h5 fw-bold">
-                      Luxembourg & France Masterclass
-                    </Text>
-                    <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
-                      Newly added
-                    </Badge>
-                  </Group>
-                  <Text size="sm">
-                    A comprehensive 2-hour Masterclass on Australia covering
-                    Immigration, Visa Sponsorship, Job Applications, Lifestyle,
-                    and more!
-                  </Text>
-                  <div>
-                    <Button
-                      color="blue"
-                      fullWidth
-                      mt="md"
-                      radius="md"
-                      class="btn button-g fw-bold"
-                    >
-                      Get Started
-                    </Button>
+                {/* UK MASTERCLASS */}
+                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                  <img class="card-img-top" src={uk} alt="Card image cap" />
+                  <div class="card-body d-flex justify-content-center flex-column">
+                    <div class="d-flex justify-content-between align-items-center ">
+                      <h5 class="card-title h5 fw-bold">UK Masterclass</h5>
+                      <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
+                        Newly added
+                      </Badge>
+                    </div>
+                    <div class="d-flex justify-content-around flex-column">
+                      <p class="card-text h6">
+                        Your Guide to Career, Education, and Life Opportunities
+                        in the United Kingdom.
+                      </p>
+                      <div>
+                        <a href="#" class="btn button-g">
+                          Go somewhere
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </Card>
+                </div>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                {/* Linkedin-1 */}
+                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                  <img class="card-img-top" src={lnkd} alt="Card image cap" />
+                  <div class="card-body d-flex justify-content-center flex-column">
+                    <div class="d-flex justify-content-between align-items-center ">
+                      <h5 class="card-title h5 fw-bold">
+                        LinkedIn & Professional Brand Building
+                      </h5>
+                      <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
+                        Newly added
+                      </Badge>
+                    </div>
+                    <div class="d-flex justify-content-around flex-column">
+                      <p class="card-text h6">
+                        Looking for your dream job? How good is your sales
+                        pitch, i.e., your LinkedIn?
+                      </p>
+                      <div>
+                      <a href="#" class="btn button-g ">
+                        Go somewhere
+                      </a>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                {/* NETHERLANDS */}
+                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                  <img
+                    class="card-img-top"
+                    src={netherlands}
+                    alt="Card image cap"
+                  />
+                  <div class="card-body d-flex justify-content-center flex-column">
+                    <div class="d-flex justify-content-between align-items-center ">
+                      <h5 class="card-title h5 fw-bold">
+                        The Netherlands Masterclass
+                      </h5>
+                      <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
+                        Newly added
+                      </Badge>
+                    </div>
+                    <div class="d-flex justify-content-around flex-column">
+                      <p class="card-text h6">
+                        The Masterclass can help you discover different
+                        immigration pathways to move and apply for exciting job
+                        opportunities in the Netherlands.
+                      </p>
+                      <div>
+                        <a href="#" class="btn button-g">
+                          Go somewhere
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                {/* IRELAND */}
+                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                  <img
+                    class="card-img-top"
+                    src={ireland}
+                    alt="Card image cap"
+                  />
+                  <div class="card-body d-flex justify-content-center flex-column">
+                    <div class="d-flex justify-content-between align-items-center ">
+                      <h5 class="card-title h5 fw-bold">
+                        The Ireland Masterclass
+                      </h5>
+                      <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
+                        Newly added
+                      </Badge>
+                    </div>
+                    <div class="d-flex justify-content-around flex-column">
+                      <p class="card-text h6">
+                        The Masterclass can help you discover different
+                        immigration pathways to move and apply for exciting job
+                        opportunities in Ireland. If you don’t want to miss this
+                        chance to be part of a country with a flourishing job
+                        market and diverse industries, enroll NOW!
+                      </p>
+                      <div>
+                        <a href="#" class="btn button-g">
+                          Go somewhere
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                {/* CANADA-1 */}
+                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                  <img class="card-img-top" src={canada} alt="Card image cap" />
+                  <div class="card-body d-flex justify-content-center flex-column">
+                    <div class="d-flex justify-content-between align-items-center ">
+                      <h5 class="card-title h5 fw-bold">Canada Masterclass</h5>
+                      <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
+                        Newly added
+                      </Badge>
+                    </div>
+                    <div class="d-flex justify-content-around flex-column">
+                      <p class="card-text h6">
+                        Canada will be inviting 400,000 foreigners every year
+                        until 2024. This is your chance to make it! Did you know
+                        Canada has not one but multiple pathways to enter and
+                        live in the country? This masterclass will help you plan
+                        your move, get to Canada and settle in. Whether you are
+                        looking at PR, PNP, a work visa, a study visa, or
+                        special permits, it will help you wherever you are in
+                        your immigration journey.
+                      </p>
+                      <div>
+                        <a href="#" class="btn button-g">
+                          Go somewhere
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                {/* Linkedin-2 */}
+                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                  <img class="card-img-top" src={lnkd} alt="Card image cap" />
+                  <div class="card-body d-flex justify-content-center flex-column">
+                    <div class="d-flex justify-content-between align-items-center ">
+                      <h5 class="card-title h5 fw-bold">
+                        LinkedIn & Professional Brand Building - 2
+                      </h5>
+                      <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
+                        Newly added
+                      </Badge>
+                    </div>
+                    <div class="d-flex justify-content-around flex-column">
+                      <p class="card-text h6">
+                        Looking for your dream job? How good is your sales
+                        pitch, i.e., your LinkedIn?
+                      </p>
+                      <div>
+                        <a href="#" class="btn button-g ">
+                          Go somewhere
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                {/* CANADA-2 */}
+                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                  <img class="card-img-top" src={canada} alt="Card image cap" />
+                  <div class="card-body d-flex justify-content-center flex-column">
+                    <div class="d-flex justify-content-between align-items-center ">
+                      <h5 class="card-title h5 fw-bold">
+                        Canada Work Permit Masterclass
+                      </h5>
+                      <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
+                        Newly added
+                      </Badge>
+                    </div>
+                    <div class="d-flex justify-content-around flex-column">
+                      <p class="card-text h6">
+                        Canada will be inviting 400,000 foreigners every year
+                        until 2024. This is your chance to make it! Did you know
+                        Canada has not one but multiple pathways to enter and
+                        live in the country? This masterclass will help you plan
+                        your move, get to Canada and settle in. Whether you are
+                        looking at PR, PNP, a work visa, a study visa, or
+                        special permits, it will help you wherever you are in
+                        your immigration journey.
+                      </p>
+                      <div>
+                        <a href="#" class="btn button-g">
+                          Go somewhere
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                {/* PROFILE BUILDING  */}
+                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                  <img
+                    class="card-img-top"
+                    src={profilebuilding}
+                    alt="Card image cap"
+                  />
+                  <div class="card-body d-flex justify-content-center flex-column">
+                    <div class="d-flex justify-content-between align-items-center ">
+                      <h5 class="card-title h5 fw-bold">
+                        Profile Building For Career Abroad
+                      </h5>
+                      <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
+                        Newly added
+                      </Badge>
+                    </div>
+                    <div class="d-flex justify-content-around flex-column">
+                      <p class="card-text h6">
+                        Looking for opportunities to work abroad but don't know
+                        where to start? Over 5 MILLION JOBS are open to
+                        FOREIGNERS in Canada, the USA, the UK, Germany, Ireland,
+                        the Netherlands, and more, but having the right profile
+                        can be a barrier. This MasterClass is designed to teach
+                        you how to build a strong profile that will help you
+                        land your dream job abroad.
+                      </p>
+                      <div>
+                        <a href="#" class="btn button-g">
+                          Go somewhere
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                  <img class="card-img-top" src={global} alt="Card image cap" />
+                  <div class="card-body d-flex justify-content-center flex-column">
+                    <div class="d-flex justify-content-between align-items-center ">
+                      <h5 class="card-title h5 fw-bold">
+                        Global Masterclass : Career, Education, and Life
+                        opportunities
+                      </h5>
+                      <Badge class="badge animate__animated animate__tada animate__infinite	infinite">
+                        Newly added
+                      </Badge>
+                    </div>
+                    <div class="d-flex justify-content-around flex-column">
+                      <p class="card-text h6">
+                        Over the past few years, record labor shortages in
+                        high-income countries have created a great demand for
+                        international workers, professionals, and students.
+                        Understanding the nature of this demand and the
+                        opportunities available can help you create an
+                        international career.
+                      </p>
+                      <div>
+                        <a href="#" class="btn button-g">
+                          Go somewhere
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </Carousel.Slide>
             </Carousel>
           </Tabs.Panel>
           <Tabs.Panel value="second" pt="md">
-            <Carousel
+            {/* <Carousel
               withIndicators
               slideSize={{ base: "100%", sm: "50%", md: "33.333333%" }}
               slideGap={{ base: 0, sm: "md" }}
@@ -243,128 +528,62 @@ const Services = () => {
                   <Button class="btn text-light fw-bold">Read article</Button>
                 </Paper>
               </Carousel.Slide>
-            </Carousel>
+            </Carousel> */}
+            <div class="d-flex justify-content-center align-items-center gap-2">
+              <img
+                src={timer}
+                class="img-fluid rounded-top"
+                alt=""
+                style={{width:"128px", height:"128px"}}
+              />
+              <div class="display-3">Coming soon!</div>
+            </div>
           </Tabs.Panel>
           <Tabs.Panel value="third" pt="md">
             <Carousel
               withIndicators
               slideSize={{ base: "100%", sm: "50%", md: "33.333333%" }}
-              slideGap={{ base: 0, sm: "md" }}
+              slideGap={{ base: 0, sm: "lg" }}
               loop
               align="start"
             >
               <Carousel.Slide>
-                <Paper shadow="md" p="xl" radius="sm" className={classes.card3}>
+                <Paper shadow="md" p="xl" radius="sm" className={classes.card1}>
                   <div>
                     <Text className={classes.category} size="xs">
-                      nature
+                    IMMIGRATION | JOB MARKET
                     </Text>
                     <Title order={3} className={classes.title}>
-                      Best forests to visit in North America
+                    How to Find a Job in Europe?
                     </Title>
                   </div>
-                  <Button class="btn text-light fw-bold">Read article</Button>
+                  <Button class="btn button-g text-light fw-bold" href="https://globalogy.in/blog/how-to-find-a-job-in-europe/">Read article</Button>
+                </Paper>
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <Paper shadow="md" p="xl" radius="md" className={classes.card2}>
+                  <div>
+                    <Text className={classes.category} size="xs">
+                    JOB MARKET
+                    </Text>
+                    <Title order={3} className={classes.title}>
+                    Top 5 Job Opportunities in Belgium in 2024
+                    </Title>
+                  </div>
+                  <Button class="btn button-g text-light fw-bold" href="https://globalogy.in/blog/top-5-job-opportunities-in-belgium-in-2024/">Read article</Button>
                 </Paper>
               </Carousel.Slide>
               <Carousel.Slide>
                 <Paper shadow="md" p="xl" radius="md" className={classes.card3}>
                   <div>
                     <Text className={classes.category} size="xs">
-                      nature
+                    IMMIGRATION
                     </Text>
                     <Title order={3} className={classes.title}>
-                      Best forests to visit in North America
+                    Top 10 Powerful Passports in the World in 2024
                     </Title>
                   </div>
-                  <Button class="btn text-light fw-bold">Read article</Button>
-                </Paper>
-              </Carousel.Slide>
-              <Carousel.Slide>
-                <Paper shadow="md" p="xl" radius="md" className={classes.card3}>
-                  <div>
-                    <Text className={classes.category} size="xs">
-                      nature
-                    </Text>
-                    <Title order={3} className={classes.title}>
-                      Best forests to visit in North America
-                    </Title>
-                  </div>
-                  <Button class="btn text-light fw-bold">Read article</Button>
-                </Paper>
-              </Carousel.Slide>
-              <Carousel.Slide>
-                <Paper shadow="md" p="xl" radius="md" className={classes.card3}>
-                  <div>
-                    <Text className={classes.category} size="xs">
-                      nature
-                    </Text>
-                    <Title order={3} className={classes.title}>
-                      Best forests to visit in North America
-                    </Title>
-                  </div>
-                  <Button class="btn text-light fw-bold">Read article</Button>
-                </Paper>
-              </Carousel.Slide>
-            </Carousel>
-          </Tabs.Panel>
-          <Tabs.Panel value="forth" pt="md">
-            <Carousel
-              withIndicators
-              slideSize={{ base: "100%", sm: "50%", md: "33.333333%" }}
-              slideGap={{ base: 0, sm: "md" }}
-              loop
-              align="start"
-            >
-              <Carousel.Slide>
-                <Paper shadow="md" p="xl" radius="md" className={classes.card4}>
-                  <div>
-                    <Text className={classes.category} size="xs">
-                      nature
-                    </Text>
-                    <Title order={3} className={classes.title}>
-                      Best forests to visit in North America
-                    </Title>
-                  </div>
-                  <Button class="btn text-light fw-bold">Read article</Button>
-                </Paper>
-              </Carousel.Slide>
-              <Carousel.Slide>
-                <Paper shadow="md" p="xl" radius="md" className={classes.card4}>
-                  <div>
-                    <Text className={classes.category} size="xs">
-                      nature
-                    </Text>
-                    <Title order={3} className={classes.title}>
-                      Best forests to visit in North America
-                    </Title>
-                  </div>
-                  <Button class="btn text-light fw-bold">Read article</Button>
-                </Paper>
-              </Carousel.Slide>
-              <Carousel.Slide>
-                <Paper shadow="md" p="xl" radius="md" className={classes.card4}>
-                  <div>
-                    <Text className={classes.category} size="xs">
-                      nature
-                    </Text>
-                    <Title order={3} className={classes.title}>
-                      Best forests to visit in North America
-                    </Title>
-                  </div>
-                  <Button class="btn text-light fw-bold">Read article</Button>
-                </Paper>
-              </Carousel.Slide>
-              <Carousel.Slide>
-                <Paper shadow="md" p="xl" radius="md" className={classes.card4}>
-                  <div>
-                    <Text className={classes.category} size="xs">
-                      nature
-                    </Text>
-                    <Title order={3} className={classes.title}>
-                      Best forests to visit in North America
-                    </Title>
-                  </div>
-                  <Button class="btn text-light fw-bold">Read article</Button>
+                  <Button class="btn button-g text-light fw-bold" href="https://globalogy.in/blog/top-10-powerful-passport/">Read article</Button>
                 </Paper>
               </Carousel.Slide>
             </Carousel>

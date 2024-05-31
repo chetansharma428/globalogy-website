@@ -502,7 +502,7 @@ const Herosection = (props) => {
       <Container size="lg">
         <div className={classes.inner}>
           <div class="row g-2">
-            <div class="col-sm-12 col g-2 flex-column d-flex justify-content-center">
+            <div class="col-sm-12 col g-2 flex-column d-flex justify-content-center gap-2">
               <div class="col flex-row gap-2 flag d-flex justify-content-center align-items-center">
                 <img
                   src={flag3}

@@ -33,25 +33,25 @@ import {
 const mockdata = [
   {
     icon: IconChartPie3,
-    title: "Job Support Service & PR",
+    title: "Job Support Service (JSS)",
     description: "White Collar Jobs",
     link: "/jobsupport",
   },
   {
     icon: IconNotification,
-    title: "Visa Support Service",
+    title: "Job Seeker Visa & PR (JSV & PR)",
     description: "JSV-Austria, UAE, Germany, Sweden, Portugal || PR-Australia & Canada",
     link: "/visasupport",
   },
   {
     icon:  IconBook,
-    title: "Come To Canada",
+    title: "Come To Canada (C2C)",
     description: "George Brown College-Study Program",
     link: "/comecanada",
   },
   {
     icon: IconChevronDown,
-    title: "Direct Job Placement",
+    title: "Direct Job Placement (DJP)",
     description: "Blue Collar Jobs",
     link: "/courses",
   },
@@ -97,7 +97,7 @@ const Navbar = () => {
           class=" alert-dismissible fade show m-0 border-0 text-center text-light"
           role="alert"
         >
-          <strong>Off-to Australia!</strong> You should check new Masterclass{" "}
+          <strong>Habibi, Come to Dubai! </strong> Explore our latest Masterclass.{" "}
           <span class="">
             <button class="check btn button-g fw-bold">
               {" "}
@@ -177,6 +177,20 @@ const Navbar = () => {
                     </SimpleGrid>
                   </HoverCard.Dropdown>
                 </HoverCard>
+                <a
+                  href="/courses"
+                  className={classes.link}
+                  id="navEle"
+                >
+                  Masterclass
+                </a>
+                <a
+                  href="/campusambasador"
+                  className={classes.link}
+                  id="navEle"
+                >
+                  Campus Ambasador
+                </a>
                 <div id="navEle">
                   <button
                     className={classes.link}
@@ -267,7 +281,7 @@ const Navbar = () => {
             opened={drawerOpened}
             onClose={closeDrawer}
             position="top"
-            size="40%"
+            size="50%"
             padding="md"
             title="Globalogy"
             hiddenFrom="md"
@@ -289,6 +303,20 @@ const Navbar = () => {
                 </Center>
               </UnstyledButton>
               <Collapse in={linksOpened}>{links}</Collapse>
+              <a
+                  href="/contact"
+                  className={classes.link}
+                  id="navEle"
+                >
+                  Masterclass
+                </a>
+                <a
+                  href=""
+                  className={classes.link}
+                  id="navEle"
+                >
+                  Campus Ambasador
+                </a>
               <div>
                 <button
                   className={classes.link}

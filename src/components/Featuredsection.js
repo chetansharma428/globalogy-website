@@ -1,5 +1,6 @@
 import React from "react";
 import { Carousel } from "@mantine/carousel";
+import { IconArrowRight, IconArrowLeft } from '@tabler/icons-react';
 import master1 from "../assests/images/master1.webp";
 import hovermaster1 from "../assests/images/hovermaster1.webp";
 import master2 from "../assests/images/master2.webp";
@@ -26,6 +27,8 @@ const Featuredsection = () => {
               slideGap={{ base: 0, sm: "xl" }}
               loop
               align="start"
+              nextControlIcon={<IconArrowRight />}
+              previousControlIcon={<IconArrowLeft />}
             >
               <Carousel.Slide>
                 <div class="container d-flex justify-content-center">

@@ -1,6 +1,4 @@
 import React from "react";
-import tick from "../../assests/images/tick.svg";
-import chart from "../../assests/images/Image [object-cover] (1).png";
 
 const Competitive = () => {
   return (

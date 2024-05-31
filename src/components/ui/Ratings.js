@@ -1,57 +1,57 @@
 import React from "react";
+import social from "../../assests/images/social-media.png";
 
 const Ratings = () => {
   return (
     <div class="container-fluid pattern">
-      <div class="container py-4">
-        <div class="row row-cols-auto d-flex justify-content-center align-items-center gap-4">
-          <div class="col rating-box">
+      <div class="container">
+        <div class="row stat-content mb-4">
+          <div class="col-lg-3 col-sm-12 rating-box">
             <div class="row d-flex justify-content-center align-items-center g-2">
               <div class="col d-flex justify-content-center align-items-center flex-row gap-2">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
                   width="48"
-                  height="48"
+                  height="46"
+                  viewBox="0 0 48 46"
                   fill="none"
-                  class="bi bi-linkedin"
-                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
-                    fill="#0A66C2"
+                    d="M48.0005 17.6214H29.6708L24.0091 0.17627L18.3297 17.6214L0 17.6037L14.8443 28.3963L9.16487 45.8237L24.0091 35.0488L38.8357 45.8237L33.174 28.3963L48.0005 17.6214Z"
+                    fill="#00B67A"
+                  ></path>
+                  <path
+                    d="M34.4466 32.342L33.1727 28.3965L24.0078 35.049L34.4466 32.342Z"
+                    fill="#005128"
                   ></path>
                 </svg>
                 <div>
-                  <p class="text-muted">linkedin</p>
-                  <div class="h5 fw-bold">Top Startup India 2023</div>
+                  <p class="text-muted">Featured In</p>
+                  <div class="h5 fw-bold">
+                    World's first Ed-Tech company to be featured on Times Square
+                    ✨
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col rating-box">
+          <div class="col-lg-3 col-sm-12 rating-box">
             <div class="row d-flex justify-content-center align-items-center g-2">
               <div class="col d-flex justify-content-center align-items-center flex-row gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="48"
-                  height="48"
-                  fill="none"
-                  class="bi bi-linkedin"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
-                    fill="#0A66C2"
-                  ></path>
-                </svg>
+                <img
+                  src={social}
+                  class="img-fluid rounded-top"
+                  style={{ width: "46px", height: "48px" }}
+                  alt=""
+                />
                 <div>
-                  <p>linkedin</p>
-                  <div class="h5 fw-bold">Top Startup India 2023</div>
+                  <p class="text-muted">followers</p>
+                  <div class="h5 fw-bold">200K+ Followers on Social Media</div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col rating-box">
+          <div class="col-lg-3 col-sm-12 rating-box">
             <div class="row d-flex justify-content-center align-items-center g-2">
               <div class="col d-flex justify-content-center align-items-center flex-row gap-2">
                 <svg
@@ -87,36 +87,60 @@ const Ratings = () => {
             </div>
           </div>
         </div>
-        <div class="row row-cols-auto d-flex justify-content-center align-items-center gap-4 py-4">
-          <div class="col rating-box">
+        <div class="row stat-bottom-content">
+          <div class="rating-box-bottom">
             <div class="row d-flex justify-content-center align-items-center g-2">
               <div class="col d-flex justify-content-center align-items-center flex-column gap-2">
-              <img width="48" height="48" src="https://img.icons8.com/color/48/000000/customer-insight.png" alt="customer-insight"/>
-                <p class=" h5 text-muted">2500+</p>
-                <div class="h5 fw-bold">Candidates Benifited</div>
+                <img
+                  width="48"
+                  height="48"
+                  src="https://img.icons8.com/color/48/000000/customer-insight.png"
+                  alt="customer-insight"
+                />
+                <p class=" h2 fw-bold">2500+</p>
+                <div class="h5 fw-bold text-center">Candidates Benifited from our courses.</div>
               </div>
             </div>
           </div>
-          <div class="col rating-box">
+          <div class="rating-box-bottom">
             <div class="row d-flex justify-content-center align-items-center g-2">
-            <div class="col d-flex justify-content-center align-items-center flex-column gap-2">
+              <div class="col d-flex justify-content-center align-items-center flex-column gap-2">
                 <img
                   width="48"
                   height="48"
                   src="https://img.icons8.com/color/48/conference-call--v1.png"
                   alt="conference-call--v1"
                 />
-                <p class=" h5 text-muted">150+</p>
-                <div class="h5 fw-bold">Candidates Benifited</div>
+                <p class=" h2 fw-bold">70%</p>
+                <div class="h5 fw-bold text-center">Interviews scheduled from global recruiters</div>
               </div>
             </div>
           </div>
-          <div class="col rating-box">
+          <div class="rating-box-bottom">
             <div class="row d-flex justify-content-center align-items-center g-2">
-            <div class="col d-flex justify-content-center align-items-center flex-column gap-2">
-            <img width="48" height="48" src="https://img.icons8.com/color/48/group-task.png" alt="group-task"/>
-                <p class=" h5 text-muted">2500+</p>
-                <div class="h5 fw-bold">Candidates Benifited</div>
+              <div class="col d-flex justify-content-center align-items-center flex-column gap-2">
+                <img
+                  width="48"
+                  height="48"
+                  src="https://img.icons8.com/color/48/group-task.png"
+                  alt="group-task"
+                />
+                <p class=" h2 fw-bold">1300+</p>
+                <div class="h5 fw-bold text-center">Have moved abroad with our help</div>
+              </div>
+            </div>
+          </div>
+          <div class="rating-box-bottom">
+            <div class="row d-flex justify-content-center align-items-center g-2">
+              <div class="col d-flex justify-content-center align-items-center flex-column gap-2">
+                <img
+                  width="48"
+                  height="48"
+                  src="https://img.icons8.com/color/48/group-task.png"
+                  alt="group-task"
+                />
+                <p class=" h2 fw-bold">1000+</p>
+                <div class="h5 fw-bold text-center">Personal sessions and multiple lives impacted</div>
               </div>
             </div>
           </div>

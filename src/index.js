@@ -21,6 +21,7 @@ import Courses from "./components/Courses";
 import Visasupport from "./components/Visasupport";
 import Footer from "./components/ui/Footer";
 import '@mantine/carousel/styles.css';
+import Campusambasador from "./components/Campusambasador";
 
 
 const theme = createTheme({
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
   {
     path: "/courses",
     element: <Courses />,
+  },
+  {
+    path: "/campusambasador",
+    element: <Campusambasador />,
   },
 ]);
 

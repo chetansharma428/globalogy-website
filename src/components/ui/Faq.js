@@ -2,8 +2,18 @@ import { Image, Accordion, Grid, Container, Title } from "@mantine/core";
 import image from "../../assests/images/Faq_image.svg";
 import classes from "./Navbar.module.css";
 
-const placeholder =
-  "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.";
+const answer1 =
+  "Fill the form available on our website & our team will reach out to you in 5-7 working days to provide you custom solutions that work for you.";
+const answer2 =
+  "With the Direct Jobs Placement (blue collar jobs) there is a guarantee. But with the Job Support Service (non blue collar jobs), there is no guarantee. 84% of our JSS clients have heard from the recruiters with many interviews scheduled.";
+const answer3 =
+  "Service charges vary per the services, not countries.";
+const answer4 =
+  "Unfortunately, we are unable to provide any refunds.";
+const answer5 =
+  "Yes. Masterclass is scheduled specifically tailored to one country on a monthly basis.";
+const answer6 =
+  "Yes. You can book a 1:1 Consultation Call with Nidhi Nagori.";
 
 export function FaqWithImage() {
   return (
@@ -26,9 +36,9 @@ export function FaqWithImage() {
               >
                 <Accordion.Item className={classes.item} value="reset-password">
                   <Accordion.Control>
-                    How can I reset my password?
+                  I am unable to find the right option for myself. Whom should I contact?
                   </Accordion.Control>
-                  <Accordion.Panel>{placeholder}</Accordion.Panel>
+                  <Accordion.Panel>{answer1}</Accordion.Panel>
                 </Accordion.Item>
 
                 <Accordion.Item
@@ -36,23 +46,35 @@ export function FaqWithImage() {
                   value="another-account"
                 >
                   <Accordion.Control>
-                    Can I create more that one account?
+                  Do you provide a job guarantee?
                   </Accordion.Control>
-                  <Accordion.Panel>{placeholder}</Accordion.Panel>
+                  <Accordion.Panel>{answer2}</Accordion.Panel>
                 </Accordion.Item>
 
                 <Accordion.Item className={classes.item} value="newsletter">
                   <Accordion.Control>
-                    How can I subscribe to monthly newsletter?
+                  Are the service charges different for different countries?
                   </Accordion.Control>
-                  <Accordion.Panel>{placeholder}</Accordion.Panel>
+                  <Accordion.Panel>{answer3}</Accordion.Panel>
                 </Accordion.Item>
 
                 <Accordion.Item className={classes.item} value="credit-card">
                   <Accordion.Control>
-                    Do you store credit card information securely?
+                  Is there a refund policy?
                   </Accordion.Control>
-                  <Accordion.Panel>{placeholder}</Accordion.Panel>
+                  <Accordion.Panel>{answer4}</Accordion.Panel>
+                </Accordion.Item>
+                <Accordion.Item className={classes.item} value="credit-card">
+                  <Accordion.Control>
+                  Do Masterclasses take place every month?
+                  </Accordion.Control>
+                  <Accordion.Panel>{answer5}</Accordion.Panel>
+                </Accordion.Item>
+                <Accordion.Item className={classes.item} value="credit-card">
+                  <Accordion.Control>
+                  Can I consult with Nidhi Nagori?
+                  </Accordion.Control>
+                  <Accordion.Panel>{answer6}</Accordion.Panel>
                 </Accordion.Item>
               </Accordion>
             </Grid.Col>

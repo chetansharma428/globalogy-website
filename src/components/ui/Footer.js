@@ -1,6 +1,7 @@
 import React from "react";
 
 import m_icon from "../../assests/images/mail-icon.png";
+import fb from "../../assests/images/icons8-facebook.svg";
 const Footer = () => {
   return (
     <div>
@@ -8,13 +9,19 @@ const Footer = () => {
         <div class="container py-4">
           <div class="tex d-flex justify-content-center align-items-center">
             <div class="row d-flex justify-content-center align-items-center g-2">
-              <div class="col-7 d-flex justify-content-center align-items-center">
-                <div class="h2 fw-bold text-light">
-                  What would you like to learn? Talk to us today
+              <div class="col d-flex justify-content-center align-items-center flex-column">
+                <div class="h1 fw-bold text-light text-center">
+                  Join Our Community
                 </div>
-              </div>
-              <div class="col-5 d-flex justify-content-center align-items-center">
-                <button class="btn button-g text-light">Get Started</button>
+                <div class="h5 text-light text-center">
+                  Connect with like-minded individuals, get expert answers to
+                  your queries, access exclusive job opportunities and insights,
+                  receive newsletters on a weekly basis, avail special offers &
+                  much more. Be a part of our exclusive vibrant community.
+                </div>
+                <div class="col-5 d-flex justify-content-center align-items-center">
+                  <button class="btn button-g text-light h5">Join Us</button>
+                </div>
               </div>
             </div>
           </div>
@@ -28,14 +35,12 @@ const Footer = () => {
                     style={{ width: "53px" }}
                     alt=""
                   />
-                  <a href="" class="text-uppercase h5">
+                  <a href="" class="text-uppercase h5 m-0">
                     Globalogy
                   </a>
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
-                  <div class="text-light">
-                    Go Global with Globalogy #GoGlobal
-                  </div>
+                  <div class="text-light">#GoGlobal with Globalogy</div>
                 </div>
               </div>
             </div>
@@ -100,7 +105,7 @@ const Footer = () => {
                   <ul class="example-2">
                     <li class="icon-content">
                       <a
-                        href="https://linkedin.com/"
+                        href="https://bit.ly/44YX5xN"
                         aria-label="LinkedIn"
                         data-social="linkedin"
                       >
@@ -119,31 +124,32 @@ const Footer = () => {
                           ></path>
                         </svg>
                       </a>
-                      {/* <div class="tooltip"></div> */}
+                      {/* <div class="tooltip">LinkedIn</div> */}
                     </li>
                     <li class="icon-content">
                       <a
-                        href="https://www.github.com/"
+                        href="https://bit.ly/4e2jkqw"
                         aria-label="Twitter"
                         data-social="twitter"
                       >
                         <div class="filled"></div>
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
+                          
+                          height="56.693px"
+                          id="Layer_1"
+                          version="1.1"
+                          viewBox="0 0 56.693 56.693"
+                          width="56.693px"
                           fill="currentColor"
-                          class="bi bi-twitter"
-                          viewBox="0 0 335 276"
                         >
-                          <path d="m302 70a195 195 0 0 1 -299 175 142 142 0 0 0 97 -30 70 70 0 0 1 -58 -47 70 70 0 0 0 31 -2 70 70 0 0 1 -57 -66 70 70 0 0 0 28 5 70 70 0 0 1 -18 -90 195 195 0 0 0 141 72 67 67 0 0 1 116 -62 117 117 0 0 0 43 -17 65 65 0 0 1 -31 38 117 117 0 0 0 39 -11 65 65 0 0 1 -32 35" />
+                          <path d="M28.347,5.157c-13.6,0-24.625,11.027-24.625,24.625c0,13.6,11.025,24.623,24.625,24.623c13.6,0,24.625-11.023,24.625-24.623  C52.972,16.184,41.946,5.157,28.347,5.157z M34.864,29.679h-4.264c0,6.814,0,15.207,0,15.207h-6.32c0,0,0-8.307,0-15.207h-3.006  V24.31h3.006v-3.479c0-2.49,1.182-6.377,6.379-6.377l4.68,0.018v5.215c0,0-2.846,0-3.398,0c-0.555,0-1.34,0.277-1.34,1.461v3.163  h4.818L34.864,29.679z" />
                         </svg>
                       </a>
-                      <div class="tooltip">X</div>
+                      {/* <div class="tooltip">facebook</div> */}
                     </li>
                     <li class="icon-content">
                       <a
-                        href="https://www.instagram.com/"
+                        href="https://bit.ly/4bBorMV"
                         aria-label="Instagram"
                         data-social="instagram"
                       >
@@ -162,11 +168,11 @@ const Footer = () => {
                           ></path>
                         </svg>
                       </a>
-                      <div class="tooltip">Instagram</div>
+                      {/* <div class="tooltip">Instagram</div> */}
                     </li>
                     <li class="icon-content">
                       <a
-                        href="https://youtube.com/"
+                        href="https://bit.ly/44ZHKNc"
                         aria-label="Youtube"
                         data-social="youtube"
                       >
@@ -185,7 +191,7 @@ const Footer = () => {
                           ></path>
                         </svg>
                       </a>
-                      <div class="tooltip">Youtube</div>
+                      {/* <div class="tooltip">Youtube</div> */}
                     </li>
                   </ul>
                 </div>

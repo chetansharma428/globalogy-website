@@ -17,6 +17,7 @@
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "class-variance-authority": "^0.7.0",
+    "embla-carousel-autoplay": "^7.1.0",
     "lucide-react": "^0.359.0",
     "popper.js": "^1.16.1",
     "react": "^18.2.0",
