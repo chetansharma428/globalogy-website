@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div>
       <div class="container-fluid bg-dark">
-        <div class="container py-4">
+        <div class="container" style={{ paddingBottom: "150px" }}>
           <div class="tex d-flex justify-content-center align-items-center">
             <div class="row d-flex justify-content-center align-items-center g-2">
               <div class="col d-flex justify-content-center align-items-center flex-column">
@@ -26,16 +26,18 @@ const Footer = () => {
             </div>
           </div>
           <div class="row d-flex justify-content-center align-items-start g-2 text-light pb-4">
-            <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-center">
+            <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-start">
               <div class="row justify-content-center align-items-center g-2 flex-column text-center">
                 <div class="col d-flex justify-content-center align-items-center flex-row">
-                  <img
-                    src="https://assets-global.website-files.com/641aff1f42be5c6f6a912b8d/64885d09846b08b720f88dc8_123.png"
-                    class="img-fluid rounded-top"
-                    style={{ width: "53px" }}
-                    alt=""
-                  />
-                  <a href="" class="text-uppercase h5 m-0">
+                  <a href="/">
+                    <img
+                      src="https://assets-global.website-files.com/641aff1f42be5c6f6a912b8d/64885d09846b08b720f88dc8_123.png"
+                      class="img-fluid rounded-top"
+                      style={{ width: "53px" }}
+                      alt=""
+                    />
+                  </a>
+                  <a href="/" class="text-uppercase h5 m-0">
                     Globalogy
                   </a>
                 </div>
@@ -44,31 +46,43 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-center">
-              <div class="row d-flex justify-content-center align-items-center g-2 flex-column text-center">
-                {" "}
-                <div class="py-1 fw-bold">Quick Links</div>
-                <a href="" class="col">
-                  Home
-                </a>
-                <a href="" class="col">
-                  Courses
-                </a>
-                <a href="" class="col">
-                  Services
-                </a>
-                <a href="" class="col">
-                  Blog
-                </a>
-                <a href="" class="col">
-                  Contact
-                </a>
+            <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-start">
+              <div class="row d-flex justify-content-center align-items-center g-2 flex-row text-center">
+              <div class=" fw-bold">Quick Links</div>
+                <div class="col-6 d-flex justify-content-center align-items-center flex-column">   
+                  <a href="" class="col">
+                    Home
+                  </a>
+                  <a href="" class="col">
+                    Services
+                  </a>
+                  <a href="" class="col">
+                    Masterclass
+                  </a>
+                  <a href="" class="col">
+                    Campus Ambasador
+                  </a>
+                </div>
+                <div class="col-6 d-flex justify-content-start align-items-center flex-column">
+                  <a href="" class="col">
+                    Testimonials
+                  </a>
+                  <a href="" class="col">
+                    Blog
+                  </a>
+                  <a href="" class="col">
+                    Contact
+                  </a>
+                  <a href="" class="col">
+                    About
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-center">
+            <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-start">
               <div class="row d-flex justify-content-center align-items-center g-2 flex-column text-center">
                 {" "}
-                <a href="" class="py-1 fw-bold">
+                <a href="" class=" fw-bold">
                   Legal
                 </a>
                 <a href="" class="col">
@@ -82,10 +96,10 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-center ">
+            <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-start ">
               <div class="row d-flex justify-content-center align-items-center g-2 flex-column text-center">
                 {" "}
-                <div class="py-1 fw-bold">Get in Touch</div>
+                <div class="fw-bold">Get in Touch</div>
                 <a
                   href=""
                   class="col justify-content-center d-flex flex-row gap-1"
@@ -134,7 +148,6 @@ const Footer = () => {
                       >
                         <div class="filled"></div>
                         <svg
-                          
                           height="56.693px"
                           id="Layer_1"
                           version="1.1"

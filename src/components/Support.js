@@ -26,7 +26,7 @@ const Support = (props) => {
   } = props.data[0];
   return (
     <div>
-      <div class="container justify-content-center p-4">
+      <div class="container justify-content-center p-4 text-light">
         <div class="row d-flex g-2">
           <div class="col d-flex align-items-center">
             <div class="col-sm-12 col d-flex justify-content-center align-items-start g-2 flex-column">

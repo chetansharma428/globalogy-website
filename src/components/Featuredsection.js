@@ -23,8 +23,8 @@ const Featuredsection = () => {
           <div class="col p-0">
             <Carousel
               withIndicators
-              slideSize={{ base: "100%", sm: "50%", md: "24.78%" }}
-              slideGap={{ base: 0, sm: "xl" }}
+              slideSize={{ base: "100%", sm: "50%", md: "25%" }}
+              slideGap={{ base: 0, sm: "sm" }}
               loop
               align="start"
               nextControlIcon={<IconArrowRight />}
@@ -55,7 +55,7 @@ const Featuredsection = () => {
                 </div>
               </Carousel.Slide>
               <Carousel.Slide>
-                <div class="container">
+                <div class="container d-flex justify-content-center">
                   <div class="row product-box d-flex justify-content-end align-item-center flex-column gap-4">
                     <div class="product-icon">
                       <img
@@ -79,7 +79,7 @@ const Featuredsection = () => {
                 </div>
               </Carousel.Slide>
               <Carousel.Slide>
-                <div class="container">
+                <div class="container d-flex justify-content-center">
                   <div class="row product-box d-flex justify-content-end align-item-center flex-column gap-4">
                     <div class="product-icon">
                       <img
@@ -105,7 +105,7 @@ const Featuredsection = () => {
                 </div>
               </Carousel.Slide>
               <Carousel.Slide>
-                <div class="container">
+                <div class="container d-flex justify-content-center">
                   <div class="row product-box d-flex justify-content-end align-item-center flex-column gap-4">
                     <div class="product-icon">
                       <img

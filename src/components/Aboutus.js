@@ -1,9 +1,17 @@
 import React from 'react'
+import Navbar from './ui/Navbar';
+import Footer from './ui/Footer';
 
 const Aboutus = () => {
   return (
     <div>
-      About Us.
+      <Navbar/>
+      <div class="container-fluid bg-light">
+        <div class="container" style={{height:"50vh"}}>
+          <div class="display-4 text-center">Hero Section</div>
+        </div>
+      </div>
+      <Footer/>
     </div>
   )
 }

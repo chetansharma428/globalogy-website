@@ -8,6 +8,7 @@ import Featuredsection from './Featuredsection'
 import Ratings from './ui/Ratings'
 import Featurevideo from './ui/Featurevideo'
 import { FaqWithImage } from './ui/Faq'
+import Navbar from './ui/Navbar'
 
 const Homepage = () => {
   const data =[
@@ -35,6 +36,7 @@ const Homepage = () => {
   ]
   return (
     <div>
+      <Navbar />
       <Herosection data={data}/>
       <Ratings/>
       <Featuredsection/>

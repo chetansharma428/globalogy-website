@@ -3,8 +3,9 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Red+Hat+Display:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 /* // globalogy logo color pallet  */
 /* $kelly-green: #5CBA47ff;
@@ -14,15 +15,15 @@ $dark-spring-green: #217956ff; */
 :root {
   --background-color: #030a21;
   --background-color-dark: black;
-  --alert-background-light: #237B54;
+  --alert-background-light: #237b54;
   --alert-background-gradient-dark: #ff4928;
   --button-background-dark: #5cba47ff;
-  --button-background-light: #237B54;
+  --button-background-light: #237b54;
   --text-color-light: black;
   --text-color-dark: white;
   --button-hover-background: #b83720;
   --header-text-color: #27293b;
-  --button-hover-light: #237B54;
+  --button-hover-light: #237b54;
   --bg-dark: #030a21;
 }
 [data-mantine-color-scheme="light"] {
@@ -133,30 +134,30 @@ $dark-spring-green: #217956ff; */
   background: rgb(255,73,40);
 background: linear-gradient(180deg, rgba(255,73,40,1) 30%, rgba(40,62,255,1) 100%);
   } */
-  .alert {
-    background: #388087;
-    background: linear-gradient(180deg, rgba(56, 128, 135, 1) 0%, #3c0084 100%);
-    border-radius: 0;
-  }
-  
-  .btn {
-    background-color: var(--button-background-light);
-    border: none;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  }
-  .sign-in {
-    background-color: #388087;
-    color: white;
-  }
-  .sign-in.btn:hover {
-    background-color: navy;
-    color: white;
-  }
-  .header-bar {
-    background-color: var(--background-color);
-  }
+.alert {
+  background: #388087;
+  background: linear-gradient(180deg, rgba(56, 128, 135, 1) 0%, #3c0084 100%);
+  border-radius: 0;
+}
+
+.btn {
+  background-color: var(--button-background-light);
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.sign-in {
+  background-color: #388087;
+  color: white;
+}
+.sign-in.btn:hover {
+  background-color: navy;
+  color: white;
+}
+.header-bar {
+  background-color: var(--background-color);
+}
 .btn:hover {
   background-color: var(--button-hover-light);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -168,7 +169,7 @@ background: linear-gradient(180deg, rgba(255,73,40,1) 30%, rgba(40,62,255,1) 100
 .wherecanmove {
   color: black;
   grid-column-gap: 8px;
-  background-color: #237B54;
+  background-color: #237b54;
   color: white;
   border-radius: 12px;
   justify-content: center;
@@ -184,11 +185,18 @@ background: linear-gradient(180deg, rgba(255,73,40,1) 30%, rgba(40,62,255,1) 100
 .mid {
   padding: 3%;
   border-radius: 10px;
-   background-color: white;
-   height: 27rem;
+  background-color: white;
+  height: 27rem;
 }
 .badge {
-  background-color: #23c45c;
+  background-color: #23c45c ;
+    font-size: 14px;
+    /* width: 24px; */
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-radius: 50%; */
 }
 .tex {
   position: relative;
@@ -206,7 +214,6 @@ background: linear-gradient(180deg, rgba(255,73,40,1) 30%, rgba(40,62,255,1) 100
   width: 72px;
   height: 50px;
 }
-
 
 .sun svg {
   z-index: 1;
@@ -337,7 +344,7 @@ ul {
 
 .example-2 .icon-content a[data-social="twitter"] .filled,
 .example-2 .icon-content a[data-social="twitter"] ~ .tooltip {
-  background-color: #1877F2;
+  background-color: #1877f2;
 }
 .example-2 .icon-content a[data-social="instagram"] .filled,
 .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
@@ -396,7 +403,7 @@ ul {
 }
 .button-g {
   grid-column-gap: 8px;
-  background-color: #237B54;
+  background-color: #237b54;
   color: white;
   border-radius: 12px;
   justify-content: center;
@@ -411,90 +418,90 @@ ul {
 }
 .rating-box {
   z-index: 1;
-    grid-column-gap: 12px;
-    grid-row-gap: 16px;
-    border: 2px solid black;
-    background-color: #fff;
-    border-radius: 12px;
-    grid-template-rows: auto;
-    grid-auto-columns: 1fr;
-    align-items: center;
-    padding: 1rem 1.5rem;
-    display: grid;
-    position: relative;
+  grid-column-gap: 12px;
+  grid-row-gap: 16px;
+  border: 2px solid black;
+  background-color: #fff;
+  border-radius: 12px;
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  display: grid;
+  position: relative;
 }
 .pattern {
   background-color: white;
-/* background-image: radial-gradient(#444cf7 0.9px, #e5e5f7 0.9px); */
-background-size: 18px 18px;
-    padding: 5%;
+  /* background-image: radial-gradient(#444cf7 0.9px, #e5e5f7 0.9px); */
+  background-size: 18px 18px;
+  padding: 5%;
 }
 .product-box {
-    z-index: 1;
-    width: 250px;
-    max-width: 250px;
-    grid-row-gap: 20px;
-    box-shadow: 2px 2px 0 0 #fff, 3px 3px 0 1px black;
-    color: white;
-    background-color: #030a21;
-    border-radius: 1rem;
-    flex-direction: column;
-    padding: 2rem;
-    transition: all .3s;
-    display: flex;
-    position: relative;
-    height: 325px;
-    margin: 1rem;
+  z-index: 1;
+  width: 250px;
+  max-width: 250px;
+  grid-row-gap: 20px;
+  box-shadow: 2px 2px 0 0 #fff, 3px 3px 0 1px black;
+  color: white;
+  background-color: #030a21;
+  border-radius: 1rem;
+  flex-direction: column;
+  padding: 2rem;
+  transition: all 0.3s;
+  display: flex;
+  position: relative;
+  height: 350px;
+  margin: 1rem;
 }
 
 .product-box:hover {
   color: #37ed81; /* Change text color to green on hover */
   background-color: #021409;
-  .product-icon-master{
+  .product-icon-master {
     opacity: 0;
   }
-  .product-icon-hovermaster{
+  .product-icon-hovermaster {
     opacity: 1;
   }
 }
 /* .test{
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 } */
-.video-player{
+.video-player {
   height: auto;
   width: -webkit-fill-available;
   overflow: hidden;
   border-radius: 10px;
 }
-.product-icon-master{
-    z-index: 1;
-    opacity: 1;
-    /* height: 100px; */
-    object-fit: contain;
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
-    margin: 2rem;
-}
-.product-icon-hovermaster{
+.product-icon-master {
+  z-index: 1;
+  opacity: 1;
   /* height: 100px; */
-    z-index: 1;
-    opacity: 0;
-    /* height: 100px; */
-    object-fit: contain;
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
-    margin: 2rem;
+  object-fit: contain;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  margin: 2rem;
+}
+.product-icon-hovermaster {
+  /* height: 100px; */
+  z-index: 1;
+  opacity: 0;
+  /* height: 100px; */
+  object-fit: contain;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  margin: 2rem;
 }
 .selected::after {
-  content: '\2713'; /* Unicode character for tick mark */
+  content: "\2713"; /* Unicode character for tick mark */
   margin-left: 5px;
-  color: green; /* Color of the tick mark */
+  color: #008000; /* Color of the tick mark */
 }
 
 /* Transition effect */
@@ -511,57 +518,60 @@ label {
 .required {
   color: red;
 }
-.option-butn{
+.option-butn {
   border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: rgba(255, 255, 255, 0.6) 0px 0px 0px 1px inset;
-    color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: rgba(255, 255, 255, 0.6) 0px 0px 0px 1px inset;
+  color: rgb(255, 255, 255);
 }
-.mantine-Modal-content{
+.mantine-Modal-content {
   padding: 5%;
   background-image: url("./assests/images/bg_dark.jpeg");
   background-position: center top;
-    background-size: cover;
+  background-size: cover;
 }
-.mantine-Modal-header{
-  color:white;
-  padding:2%;
+.mantine-Modal-header {
+  color: white;
+  padding: 2%;
   position: relative;
-  .mantine-Modal-title{
+  .mantine-Modal-title {
     font-size: 1.5rem;
   }
 }
-.mantine-Drawer-content{
+.mantine-Drawer-content {
   background-image: url("./assests/images/bg_dark.jpeg");
   background-position: center top;
-    background-size: cover;
-    overflow: hidden;
-    .mantine-Drawer-title{
-      color:white;
-      font-family: "Pacifico", cursive;
-      font-size: 1.5rem;
-    }
+  background-size: cover;
+  overflow: hidden;
+  .mantine-Drawer-title {
+    color: white;
+    font-family: "Pacifico", cursive;
+    font-size: 1.5rem;
+  }
 }
-.mantine-Carousel-slide{
+.mantine-Carousel-slide {
   display: flex;
   justify-content: center;
 }
-.mantine-Carousel-indicators{
-  bottom: 0!important;
+.mantine-Carousel-indicators {
+  bottom: 0 !important;
 }
-.mantine-Tabs-tab:hover{
+.mantine-Carousel-controls {
+  padding: 0 !important;
+}
+.mantine-Tabs-tab:hover {
   color: black;
 }
-.stat-content{
+.stat-content {
   display: flex;
-    justify-content: center;
-    column-gap: 30px;
+  justify-content: center;
+  column-gap: 30px;
 }
 @media screen and (max-width: 767px) {
   .stat-content {
-      flex-direction: column;
-      display: flex;
-      row-gap: 10px;
+    flex-direction: column;
+    display: flex;
+    row-gap: 10px;
   }
 }
 .stat-bottom-content {
@@ -575,7 +585,7 @@ label {
   justify-items: center;
   display: flex;
 }
-.rating-box-bottom{
+.rating-box-bottom {
   z-index: 1;
   width: 297px;
   height: 200px;

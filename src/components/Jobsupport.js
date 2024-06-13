@@ -9,6 +9,7 @@ import Bottomform from './ui/Bottomform';
 import Testimonials from './ui/Testimonials';
 import Social from './ui/Social';
 import Support from './Support';
+import Navbar from './ui/Navbar';
 
 const Jobsupport = () => {
   const data =[
@@ -58,6 +59,7 @@ const Jobsupport = () => {
   ]
   return (
     <div>
+      <Navbar/>
       <Support data={data}/>
       <Verticalstepper data={data}/>
       <Services/>

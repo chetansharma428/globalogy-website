@@ -12,6 +12,7 @@ import {
   Tabs,
   Space,
 } from "@mantine/core";
+import "animate.css";
 import { IconArrowRight, IconArrowLeft } from '@tabler/icons-react';
 import classes from "./Navbar.module.css";
 import dubai from "../../assests/images/Dubai.png";
@@ -60,7 +61,7 @@ const Services = () => {
             <Carousel
               withIndicators
               slideSize={{ base: "100%", sm: "50%", md: "33.333333%" }}
-              slideGap={{ base: 0, sm: "md" }}
+              slideGap={{ base: 0, sm: "sm" }}
               loop
               align="start"
               nextControlIcon={<IconArrowRight />}
@@ -91,7 +92,7 @@ const Services = () => {
                     <Button
                       color="blue"
                       fullWidth
-                      mt="md"
+  2                  mt="md"
                       radius="md"
                       class="btn button-g fw-bold"
                     >
@@ -99,7 +100,8 @@ const Services = () => {
                     </Button>
                   </div>
                 </Card> */}
-                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                <a href="/masterclass">
+                <div class="card" style={{ width: "22rem", height:"fit-content" }}>
                   <img class="card-img-top" src={dubai} alt="Card image cap" />
                   <div class="card-body d-flex justify-content-center flex-column">
                     <div class="d-flex justify-content-between align-items-center ">
@@ -117,17 +119,18 @@ const Services = () => {
                         much more from the experts.
                       </p>
                       <div>
-                        <a href="#" class="btn button-g">
+                        <a href="/masterclass" class="btn button-g">
                           Go somewhere
                         </a>
                       </div>
                     </div>
                   </div>
                 </div>
+                </a>
               </Carousel.Slide>
               <Carousel.Slide>
                 {/* AUSTRALIA MASTERCLASS */}
-                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                <div class="card" style={{ width: "22rem", height:"fit-content" }}>
                   <img
                     class="card-img-top"
                     src={australia}
@@ -149,7 +152,7 @@ const Services = () => {
                         Lifestyle, and more!
                       </p>
                       <div>
-                        <a href="#" class="btn button-g">
+                        <a href="/masterclass" class="btn button-g">
                           Go somewhere
                         </a>
                       </div>
@@ -159,7 +162,7 @@ const Services = () => {
               </Carousel.Slide>
               <Carousel.Slide>
                 {/* Luxembourg Masterclass*/}
-                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                <div class="card" style={{ width: "22rem", height:"fit-content" }}>
                   <img
                     class="card-img-top"
                     src={Luxembourg}
@@ -181,7 +184,7 @@ const Services = () => {
                         France!
                       </p>
                       <div>
-                        <a href="#" class="btn button-g">
+                        <a href="/masterclass" class="btn button-g">
                           Go somewhere
                         </a>
                       </div>
@@ -191,7 +194,7 @@ const Services = () => {
               </Carousel.Slide>
               <Carousel.Slide>
                 {/* UK MASTERCLASS */}
-                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                <div class="card" style={{ width: "22rem", height:"fit-content" }}>
                   <img class="card-img-top" src={uk} alt="Card image cap" />
                   <div class="card-body d-flex justify-content-center flex-column">
                     <div class="d-flex justify-content-between align-items-center ">
@@ -206,7 +209,7 @@ const Services = () => {
                         in the United Kingdom.
                       </p>
                       <div>
-                        <a href="#" class="btn button-g">
+                        <a href="/masterclass" class="btn button-g">
                           Go somewhere
                         </a>
                       </div>
@@ -216,7 +219,7 @@ const Services = () => {
               </Carousel.Slide>
               <Carousel.Slide>
                 {/* Linkedin-1 */}
-                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                <div class="card" style={{ width: "22rem", height:"fit-content" }}>
                   <img class="card-img-top" src={lnkd} alt="Card image cap" />
                   <div class="card-body d-flex justify-content-center flex-column">
                     <div class="d-flex justify-content-between align-items-center ">
@@ -233,7 +236,7 @@ const Services = () => {
                         pitch, i.e., your LinkedIn?
                       </p>
                       <div>
-                      <a href="#" class="btn button-g ">
+                      <a href="/masterclass" class="btn button-g ">
                         Go somewhere
                       </a>
                       </div>
@@ -244,7 +247,7 @@ const Services = () => {
               </Carousel.Slide>
               <Carousel.Slide>
                 {/* NETHERLANDS */}
-                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                <div class="card" style={{ width: "22rem", height:"fit-content" }}>
                   <img
                     class="card-img-top"
                     src={netherlands}
@@ -266,7 +269,7 @@ const Services = () => {
                         opportunities in the Netherlands.
                       </p>
                       <div>
-                        <a href="#" class="btn button-g">
+                        <a href="/masterclass" class="btn button-g">
                           Go somewhere
                         </a>
                       </div>
@@ -276,7 +279,7 @@ const Services = () => {
               </Carousel.Slide>
               <Carousel.Slide>
                 {/* IRELAND */}
-                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                <div class="card" style={{ width: "22rem", height:"fit-content" }}>
                   <img
                     class="card-img-top"
                     src={ireland}
@@ -300,7 +303,7 @@ const Services = () => {
                         market and diverse industries, enroll NOW!
                       </p>
                       <div>
-                        <a href="#" class="btn button-g">
+                        <a href="/masterclass" class="btn button-g">
                           Go somewhere
                         </a>
                       </div>
@@ -310,7 +313,7 @@ const Services = () => {
               </Carousel.Slide>
               <Carousel.Slide>
                 {/* CANADA-1 */}
-                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                <div class="card" style={{ width: "22rem", height:"fit-content" }}>
                   <img class="card-img-top" src={canada} alt="Card image cap" />
                   <div class="card-body d-flex justify-content-center flex-column">
                     <div class="d-flex justify-content-between align-items-center ">
@@ -331,7 +334,7 @@ const Services = () => {
                         your immigration journey.
                       </p>
                       <div>
-                        <a href="#" class="btn button-g">
+                        <a href="/masterclass" class="btn button-g">
                           Go somewhere
                         </a>
                       </div>
@@ -341,7 +344,7 @@ const Services = () => {
               </Carousel.Slide>
               <Carousel.Slide>
                 {/* Linkedin-2 */}
-                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                <div class="card" style={{ width: "22rem", height:"fit-content" }}>
                   <img class="card-img-top" src={lnkd} alt="Card image cap" />
                   <div class="card-body d-flex justify-content-center flex-column">
                     <div class="d-flex justify-content-between align-items-center ">
@@ -358,7 +361,7 @@ const Services = () => {
                         pitch, i.e., your LinkedIn?
                       </p>
                       <div>
-                        <a href="#" class="btn button-g ">
+                        <a href="/masterclass" class="btn button-g ">
                           Go somewhere
                         </a>
                       </div>
@@ -368,7 +371,7 @@ const Services = () => {
               </Carousel.Slide>
               <Carousel.Slide>
                 {/* CANADA-2 */}
-                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                <div class="card" style={{ width: "22rem", height:"fit-content" }}>
                   <img class="card-img-top" src={canada} alt="Card image cap" />
                   <div class="card-body d-flex justify-content-center flex-column">
                     <div class="d-flex justify-content-between align-items-center ">
@@ -391,7 +394,7 @@ const Services = () => {
                         your immigration journey.
                       </p>
                       <div>
-                        <a href="#" class="btn button-g">
+                        <a href="/masterclass" class="btn button-g">
                           Go somewhere
                         </a>
                       </div>
@@ -401,7 +404,7 @@ const Services = () => {
               </Carousel.Slide>
               <Carousel.Slide>
                 {/* PROFILE BUILDING  */}
-                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                <div class="card" style={{ width: "22rem", height:"fit-content" }}>
                   <img
                     class="card-img-top"
                     src={profilebuilding}
@@ -427,7 +430,7 @@ const Services = () => {
                         land your dream job abroad.
                       </p>
                       <div>
-                        <a href="#" class="btn button-g">
+                        <a href="/masterclass" class="btn button-g">
                           Go somewhere
                         </a>
                       </div>
@@ -436,7 +439,7 @@ const Services = () => {
                 </div>
               </Carousel.Slide>
               <Carousel.Slide>
-                <div class="card" style={{ width: "24rem", height:"fit-content" }}>
+                <div class="card" style={{ width: "22rem", height:"fit-content" }}>
                   <img class="card-img-top" src={global} alt="Card image cap" />
                   <div class="card-body d-flex justify-content-center flex-column">
                     <div class="d-flex justify-content-between align-items-center ">
@@ -458,7 +461,7 @@ const Services = () => {
                         international career.
                       </p>
                       <div>
-                        <a href="#" class="btn button-g">
+                        <a href="/masterclass" class="btn button-g">
                           Go somewhere
                         </a>
                       </div>
@@ -534,7 +537,7 @@ const Services = () => {
                 src={timer}
                 class="img-fluid rounded-top"
                 alt=""
-                style={{width:"128px", height:"128px"}}
+                style={{width:"122px", height:"128px"}}
               />
               <div class="display-3">Coming soon!</div>
             </div>

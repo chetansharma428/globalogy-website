@@ -64,13 +64,13 @@ export function FaqWithImage() {
                   </Accordion.Control>
                   <Accordion.Panel>{answer4}</Accordion.Panel>
                 </Accordion.Item>
-                <Accordion.Item className={classes.item} value="credit-card">
+                <Accordion.Item className={classes.item} value="credit">
                   <Accordion.Control>
                   Do Masterclasses take place every month?
                   </Accordion.Control>
                   <Accordion.Panel>{answer5}</Accordion.Panel>
                 </Accordion.Item>
-                <Accordion.Item className={classes.item} value="credit-card">
+                <Accordion.Item className={classes.item} value="debit-card">
                   <Accordion.Control>
                   Can I consult with Nidhi Nagori?
                   </Accordion.Control>

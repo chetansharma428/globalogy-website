@@ -12,7 +12,6 @@ import { Notifications } from '@mantine/notifications';
 
 import "./index.css";
 import Homepage from "./components/Homepage";
-import Navbar from "./components/ui/Navbar";
 import Facingissue from "./components/ui/Facingissue";
 import Contact from "./components/ui/Contact";
 import Aboutus from "./components/Aboutus";
@@ -22,13 +21,15 @@ import Visasupport from "./components/Visasupport";
 import Footer from "./components/ui/Footer";
 import '@mantine/carousel/styles.css';
 import Campusambasador from "./components/Campusambasador";
+import Course from "./components/Course";
 
 
 const theme = createTheme({
   // fontFamily: "Inter, sans-serif",
   // fontFamily: "Arimo, sans-serif",
   // fontFamily: "Poppins, sans-serif",
-  fontFamily: "Lato, sans-serif",
+  // fontFamily: "Lato, sans-serif",
+  fontFamily: "Plus Jakarta Sans, sans-serif",
 });
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
     element: <Courses />,
   },
   {
+    path: "/masterclass",
+    element: <Course />,
+  },
+  {
     path: "/campusambasador",
     element: <Campusambasador />,
   },
@@ -66,7 +71,6 @@ root.render(
   <MantineProvider theme={theme}>
     <Notifications position="top-right" zIndex={100000}/>
       <React.StrictMode>
-        <Navbar />
         <RouterProvider router={router} />
         {/* <Facingissue /> */}
         <Footer/>
