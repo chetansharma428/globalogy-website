@@ -47,13 +47,13 @@ const mockdata = [
     icon:  IconBook,
     title: "Come To Canada (C2C)",
     description: "George Brown College-Study Program",
-    link: "/comecanada",
+    link: "/cometocanada",
   },
   {
     icon: IconChevronDown,
     title: "Direct Job Placement (DJP)",
     description: "Blue Collar Jobs",
-    link: "/courses",
+    link: "/directjobplacement",
   },
 ];
 

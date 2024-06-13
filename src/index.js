@@ -22,6 +22,8 @@ import Footer from "./components/ui/Footer";
 import '@mantine/carousel/styles.css';
 import Campusambasador from "./components/Campusambasador";
 import Course from "./components/Course";
+import Cometocanada from "./components/Cometocanada";
+import Directjobplacement from "./components/Directjobplacement";
 
 
 const theme = createTheme({
@@ -63,6 +65,14 @@ const router = createBrowserRouter([
   {
     path: "/campusambasador",
     element: <Campusambasador />,
+  },
+  {
+    path: "/cometocanada",
+    element: <Cometocanada />,
+  },
+  {
+    path: "/directjobplacement",
+    element: <Directjobplacement />,
   },
 ]);
 
