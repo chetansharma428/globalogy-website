@@ -17,7 +17,7 @@ const answer6 =
 
 export function FaqWithImage() {
   return (
-    <div class="container-fluid bg-light py-4">
+    <div class="container-fluid bg-light" style={{paddingBottom:"4rem"}}>
       <div className={classes.wrapper}>
         <Container size="lg">
           <Grid id="faq-grid" gutter={50}>

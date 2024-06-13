@@ -910,7 +910,7 @@ const Course = () => {
             </div>
           </div>
         </div>
-        <div class="faq" style={{paddingBottom:"3rem"}}>
+        <div class="faq">
           <div class="col">
             <div class="heading-wrapper">
               <div class="d-flex justify-content-center align-items-center flex-column">
