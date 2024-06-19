@@ -183,7 +183,7 @@ const Navbar = () => {
                 >
                   Masterclass
                 </a>
-                <div id="navEle">
+                {/* <div id="navEle">
                   <button
                     className={classes.link}
                     onClick={() => {
@@ -199,7 +199,7 @@ const Navbar = () => {
                   >
                     Testimonials
                   </button>
-                </div>
+                </div> */}
                 <a
                   href="https://globalogy.in/blog/"
                   className={classes.link}
@@ -299,7 +299,7 @@ const Navbar = () => {
                 >
                   Masterclass
                 </a>
-              <div>
+              {/* <div>
                 <button
                   className={classes.link}
                   onClick={() => {
@@ -312,7 +312,7 @@ const Navbar = () => {
                 >
                   Testimonials
                 </button>
-              </div>
+              </div> */}
               <a href="https://globalogy.in/blog/" className={classes.link}>
                 Blog
               </a>
