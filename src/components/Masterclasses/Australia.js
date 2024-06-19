@@ -1,5 +1,6 @@
 import React from 'react'
 import Course from '../Course'
+import Footer from '../ui/Footer';
 
 const Australia = () => {
   const data =[{
@@ -62,10 +63,16 @@ const Australia = () => {
     answer5:"Absolutely! There will be a dedicated Q&A session during the live masterclass where you can submit your questions through the chat box. The mentors will address each question to ensure you gain maximum value.",
     price:"",
     msrp:"",
+  }];
+  const FooterData = [{
+    header1:"Ready to make your move?",
+    header2:"Don't let the dream of an international career remain just a dream. Take the first step towards a fulfilling and exciting professional journey on the global stage.",
+    button1:"Get Started Now!",
   }]
   return (
     <div>
       <Course data= {data}/>
+      <Footer FooterData={FooterData}/>
     </div>
   )
 }

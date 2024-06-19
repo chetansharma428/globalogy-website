@@ -136,7 +136,7 @@ root.render(
       <React.StrictMode>
         <RouterProvider router={router} />
         {/* <Facingissue /> */}
-        <Footer/>
+        {/* <Footer/> */}
       </React.StrictMode>
   </MantineProvider>
 );

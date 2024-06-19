@@ -24,7 +24,7 @@ const Testimonials = () => {
           padding: "70px 0px",
           color: "black",
           background: "linear-gradient(151deg, rgb(5, 13, 34) 60%, rgb(35, 123, 84) 100%)",
-          paddingBottom: "100px"
+          paddingBottom: "90px"
         }}
         id="testimonialID"
       > 

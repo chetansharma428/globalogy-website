@@ -9,6 +9,7 @@ import Ratings from './ui/Ratings'
 import Featurevideo from './ui/Featurevideo'
 import { FaqWithImage } from './ui/Faq'
 import Navbar from './ui/Navbar'
+import Footer from './ui/Footer'
 
 const Homepage = () => {
   const data =[
@@ -34,6 +35,11 @@ const Homepage = () => {
       linkedin:require("../assests/images/lknd.png"),
     },
   ]
+  const FooterData = [{
+    header1:"Ready to make your move?",
+    header2:"Don't let the dream of an international career remain just a dream. Take the first step towards a fulfilling and exciting professional journey on the global stage.",
+    button1:"Get Started Now!",
+  }];
   return (
     <div>
       <Navbar />
@@ -46,6 +52,7 @@ const Homepage = () => {
       <Featurevideo/>
       <Testimonials/>
       <FaqWithImage/>
+      <Footer FooterData={FooterData}/>
     </div>
   )
 }

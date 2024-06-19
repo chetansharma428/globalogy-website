@@ -25,7 +25,7 @@ const MasterclassTestimonials = () => {
             <Carousel.Slide>
               <div
                 class="row card d-flex justify-content-center align-items-center  flex-column gap-2 m-2"
-                style={{ width: "20rem", height: "25rem" }}
+                style={{ width: "24rem", height: "21rem" }}
               >
                 <div class="d-flex justify-content-center align-items-center gap-2 py-2">
                   <img src={profilepic} class="img-fluid rounded-top" alt="" />
@@ -45,7 +45,7 @@ const MasterclassTestimonials = () => {
             <Carousel.Slide>
               <div
                 class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2"
-                style={{ width: "20rem", height: "25rem" }}
+                style={{ width: "24rem", height: "21rem" }}
               >
                 <div class="d-flex justify-content-center align-items-center g-2 py-2 gap-2">
                   <img src={profilepic} class="img-fluid rounded-top" alt="" />
@@ -63,7 +63,7 @@ const MasterclassTestimonials = () => {
             <Carousel.Slide>
               <div
                 class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2"
-                style={{ width: "20rem", height: "25rem" }}
+                style={{ width: "24rem", height: "21rem" }}
               >
                 <div class="d-flex justify-content-center align-items-center g-2 py-2 gap-2">
                   <img src={profilepic} class="img-fluid rounded-top" alt="" />
@@ -82,7 +82,7 @@ const MasterclassTestimonials = () => {
             <Carousel.Slide>
               <div
                 class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2"
-                style={{ width: "20rem", height: "25rem" }}
+                style={{ width: "24rem", height: "21rem" }}
               >
                 <div class="d-flex justify-content-center align-items-center g-2 py-2 gap-2">
                   <img src={profilepic} class="img-fluid rounded-top" alt="" />
@@ -100,7 +100,7 @@ const MasterclassTestimonials = () => {
             <Carousel.Slide>
               <div
                 class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2"
-                style={{ width: "20rem", height: "25rem" }}
+                style={{ width: "24rem", height: "21rem" }}
               >
                 <div class="d-flex justify-content-center align-items-center g-2 py-2 gap-2">
                   <img src={profilepic} class="img-fluid rounded-top" alt="" />
@@ -120,7 +120,7 @@ const MasterclassTestimonials = () => {
             <Carousel.Slide>
               <div
                 class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2"
-                style={{ width: "20rem", height: "25rem" }}
+                style={{ width: "24rem", height: "21rem" }}
               >
                 <div class="col d-flex justify-content-center align-items-center g-2 gap-2 py-2">
                   <img src={profilepic} class="img-fluid rounded-top" alt="" />
@@ -141,7 +141,7 @@ const MasterclassTestimonials = () => {
             <Carousel.Slide>
               <div
                 class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2"
-                style={{ width: "20rem", height: "25rem" }}
+                style={{ width: "24rem", height: "21rem" }}
               >
                 <div class="d-flex justify-content-center align-items-center g-2 py-2 gap-2">
                   <img src={profilepic} class="img-fluid rounded-top" alt="" />
@@ -163,7 +163,7 @@ const MasterclassTestimonials = () => {
             <Carousel.Slide>
               <div
                 class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2"
-                style={{ width: "20rem", height: "25rem" }}
+                style={{ width: "24rem", height: "21rem" }}
               >
                 <div class="d-flex justify-content-center align-items-center g-2 py-2 gap-2">
                   <img src={profilepic} class="img-fluid rounded-top" alt="" />
@@ -182,7 +182,7 @@ const MasterclassTestimonials = () => {
             <Carousel.Slide>
               <div
                 class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2"
-                style={{ width: "20rem", height: "25rem" }}
+                style={{ width: "24rem", height: "21rem" }}
               >
                 <div class="d-flex justify-content-center align-items-center g-2 py-2 gap-2">
                   <img src={profilepic} class="img-fluid rounded-top" alt="" />
@@ -205,7 +205,7 @@ const MasterclassTestimonials = () => {
             <Carousel.Slide>
               <div
                 class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2"
-                style={{ width: "20rem", height: "25rem" }}
+                style={{ width: "24rem", height: "21rem" }}
               >
                 <div class="d-flex justify-content-center align-items-center g-2 py-2 gap-2">
                   <img src={profilepic} class="img-fluid rounded-top" alt="" />
@@ -225,7 +225,7 @@ const MasterclassTestimonials = () => {
             <Carousel.Slide>
               <div
                 class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2"
-                style={{ width: "20rem", height: "25rem" }}
+                style={{ width: "24rem", height: "21rem" }}
               >
                 <div class="d-flex justify-content-center align-items-center g-2 py-2 gap-2">
                   <img src={profilepic} class="img-fluid rounded-top" alt="" />
@@ -245,7 +245,7 @@ const MasterclassTestimonials = () => {
             <Carousel.Slide>
               <div
                 class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2"
-                style={{ width: "20rem", height: "25rem" }}
+                style={{ width: "24rem", height: "21rem" }}
               >
                 <div class="d-flex justify-content-center align-items-center g-2 py-2 gap-2">
                   <img src={profilepic} class="img-fluid rounded-top" alt="" />
@@ -264,7 +264,7 @@ const MasterclassTestimonials = () => {
             <Carousel.Slide>
               <div
                 class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2"
-                style={{ width: "20rem", height: "25rem" }}
+                style={{ width: "24rem", height: "21rem" }}
               >
                 <div class="d-flex justify-content-center align-items-center g-2 py-2 gap-2">
                   <img src={profilepic} class="img-fluid rounded-top" alt="" />
@@ -284,7 +284,7 @@ const MasterclassTestimonials = () => {
             <Carousel.Slide>
               <div
                 class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2"
-                style={{ width: "20rem", height: "25rem" }}
+                style={{ width: "24rem", height: "21rem" }}
               >
                 <div class="d-flex justify-content-center align-items-center g-2 py-2 gap-2">
                   <img src={profilepic} class="img-fluid rounded-top" alt="" />
@@ -302,7 +302,7 @@ const MasterclassTestimonials = () => {
             {/* <Carousel.Slide>
               <div
                 class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2"
-                style={{ width: "20rem", height: "25rem" }}
+                style={{ width: "24rem", height: "21rem" }}
               >
                 <div class="d-flex justify-content-center align-items-center g-2 py-2 gap-2">
                   <img src={profilepic} class="img-fluid rounded-top" alt="" />
@@ -497,7 +497,7 @@ const MasterclassTestimonials = () => {
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                      <div class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2" style={{ width: "20rem", height:"25rem" }}>
+                      <div class="row card d-flex justify-content-center align-items-center flex-column gap-2 m-2" style={{ width: "24rem", height:"251em" }}>
                         <div class="col d-flex justify-content-center align-items-center g-2 gap-1">
                           <img
                             src={profilepic}

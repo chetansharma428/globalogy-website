@@ -5,7 +5,7 @@ import image from "../assests/images/Faq_image.svg";
 import classes from "./ui/Navbar.module.css";
 import "react-vertical-timeline-component/style.min.css";
 import border from "../assests/images/border-line.png";
-import dp from "../assests/images/banner-with-pic-removebg-preview 1.png";
+import dp from "../assests/images/Untitled design1.png";
 import pic from "../assests/images/user 1.png";
 import star from "../assests/images/star-rating-removebg-preview.png";
 import { Progress } from "@mantine/core";
@@ -23,6 +23,7 @@ import demodp from "../assests/images/banner-with-pic 1.png";
 import ReactPlayer from "react-player/youtube";
 import "./course.css";
 import MasterclassTestimonials from "./ui/MasterclassTestimonials";
+import Footer from "./ui/Footer";
 const Course = (props) => {
   const{
     header1,
@@ -449,14 +450,14 @@ const Course = (props) => {
         <div
           ref={(el) => (popUpRefs.current[3] = el)}
           class="money-banner pop-up"
-          style={{ paddingBottom: "2rem" }}
+          style={{ paddingBottom: "5rem", paddingTop:"6rem", backgroundColor:"rgb(235, 241, 255)" }}
         >
           <div class="container-fluid">
             <div class="container-xl">
               <div class="row justify-content-center align-items-center g-2 flex-column">
                 <div class="col">
                   <div class="heading-wrapper">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
+                    <div class="d-flex justify-content-center align-items-center flex-column mb-4">
                       <div class="h4 text-muted fw-bold text-center">
                         {header9}
                       </div>
@@ -914,7 +915,7 @@ const Course = (props) => {
                     ref={(el) => (popUpRefs.current[12] = el)}
                     class="heading-wrapper pop-up"
                   >
-                    <div class="d-flex justify-content-center align-items-center flex-column">
+                    {/* <div class="d-flex justify-content-center align-items-center flex-column">
                       <div class="display-5 fw-bold text-center">{header21}</div>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -928,7 +929,7 @@ const Course = (props) => {
                           fill="#ffc107"
                         />
                       </svg>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div
@@ -987,7 +988,7 @@ const Course = (props) => {
         <div class="faq">
           <div class="col">
             <div class="heading-wrapper">
-              <div class="d-flex justify-content-center align-items-center flex-column">
+              <div class="d-flex justify-content-center align-items-center flex-column py-5">
                 <div
                   ref={(el) => (popUpRefs.current[14] = el)}
                   class="display-5 fw-bold text-center pop-up"

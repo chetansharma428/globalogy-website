@@ -1,8 +1,14 @@
 import React from "react";
 import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
 import Navbar from "./ui/Navbar";
+import Footer from "./ui/Footer";
 
 const Courses = () => {
+  const FooterData = [{
+    header1:"Ready to make your move?",
+    header2:"Don't let the dream of an international career remain just a dream. Take the first step towards a fulfilling and exciting professional journey on the global stage.",
+    button1:"Get Started Now!",
+  }];
   return (
     <div>
       <Navbar />
@@ -486,6 +492,7 @@ const Courses = () => {
           </div>
         </div>
       </div>
+      <Footer FooterData={FooterData}/>
     </div>
   );
 };

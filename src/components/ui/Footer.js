@@ -2,7 +2,12 @@ import React from "react";
 
 import m_icon from "../../assests/images/mail-icon.png";
 import fb from "../../assests/images/icons8-facebook.svg";
-const Footer = () => {
+const Footer = (props) => {
+  const {
+    header1,
+    header2,
+    button1
+  } = props.FooterData[0];
   return (
     <div>
       <div class="container-fluid bg-dark ">
@@ -11,17 +16,13 @@ const Footer = () => {
             <div class="row d-flex justify-content-center align-items-center g-2">
               <div class="col d-flex justify-content-center align-items-center flex-column gap-4 mb-2">
                 <div class="h1 fw-bold text-light text-center w-75 mb-2">
-                  Ready to make your move?
+                  {header1}
                 </div>
                 <div class="h5 text-light text-center w-75 mb-2">
-                  Dreaming of a life abroad but not sure where to start or
-                  overwhelmed by the process? We can help! Share your details &
-                  our team of expert consultants will evaluate & share
-                  personalised insights to guide you towards your dream
-                  destination. Get Matched with Your Dream Country!
+                  {header2}
                 </div>
                 <div class="col-5 d-flex justify-content-center align-items-center">
-                  <button class="btn wherecanmove text-light h5 p-3 fw-bold">Want to Move Abroad?
+                  <button class="btn wherecanmove text-light h5 p-3 fw-bold">{button1}
                   <div class="glare"></div>
                   </button>
                   

@@ -1,5 +1,6 @@
 import React from 'react'
 import Course from '../Course'
+import Footer from '../ui/Footer'
 
 const Canada = () => {
   const data =[{
@@ -46,7 +47,7 @@ const Canada = () => {
     card3img:require("../../assests/images/card1.webp"),
     card4img:require("../../assests/images/card1.webp"),
     header21:"Hi, This is Nidhi Nagori",
-    header22:"Exclusive Bonuses",
+    header22:"Exclusive Bonus",
     subheader12:"Free Bonuses worth INR 20K will be revealed during the Masterclass to jumpstart your Canada move!",
     subheader13:"(Get course resources, resume template, list of 200+ recruiting agencies & much more!)",
     header23:"FAQs",
@@ -63,9 +64,15 @@ const Canada = () => {
     price:"Free",
     msrp:""
   }]
+  const FooterData = [{
+    header1:"Ready to make your move?",
+    header2:"Don't let the dream of an international career remain just a dream. Take the first step towards a fulfilling and exciting professional journey on the global stage.",
+    button1:"Get Started Now!",
+  }]
   return (
     <div>
       <Course data= {data}/>
+      <Footer FooterData={FooterData}/>
     </div>
   )
 }

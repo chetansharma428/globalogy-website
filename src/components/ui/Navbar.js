@@ -293,7 +293,7 @@ const Navbar = () => {
               </UnstyledButton>
               <Collapse in={linksOpened}>{links}</Collapse>
               <a
-                  href="/contact"
+                  href="/courses"
                   className={classes.link}
                   id="navEle"
                 >
