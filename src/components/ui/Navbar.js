@@ -97,7 +97,7 @@ const Navbar = () => {
           class=" alert-dismissible fade show m-0 border-0 text-center text-light"
           role="alert"
         >
-          <strong>Habibi, Come to Dubai! </strong> Explore our latest Masterclass.{" "}
+          <strong>Unlock the Great White North: </strong> Your Guide to Canada{" "}
           <span class="">
             <button class="check btn button-g fw-bold">
               {" "}
@@ -162,7 +162,6 @@ const Navbar = () => {
                       </Center>
                     </a>
                   </HoverCard.Target>
-
                   <HoverCard.Dropdown
                     style={{ overflow: "hidden", zIndex: "99999" }}
                   >
@@ -183,13 +182,6 @@ const Navbar = () => {
                   id="navEle"
                 >
                   Masterclass
-                </a>
-                <a
-                  href="/campusambasador"
-                  className={classes.link}
-                  id="navEle"
-                >
-                  Campus Ambasador
                 </a>
                 <div id="navEle">
                   <button
@@ -214,9 +206,6 @@ const Navbar = () => {
                   id="navEle"
                 >
                   Blog
-                </a>
-                <a href="/contact" className={classes.link} id="navEle">
-                  Contact
                 </a>
                 <a href="/contact" className={classes.link} id="navEle">
                   About
@@ -310,13 +299,6 @@ const Navbar = () => {
                 >
                   Masterclass
                 </a>
-                <a
-                  href=""
-                  className={classes.link}
-                  id="navEle"
-                >
-                  Campus Ambasador
-                </a>
               <div>
                 <button
                   className={classes.link}
@@ -334,10 +316,7 @@ const Navbar = () => {
               <a href="https://globalogy.in/blog/" className={classes.link}>
                 Blog
               </a>
-              <a href="/contact">
-                <button className={classes.link}>Contact</button>
-              </a>
-              <a href="/contact">
+              <a href="/about">
                 <button className={classes.link}>About</button>
               </a>
               <Divider my="sm" />

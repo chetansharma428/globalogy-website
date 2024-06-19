@@ -1,15 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
 import { motion, useAnimation, useScroll, useSpring } from "framer-motion";
+import { Image, Accordion, Grid, Container, Title } from "@mantine/core";
+import image from "../assests/images/Faq_image.svg";
+import classes from "./ui/Navbar.module.css";
 import "react-vertical-timeline-component/style.min.css";
 import border from "../assests/images/border-line.png";
 import dp from "../assests/images/banner-with-pic-removebg-preview 1.png";
 import pic from "../assests/images/user 1.png";
 import star from "../assests/images/star-rating-removebg-preview.png";
-import { Progress, Text } from "@mantine/core";
+import { Progress } from "@mantine/core";
 import reading from "../assests/images/reading.png";
 import travel from "../assests/images/travel.png";
 import resident from "../assests/images/resident.png";
@@ -17,14 +16,75 @@ import confused from "../assests/images/confused.png";
 import card1 from "../assests/images/card1.webp";
 import card2 from "../assests/images/card2.webp";
 import card3 from "../assests/images/card3.webp";
-import Sliders from "./ui/Sliders";
 import About from "./ui/About";
 import Founder from "./ui/Founder";
 import { FaqWithImage } from "./ui/Faq";
 import demodp from "../assests/images/banner-with-pic 1.png";
 import ReactPlayer from "react-player/youtube";
-import './course.css';
-const Course = () => {
+import "./course.css";
+import MasterclassTestimonials from "./ui/MasterclassTestimonials";
+const Course = (props) => {
+  const{
+    header1,
+    header2,
+    header3,
+    header4,
+    time,
+    hours,
+    Enroll_link,
+    button1,
+    header5,
+    header6,
+    subheader1,
+    header7,
+    subheader2,
+    header8,
+    subheader3,
+    header9,
+    header10,
+    header11,
+    subheader4,
+    header12,
+    subheader5,
+    header13,
+    subheader6,
+    header14,
+    subheader7,
+    button2,
+    header15,
+    ytlink,
+    header16,
+    header17,
+    subheader8,
+    header18,
+    subheader9,
+    header19,
+    subheader10,
+    header20,
+    subheader11,
+    card1img,
+    card2img,
+    card3img,
+    card4img,
+    header21,
+    header22,
+    subheader12,
+    subheader13,
+    header23,
+    question1,
+    answer1,
+    question2,
+    answer2,
+    question3,
+    answer3,
+    question4,
+    answer4,
+    question5,
+    answer5,
+    price,
+    msrp,
+    date,
+  } = props.data[0];
   const initialDate = new Date("2023-07-28"); // Setting the initial date
   const initialPercentage = 78.5; // Setting the initial percentage
 
@@ -59,9 +119,6 @@ const Course = () => {
     // Update the state and store the new percentage in localStorage
   }, []); // Empty dependency array ensures this runs only on mount (initial load)
 
-  // const embedHtml = `
-  //   <iframe class="embedly-embed" src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FJ-DHPt8HU-4%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DJ-DHPt8HU-4&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FJ-DHPt8HU-4%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube" width="940" height="528" scrolling="no" title="YouTube embed" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="true"></iframe>
-  // `;
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlayButtonClick = () => {
@@ -71,47 +128,6 @@ const Course = () => {
   const closeModal = () => {
     setIsPlaying(false);
   };
-  // const useScrollHeight = (sectionId) => {
-  //   const [height, setHeight] = useState('0%');
-
-  //   useEffect(() => {
-  //     const handleScroll = () => {
-  //       const section = document.getElementById(sectionId);
-
-  //       if (section) {
-  //         const sectionHeight = section.scrollHeight;
-  //         const windowHeight = window.innerHeight;
-  //         const scrollPosition = window.scrollY;
-  //         const sectionTop = section.offsetTop;
-  //         const sectionBottom = sectionTop + sectionHeight;
-
-  //         let percentScrolled;
-
-  //         // Ensure the section is within the viewport
-  //         if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom - windowHeight) {
-  //           const maxScroll = sectionHeight - windowHeight;
-  //           const scrollWithinSection = scrollPosition - sectionTop;
-  //           percentScrolled = (scrollWithinSection / maxScroll) * 100;
-  //           console.log(percentScrolled);
-  //         } else if (scrollPosition < sectionTop) {
-  //           percentScrolled = 0;
-  //         } else if (scrollPosition > sectionBottom - windowHeight) {
-  //           percentScrolled = 100;
-  //         }
-
-  //         setHeight(`${percentScrolled}%`);
-  //       }
-  //     };
-
-  //     window.addEventListener('scroll', handleScroll);
-  //     return () => {
-  //       window.removeEventListener('scroll', handleScroll);
-  //     };
-  //   }, [sectionId]);
-
-  //   return height;
-  // };
-  // const height = useScrollHeight('scroll-section');
 
   const useScrollHeight = (sectionId) => {
     const { scrollY } = useScroll();
@@ -155,38 +171,68 @@ const Course = () => {
     return controls;
   };
   const controls = useScrollHeight("scroll-section");
+  const fadeInRefs = useRef([]);
+  const popUpRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    fadeInRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    popUpRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      fadeInRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+      popUpRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
   return (
     <div>
       <div class="container-fluid bg-light text-dark p-0">
-        <div class="hero-section">
+        <div class="hero-section ">
           <div class="container">
             <div class="row d-flex justify-content-center align-items-center g-2">
-              <div class="col-lg-7 col-sm-12 d-flex gap-4 flex-column hero-content">
+              <div
+                ref={(el) => (popUpRefs.current[0] = el)}
+                class="col-lg-7 col-sm-12 d-flex gap-4 flex-column hero-content pop-up"
+              >
                 <div class="display-4" style={{ fontWeight: "800" }}>
-                  HABIBI, COME TO
+                  {header1}
                 </div>
                 <div
                   class="display-4"
                   style={{ fontWeight: "800", color: "#237b54" }}
                 >
                   {" "}
-                  DUBAI! 🏝️
+                  {header2}
                 </div>
                 <div class="subheader">
                   <div class="h5 fw-bold">with Nidhi Nagori</div>
                 </div>
-                <div class="h5">
-                  In a comprehensive{" "}
-                  <span class="fw-bold">Masterclass on Dubai</span>, unlock the
-                  secrets of building a global career in the City of Gold. Learn
-                  about immigration, visa sponsorship, job market scenarios, job
-                  hunting strategies, insider tips, and much more from the
-                  experts.
-                </div>
+                <div class="h5">{header4}</div>
                 <div class="col d-flex justify-content-center align-items-between flex-column">
                   <img src={border} class="img-fluid rounded-top" alt="" />
                   <div class="hero-capsule d-flex flex-row justify-content-start align-items-center gap-4 py-4">
-                    <div class="capsule d-flex justify-content-center align-items-center flex-row gap-4">
+                    {/* <div class="capsule d-flex justify-content-center align-items-center flex-row gap-4">
                       <svg
                         width="21"
                         height="24"
@@ -201,11 +247,9 @@ const Course = () => {
                         ></path>
                       </svg>
                       <div class="capsule-text">
-                        <div class="h5 fw-bold text-center">
-                          05th June, 3:30 PM
-                        </div>
+                        <div class="h5 fw-bold text-center">{time}</div>
                       </div>
-                    </div>
+                    </div> */}
                     <div class="capsule d-flex justify-content-center align-items-center flex-row gap-4">
                       <svg
                         width="25"
@@ -221,7 +265,7 @@ const Course = () => {
                         ></path>
                       </svg>
                       <div class="capsule-text">
-                        <div class="h5 fw-bold text-center">2 Hours</div>
+                        <div class="h5 fw-bold text-center m-0" >{hours}</div>
                       </div>
                     </div>
                   </div>
@@ -229,8 +273,11 @@ const Course = () => {
                 </div>
                 <div class="col">
                   <div class="hero-button-wrapper">
-                    <a class="hero-button d-flex justify-content-center align-items-center p-2">
-                      <span class="h4 m-2 fw-bold text-light">ENROLL NOW</span>
+                    <a
+                      href={Enroll_link}
+                      class="hero-button d-flex justify-content-center align-items-center p-2"
+                    >
+                      <span class="h4 m-2 fw-bold text-light">{button1}</span>
                     </a>
                     <div className="progress-bar">
                       <Progress.Root size="xl" radius="lg">
@@ -264,14 +311,17 @@ const Course = () => {
         </div>
         <div class="ratings">
           <div class="container-fluid " style={{ backgroundColor: "#ebf1ff" }}>
-            <div class="banner-small">
+            <div
+              ref={(el) => (popUpRefs.current[1] = el)}
+              class="banner-small pop-up"
+            >
               <div class="container-xl">
                 <div class="banner-small-content">
                   <div class="row justify-content-center align-items-center g-2">
                     <div class="col-lg-4 col-sm-12">
                       <div class="banner-small-heading ">
                         <span class="display-5 fw-bold text-center">
-                          What’s In It For You?
+                          {header5}
                         </span>
                       </div>
                     </div>
@@ -290,11 +340,11 @@ const Course = () => {
                                 fontFamily: "Poppins, sans-serif",
                               }}
                             >
-                              1800+
+                              {header6}
                             </div>
                           </div>
                           <div className="banner-small-subheading h5">
-                            Attendees
+                            {subheader1}
                           </div>
                           <div className="d-flex justify-content-center align-items-center">
                             <img
@@ -314,11 +364,11 @@ const Course = () => {
                                 fontFamily: "Poppins, sans-serif",
                               }}
                             >
-                              4.6/5
+                              {header7}
                             </div>
                           </div>
                           <div className="banner-small-subheading h5">
-                            Avg Ratings
+                            {subheader2}
                           </div>
                           <div className="d-flex justify-content-center align-items-center">
                             <img
@@ -338,8 +388,11 @@ const Course = () => {
                                 fontFamily: "Poppins, sans-serif",
                               }}
                             >
-                              5 Proprietory Financial Tools
+                              {header8}
                             </div>
+                          </div>
+                          <div className="banner-small-subheading h5">
+                            {subheader3}
                           </div>
                           <div className="d-flex justify-content-center align-items-center">
                             <img
@@ -364,7 +417,13 @@ const Course = () => {
                 <div class="col">
                   <div class="heading-wrapper">
                     <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="display-5 fw-bold"> Read Reviews</div>
+                      <div
+                        ref={(el) => (popUpRefs.current[2] = el)}
+                        class="display-5 fw-bold pop-up"
+                      >
+                        {" "}
+                        Read Past Reviews
+                      </div>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="301"
@@ -381,13 +440,17 @@ const Course = () => {
                   </div>
                 </div>
                 <div class="col">
-                  <Sliders />
+                  <MasterclassTestimonials />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="money-banner" style={{paddingBottom:"2rem"}}>
+        <div
+          ref={(el) => (popUpRefs.current[3] = el)}
+          class="money-banner pop-up"
+          style={{ paddingBottom: "2rem" }}
+        >
           <div class="container-fluid">
             <div class="container-xl">
               <div class="row justify-content-center align-items-center g-2 flex-column">
@@ -395,10 +458,10 @@ const Course = () => {
                   <div class="heading-wrapper">
                     <div class="d-flex justify-content-center align-items-center flex-column">
                       <div class="h4 text-muted fw-bold text-center">
-                        Do you struggle with unlocking the
+                        {header9}
                       </div>
-                      <div class="display-5 fw-bold text-center">
-                        True potential of your hard earned money
+                      <div class="display-6 fw-bold text-center">
+                        {header10}
                       </div>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -427,14 +490,8 @@ const Course = () => {
                             style={{ width: "64px" }}
                           />
                           <div className="text-content">
-                            <div className="title h4 fw-bold">
-                              Students or a Working Professionals
-                            </div>
-                            <p className="description">
-                              If you're considering relocating to Dubai but
-                              uncertain about the country's conditions, this
-                              masterclass is for you.
-                            </p>
+                            <div className="title h4 fw-bold">{header11}</div>
+                            <p className="description">{subheader4}</p>
                           </div>
                         </div>
                       </div>
@@ -449,15 +506,8 @@ const Course = () => {
                             style={{ width: "64px" }}
                           />
                           <div className="text-content">
-                            <div className="title h4 fw-bold">
-                              Future Residents
-                            </div>
-                            <p className="description">
-                              Planning to relocate to Dubai, either now or in
-                              the future? Understand the immigration process and
-                              set yourself up for a successful transition with
-                              our expert advice.
-                            </p>
+                            <div className="title h4 fw-bold">{header12}</div>
+                            <p className="description">{subheader5}</p>
                           </div>
                         </div>
                       </div>
@@ -472,14 +522,8 @@ const Course = () => {
                             style={{ width: "64px" }}
                           />
                           <div className="text-content">
-                            <div className="title h4 fw-bold">
-                              Destination Dilemma?
-                            </div>
-                            <p className="description">
-                              Unsure which country is the perfect fit for you?
-                              Join us to gain clarity on whether Dubai aligns
-                              with your aspirations.
-                            </p>
+                            <div className="title h4 fw-bold">{header13}</div>
+                            <p className="description">{subheader6}</p>
                           </div>
                         </div>
                       </div>
@@ -494,12 +538,8 @@ const Course = () => {
                             style={{ width: "64px" }}
                           />
                           <div className="text-content">
-                            <div className="title h4 fw-bold">Visa Seekers</div>
-                            <p className="description">
-                              Seeking visa sponsorship for your relocation? Gain
-                              insights into the job market and secure
-                              visa-sponsored opportunities with our guidance.
-                            </p>
+                            <div className="title h4 fw-bold">{header14}</div>
+                            <p className="description">{subheader7}</p>
                           </div>
                         </div>
                       </div>
@@ -512,11 +552,12 @@ const Course = () => {
         </div>
         <div class="video-message">
           <div class="video-block bg-gradient">
-            <div class="video-heading">
-              <div class="section-heading">If yes, then Nidhi has</div>
-              <div class="heading-second h1 text-light fw-bold">
-                a message for you
-              </div>
+            <div
+              ref={(el) => (popUpRefs.current[4] = el)}
+              class="video-heading pop-up"
+            >
+              {/* <div class="section-heading ">If yes, then Nidhi has</div> */}
+              <div class="heading-second h1 text-light fw-bold">{header15}</div>
             </div>
             <div class="video-wrapper">
               <div class="video-light">
@@ -558,7 +599,7 @@ const Course = () => {
                     <div className="modal">
                       <div className="modal-content">
                         <ReactPlayer
-                          url="https://youtu.be/cgmpoBwQs3U"
+                          url={ytlink}
                           playing={isPlaying}
                           controls={true}
                           width="-webkit-fill-available"
@@ -591,13 +632,16 @@ const Course = () => {
         </div>
         <div class="section-learn">
           <div class="container-fluid">
-            <div class="container-xl" >
+            <div class="container-xl">
               <div class="learn-content-wrapper">
-                <div class="heading-wrapper mb-4">
+                <div
+                  ref={(el) => (popUpRefs.current[5] = el)}
+                  class="heading-wrapper mb-4 pop-up"
+                >
                   <div class="d-flex justify-content-center align-items-center flex-column">
                     <div class="display-5 fw-bold w-50 text-center">
                       {" "}
-                      What will you learn in 2 Hours?
+                      {header16}
                     </div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -656,80 +700,104 @@ const Course = () => {
                       </div>
                     ))}
                   </div>
-                  <div class="learning-card ">
+                  <div
+                    ref={(el) => (popUpRefs.current[6] = el)}
+                    class="learning-card pop-up"
+                  >
                     <div class="card_image d-flex justify-content-end">
-                      <img src={card1} class="img-fluid rounded-top" alt="" />
+                      <img
+                        src={card1img}
+                        class="img-fluid rounded-top"
+                        alt=""
+                      />
                     </div>
                     <div class="learn-card-content-wrapper">
                       <div class="learn-card-content d-flex justify-content-center align-items-start flex-column gap-2">
-                        <div class="time h5 text-muted">00 mins - 10 mins</div>
+                        {/* <div class="time h5 text-muted">00 mins - 10 mins</div> */}
                         <div class="learn-card-heading h5 fw-bold">
-                          Money Myths
+                          {header17}
                         </div>
                         <div class="learn-card-para h5 fw-normal">
-                          You will first unlearn all the common myths taught to
-                          us by our friends and family.
+                          {subheader8}
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="learning-card-rev ">
+                  <div
+                    ref={(el) => (popUpRefs.current[7] = el)}
+                    class="learning-card-rev pop-up"
+                  >
                     <div class="d-flex justify-content-end">
                       <div class="learn-card-content-wrapper">
                         <div class="learn-card-content d-flex justify-content-center align-items-start flex-column gap-2">
-                          <div class="time h5 text-muted">
+                          {/* <div class="time h5 text-muted">
                             00 mins - 10 mins
-                          </div>
+                          </div> */}
                           <div class="learn-card-heading h5 fw-bold">
-                            Money Myths
+                            {header18}
                           </div>
                           <div class="learn-card-para h5 fw-normal">
-                            You will first unlearn all the common myths taught
-                            to us by our friends and family.
+                            {subheader9}
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="card_image">
-                      <img src={card2} class="img-fluid rounded-top" alt="" />
+                      <img
+                        src={card2img}
+                        class="img-fluid rounded-top"
+                        alt=""
+                      />
                     </div>
                   </div>
-                  <div class="learning-card ">
+                  <div
+                    ref={(el) => (popUpRefs.current[8] = el)}
+                    class="learning-card pop-up"
+                  >
                     <div class="card_image d-flex justify-content-end">
-                      <img src={card3} class="img-fluid rounded-top" alt="" />
+                      <img
+                        src={card3img}
+                        class="img-fluid rounded-top"
+                        alt=""
+                      />
                     </div>
                     <div class="learn-card-content-wrapper">
                       <div class="learn-card-content d-flex justify-content-center align-items-start flex-column gap-2">
-                        <div class="time h5 text-muted">00 mins - 10 mins</div>
+                        {/* <div class="time h5 text-muted">00 mins - 10 mins</div> */}
                         <div class="learn-card-heading h5 fw-bold">
-                          Money Myths
+                          {header19}
                         </div>
                         <div class="learn-card-para h5 fw-normal">
-                          You will first unlearn all the common myths taught to
-                          us by our friends and family.
+                          {subheader10}
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="learning-card-rev ">
+                  <div
+                    ref={(el) => (popUpRefs.current[9] = el)}
+                    class="learning-card-rev pop-up"
+                  >
                     <div class="d-flex justify-content-end">
                       <div class="learn-card-content-wrapper">
                         <div class="learn-card-content d-flex justify-content-center align-items-start flex-column gap-2">
-                          <div class="time h5 text-muted">
+                          {/* <div class="time h5 text-muted">
                             00 mins - 10 mins
-                          </div>
+                          </div> */}
                           <div class="learn-card-heading h5 fw-bold">
-                            Money Myths
+                            {header20}
                           </div>
                           <div class="learn-card-para h5 fw-normal">
-                            You will first unlearn all the common myths taught
-                            to us by our friends and family.
+                            {subheader11}
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="card_image d-flex justify-content-start">
-                      <img src={card1} class="img-fluid rounded-top" alt="" />
+                      <img
+                        src={card4img}
+                        class="img-fluid rounded-top"
+                        alt=""
+                      />
                     </div>
                   </div>
                 </div>
@@ -737,13 +805,13 @@ const Course = () => {
             </div>
           </div>
         </div>
-        <div class="masterclass-for">
+        {/* <div class="masterclass-for">
           <div class="container-fluid">
             <div class="container-xl">
               <div class="row justify-content-center align-items-center g-2 flex-column">
                 <div class="col">
                   <div class="heading-wrapper">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
+                    <div ref={(el) => popUpRefs.current[10] = el} class="d-flex justify-content-center align-items-center flex-column pop-up">
                       <div class="display-5 fw-bold text-center">
                         Who is this masterclass for?
                       </div>
@@ -762,7 +830,7 @@ const Course = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col py-4">
+                <div ref={(el) => popUpRefs.current[11] = el} class="col py-4 pop-up">
                   <div className="row g-4 align-items-stretch">
                     <div className="col-md-6 col-lg-4">
                       <div className="box-content-money">
@@ -836,17 +904,18 @@ const Course = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div class="founder-meet">
+        </div> */}
+        <div class="founder-meet" style={{paddingTop:"2rem", paddingBottom:"2rem"}}>
           <div class="container-fluid">
             <div class="container-xl">
               <div class="row justify-content-center align-items-center g-2 flex-column">
                 <div class="col">
-                  <div class="heading-wrapper">
+                  <div
+                    ref={(el) => (popUpRefs.current[12] = el)}
+                    class="heading-wrapper pop-up"
+                  >
                     <div class="d-flex justify-content-center align-items-center flex-column">
-                      <div class="display-5 fw-bold text-center">
-                        About the Founder
-                      </div>
+                      <div class="display-5 fw-bold text-center">{header21}</div>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="301"
@@ -862,14 +931,17 @@ const Course = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col py-4">
+                <div
+                  ref={(el) => (popUpRefs.current[13] = el)}
+                  class="col py-4 pop-up"
+                >
                   <Founder />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="exclusive-bonus"  style={{ backgroundColor: "#ebf1ff" }}>
+        <div class="exclusive-bonus" style={{ backgroundColor: "#ebf1ff" }}>
           <div class="container-fluid">
             <div class="container-xl">
               <div class="row justify-content-center align-items-center g-2 flex-column">
@@ -877,7 +949,7 @@ const Course = () => {
                   <div class="heading-wrapper">
                     <div class="d-flex justify-content-center align-items-center flex-column">
                       <div class="display-5 fw-bold text-center">
-                        Exclusive Bonuses
+                        {header22}
                       </div>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -894,14 +966,16 @@ const Course = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col py-4">
-                  <div class="h1 text-center">
-                    Bonuses will be revile inside the Masterclass.
+                <div class="col py-4 d-flex justify-content-center align-items-center">
+                  <div class="h3 text-center w-75">
+                   {subheader12}<br/>
+                   <div class="h4 fst-italic">{subheader13}</div>
+                   
                   </div>
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
                   <div class="hero-button-wrapper">
-                    <a class="register-button d-flex justify-content-center align-items-center">
+                    <a href={Enroll_link} class="register-button d-flex justify-content-center align-items-center">
                       <span class="h4 m-2 fw-bold">ENROLL NOW</span>
                     </a>
                   </div>
@@ -914,23 +988,86 @@ const Course = () => {
           <div class="col">
             <div class="heading-wrapper">
               <div class="d-flex justify-content-center align-items-center flex-column">
-                <div class="display-5 fw-bold text-center">FAQs</div>
-                {/* <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="301"
-                        height="14"
-                        viewBox="0 0 301 14"
-                        fill="none"
-                      >
-                        <path
-                          d="M65.8862 2.80937C94.364 2.40435 122.856 2.14398 151.348 2.02826C179.839 1.91254 208.066 1.95112 236.416 2.13434C252.52 2.24042 268.64 2.38507 284.744 2.57793L286.943 0.601051C250.173 0.996427 213.417 1.48824 176.66 2.07648C139.904 2.66472 103.147 3.3494 66.3887 4.14015C45.7541 4.58375 25.1349 5.04663 4.49985 5.54808C3.29059 5.57701 1.47568 5.76988 0.788687 6.50277C0.148519 7.18745 1.32417 7.54425 2.30085 7.52496C40.6076 6.91743 78.9415 6.85957 117.256 7.36103C155.571 7.86248 193.851 8.93289 232.08 10.553C253.558 11.4594 275.02 12.5491 296.449 13.8124C297.611 13.8799 299.535 13.5231 300.16 12.8577C300.847 12.1345 299.578 11.8837 298.648 11.8355C260.515 9.58864 222.286 7.89141 184.022 6.7535C145.759 5.61558 107.429 5.04663 69.1108 5.03698C47.5802 5.03698 26.0484 5.20092 4.51535 5.54808L2.31635 7.52496C39.0594 6.62813 75.8173 5.83738 112.575 5.13342C149.332 4.4391 186.088 3.83157 222.844 3.33011C243.478 3.05046 264.127 2.79009 284.76 2.56829C285.969 2.55865 287.8 2.33685 288.471 1.6136C289.142 0.890351 287.92 0.601051 286.959 0.591407C258.455 0.263534 229.981 0.0610241 201.491 0.0128074C173.001 -0.0354093 144.773 0.0513807 116.421 0.292464C100.314 0.427471 84.1921 0.610694 68.0852 0.842134C66.876 0.861421 65.0454 1.07357 64.374 1.79682C63.7338 2.4815 64.9095 2.8383 65.8862 2.81902L65.8862 2.80937Z"
-                          fill="#237b54"
-                        />
-                      </svg> */}
+                <div
+                  ref={(el) => (popUpRefs.current[14] = el)}
+                  class="display-5 fw-bold text-center pop-up"
+                >
+                  {header23}
+                </div>
               </div>
             </div>
           </div>
-          <FaqWithImage />
+          <div
+            class="container-fluid bg-light"
+            style={{ paddingBottom: "4rem" }}
+          >
+            <div className={classes.wrapper}>
+              <Container size="lg">
+                <Grid id="faq-grid" gutter={50}>
+                  <Grid.Col span={{ base: 12, md: 6 }}>
+                    <Image src={image} alt="Frequently Asked Questions" />
+                  </Grid.Col>
+                  <Grid.Col span={{ base: 12, md: 6 }}>
+                    <Title order={2} ta="left" className={classes.title_fq}>
+                      Frequently Asked Questions
+                    </Title>
+
+                    <Accordion
+                      chevronPosition="right"
+                      defaultValue="reset-password"
+                      variant="separated"
+                    >
+                      <Accordion.Item
+                        className={classes.item}
+                        value="reset-password"
+                      >
+                        <Accordion.Control>
+                          {question1}
+                        </Accordion.Control>
+                        <Accordion.Panel>{answer1}</Accordion.Panel>
+                      </Accordion.Item>
+
+                      <Accordion.Item
+                        className={classes.item}
+                        value="another-account"
+                      >
+                        <Accordion.Control>
+                        {question2}
+                        </Accordion.Control>
+                        <Accordion.Panel>{answer2}</Accordion.Panel>
+                      </Accordion.Item>
+
+                      <Accordion.Item
+                        className={classes.item}
+                        value="newsletter"
+                      >
+                        <Accordion.Control>
+                        {question3}
+                        </Accordion.Control>
+                        <Accordion.Panel>{answer3}</Accordion.Panel>
+                      </Accordion.Item>
+
+                      <Accordion.Item
+                        className={classes.item}
+                        value="credit-card"
+                      >
+                        <Accordion.Control>
+                        {question4}
+                        </Accordion.Control>
+                        <Accordion.Panel>{answer4}</Accordion.Panel>
+                      </Accordion.Item>
+                      <Accordion.Item className={classes.item} value="credit">
+                        <Accordion.Control>
+                        {question5}
+                        </Accordion.Control>
+                        <Accordion.Panel>{answer5}</Accordion.Panel>
+                      </Accordion.Item>
+                    </Accordion>
+                  </Grid.Col>
+                </Grid>
+              </Container>
+            </div>
+          </div>
         </div>
         <div className="bottom-banner">
           <div className="banner-content-bottom">
@@ -942,9 +1079,9 @@ const Course = () => {
             />
             <div className="banner-info">
               <div className="price">
-                ₹1,999 <span className="original-price">₹4,000</span>
+                {price} <span className="original-price">{msrp}</span>
               </div>
-              <div className="date">9th June, 4:00 PM</div>
+              <div className="date">{date}{time} </div>
             </div>
           </div>
           <div class="hero-button-wrapper">
@@ -957,5 +1094,5 @@ const Course = () => {
     </div>
   );
 };
-
+// ₹1,999
 export default Course;

@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { useDisclosure } from "@mantine/hooks";
 import {
-  Container,  
+  Container,
   Text,
   Modal,
   Input,
   Progress,
   FileInput,
-  Notification, rem, Alert 
+  Notification,
+  rem,
+  Alert,
 } from "@mantine/core";
-import { IconX, IconCheck, IconHeart } from '@tabler/icons-react';
+import { IconX, IconCheck, IconHeart } from "@tabler/icons-react";
 
 import classes from "./Navbar.module.css";
 import { a } from "react-spring";
@@ -31,14 +33,16 @@ const Herosection = (props) => {
   const [opened, { open, close }] = useDisclosure(false);
 
   const [currentQuestion, setCurrentQuestion] = useState(1);
-  const [answer1, setAnswers1] = useState({});
-  const [answer2, setAnswers2] = useState({});
-  const [answer3, setAnswers3] = useState({});
+  const [formCompleted, setFormCompleted] = useState(false); // New state for form completion
   const [selectedOption1, setSelectedOption1] = useState(null);
   const [selectedOption2, setSelectedOption2] = useState(null);
   const [selectedOption3, setSelectedOption3] = useState(null);
+  const [answer1, setAnswer1] = useState([]);
+  const [answer2, setAnswer2] = useState([]);
+  const [answer3, setAnswer3] = useState([]);
   const [resume, setResume] = useState(null);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
+
   const xIcon = <IconX style={{ width: rem(20), height: rem(20) }} />;
   const checkIcon = <IconCheck style={{ width: rem(20), height: rem(20) }} />;
   const icon = <IconHeart />;
@@ -57,17 +61,25 @@ const Herosection = (props) => {
       placeholder2: "Full Name",
       text3: "Please Enter Your Contact Number",
       type3: "number",
-      placeholder3: "Also mention your country code - +91 - for India"
+      placeholder3: "Also mention your country code - +91 - for India",
     },
     {
       id: 2,
       text1: "Highest Level of Education",
       type1: "mcq",
-      options1: ["Class 10th", "Class 12th", "Diploma", "Bachelors", "Masters/PhD", "Other:"],
+      options1: [
+        "Class 10th",
+        "Class 12th",
+        "Diploma",
+        "Bachelors",
+        "Masters/PhD",
+        "Other:",
+      ],
       text2: "Are you an International Student, currently?",
       type2: "mcq",
       options2: ["Yes", "No"],
-      text3: "Do you already have or will you be able to get a Post Study Work Visa?",
+      text3:
+        "Do you already have or will you be able to get a Post Study Work Visa?",
       type3: "mcq",
       options3: ["Yes", "No"],
     },
@@ -81,7 +93,7 @@ const Herosection = (props) => {
       placeholder2: "Please Enter",
       text3: "Upload Resume",
       type3: "file",
-      placeholder3: "Upload Resume Here"
+      placeholder3: "Upload Resume Here",
     },
     {
       id: 4,
@@ -93,29 +105,43 @@ const Herosection = (props) => {
       placeholder2: "Country Name",
       text3: "Please share your queries, feedback & suggestions, here.",
       type3: "text",
-      placeholder3: "Please Enter"
+      placeholder3: "Please Enter",
     },
     // Add more questions as needed
   ];
 
   const handleNextQuestion = () => {
-    const current = questions.find(question => question.id === currentQuestion);
+    const current = questions.find(
+      (question) => question.id === currentQuestion
+    );
 
     const isCurrentQuestionAnswered = () => {
       if (current.type1 === "mcq") {
-        return selectedOption1 !== null && selectedOption2 !== null && selectedOption3 !== null;
+        return (
+          selectedOption1 !== null &&
+          selectedOption2 !== null &&
+          selectedOption3 !== null
+        );
       } else if (current.type3 === "file") {
         return answer1[currentQuestion] && answer2[currentQuestion] && resume;
       } else {
-        return answer1[currentQuestion] && answer2[currentQuestion] && answer3[currentQuestion];
+        return (
+          answer1[currentQuestion] &&
+          answer2[currentQuestion] &&
+          answer3[currentQuestion]
+        );
       }
     };
 
     if (isCurrentQuestionAnswered()) {
-      setCurrentQuestion(currentQuestion < questions.length ? currentQuestion + 1 : questions.length);
-      setErrorMessage('');
+      if (currentQuestion < questions.length) {
+        setCurrentQuestion(currentQuestion + 1);
+        setErrorMessage("");
+      } else {
+        handleSubmit(); // Submit the form when the last question is answered
+      }
     } else {
-      alert("error");
+      alert("Please answer all questions before proceeding.");
     }
   };
 
@@ -138,64 +164,101 @@ const Herosection = (props) => {
   };
 
   const handleResumeChange = (e) => {
-    setResume(e.target.files[0]);
+    if (e.target && e.target.files) {
+      setResume(e.target.files[0]);
+    } else {
+      console.error("No files found in event:", e);
+    }
   };
 
   const handleChange1 = (e) => {
-    setAnswers1({ ...answer1, [currentQuestion]: e.target.value });
+    setAnswer1({ ...answer1, [currentQuestion]: e.target.value });
   };
 
   const handleChange2 = (e) => {
-    setAnswers2({ ...answer2, [currentQuestion]: e.target.value });
+    setAnswer2({ ...answer2, [currentQuestion]: e.target.value });
   };
 
   const handleChange3 = (e) => {
-    setAnswers3({ ...answer3, [currentQuestion]: e.target.value });
+    setAnswer3({ ...answer3, [currentQuestion]: e.target.value });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+    // Build formData as shown in previous responses
+
     const formData = [
-      { Attribute: "FirstName", Value: answer2[1] }, // Assuming answer2[1] is the name
-      { Attribute: "EmailAddress", Value: answer1[1] }, // Assuming answer1[1] is the email
-      { Attribute: "Phone", Value: answer3[1] }, // Assuming answer3[1] is the phone
-      { Attribute: "mx_Highest_Level_of_Education", Value: selectedOption1 },
-      { Attribute: "mx_Are_you_currently_an_International_Student", Value: selectedOption2 },
-      { Attribute: "mx_Experience", Value: answer1[3] }, // Assuming answer1[3] is the experience (adjust accordingly)
-      { Attribute: "mx_Your_Current_Status", Value: answer2[3] }, // Assuming answer2[3] is the designation (adjust accordingly)
-      { Attribute: "mx_Resume_Shared", Value: resume ? resume.name : "" },
-      { Attribute: "mx_City", Value: answer1[4] }, // Assuming answer1[4] is the city (adjust accordingly)
-      { Attribute: "mx_Country", Value: answer2[4] }, // Assuming answer2[4] is the country (adjust accordingly)
-      { Attribute: "Source", Value: "HomePage_form" },
-    ];
-    // `https://${host}/v2/LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`, real key
-    fetch(`https://${host}/v2/LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        // Add any other headers required by your API
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success");
-        // Handle success response
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        // Handle error
-      });
+    { Attribute: "FirstName", Value: answer2[1] }, // Assuming answer2[1] is the name
+    { Attribute: "EmailAddress", Value: answer1[1] }, // Assuming answer1[1] is the email
+    { Attribute: "Phone", Value: answer3[1] }, // Assuming answer3[1] is the phone
+    { Attribute: "mx_Highest_Level_of_Education", Value: selectedOption1 },
+    {
+      Attribute: "mx_Are_you_currently_an_International_Student",
+      Value: selectedOption2,
+    },
+    { Attribute: "mx_Experience", Value: answer1[3] }, // Assuming answer1[3] is the experience (adjust accordingly)
+    { Attribute: "mx_Your_Current_Status", Value: answer2[3] }, // Assuming answer2[3] is the designation (adjust accordingly)
+    { Attribute: "mx_City", Value: answer1[4] }, // Assuming answer1[4] is the city (adjust accordingly)
+    { Attribute: "mx_Country", Value: answer2[4] }, // Assuming answer2[4] is the country (adjust accordingly)
+    { Attribute: "Source", Value: "HomePageform" },
+  ];  
+
+    console.log("Form Data:", formData); // Log formData to verify it
+
+    // Ensure all required fields are filled
+    for (const field of formData) {
+      if (!field.Value) {
+        console.error(`Missing value for ${field.Attribute}`);
+        return; // Stop the form submission if any value is missing
+      }
+    }
+
+    try {
+      const response = await fetch(
+        `https://${host}/v2/LeadManagement.svc/Lead.Capture?accessKey=${accessKey}&secretKey=${secretKey}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      // if (!response.ok) {
+      //   throw new Error(`Server responded with status: ${response.status}`);
+      // }
+
+      const data = await response.json();
+      console.log("Success:", data);
+
+      // Mark form as completed
+      setFormCompleted(true);
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   const renderQuestion = () => {
-    const current = questions.find(question => question.id === currentQuestion);
+    const current = questions.find(
+      (question) => question.id === currentQuestion
+    );
+
+    if (formCompleted) {
+      setCurrentQuestion(currentQuestion + 1);
+      return (
+        <div className="h3 d-flex justify-content-center align-items-center text-light text-center">
+          Thank you for answering all questions!
+        </div>
+      );
+    }
+
     if (current.type1 === "mcq") {
       return (
         <Container size="xs" className="text-light">
           <div
             className="progress-bar"
             style={{
-              width: `${((currentQuestion - 1) / questions.length) * 100}%`,
+              width: `${((currentQuestion-1) / questions.length) * 100}%`,
             }}
           ></div>
           <div className="mb-2">
@@ -210,7 +273,7 @@ const Herosection = (props) => {
                     name="option1"
                     value={option1}
                     onChange={handleOptionChange1}
-                    checked={selectedOption1 === option1} // Check if this option is selected
+                    checked={selectedOption1 === option1}
                   />
                   <label htmlFor={`options1${index1}`} className="option1 px-2">
                     {option1}
@@ -231,7 +294,7 @@ const Herosection = (props) => {
                     name="option2"
                     value={option2}
                     onChange={handleOptionChange2}
-                    checked={selectedOption2 === option2} // Check if this option is selected
+                    checked={selectedOption2 === option2}
                   />
                   <label htmlFor={`option2${index2}`} className="option2 px-2">
                     {option2}
@@ -252,7 +315,7 @@ const Herosection = (props) => {
                     name="option3"
                     value={option3}
                     onChange={handleOptionChange3}
-                    checked={selectedOption3 === option3} // Check if this option is selected
+                    checked={selectedOption3 === option3}
                   />
                   <label htmlFor={`option3${index}`} className="option px-2">
                     {option3}
@@ -262,62 +325,135 @@ const Herosection = (props) => {
             </form>
           </div>
           <div className="d-flex flex-row gap-4">
-            <button onClick={handleNextQuestion} className="button-g btn text-light fw-bold">Next</button>
-            <button onClick={handlePreviousQuestion} className="button-g btn text-light fw-bold">Back</button>
+            <button
+              onClick={handleNextQuestion}
+              className="button-g btn text-light fw-bold"
+            >
+              Next
+            </button>
+            <button
+              onClick={handlePreviousQuestion}
+              className="button-g btn text-light fw-bold"
+            >
+              Back
+            </button>
           </div>
         </Container>
       );
     } else if (current.type3 === "file") {
       return (
         <Container className="text-light">
-          <div className="progress-bar" style={{ width: `${((currentQuestion - 1) / questions.length) * 100}%` }}></div>
+          <div
+            className="progress-bar"
+            style={{
+              width: `${((currentQuestion - 1) / questions.length) * 100}%`,
+            }}
+          ></div>
           <div className="mb-2">
             <h2 className="h3 py-4">{current.text1}</h2>
-            <Input type={current.type1} placeholder={current.placeholder1} value={answer1[currentQuestion] || ''} onChange={handleChange1} />
+            <Input
+              type={current.type1}
+              placeholder={current.placeholder1}
+              value={answer1[currentQuestion] || ""}
+              onChange={handleChange1}
+            />
           </div>
           <div className="mb-2">
             <h2 className="h3 py-4">{current.text2}</h2>
-            <Input type={current.type2} placeholder={current.placeholder2} value={answer2[currentQuestion] || ''} onChange={handleChange2} />
+            <Input
+              type={current.type2}
+              placeholder={current.placeholder2}
+              value={answer2[currentQuestion] || ""}
+              onChange={handleChange2}
+            />
           </div>
           <div className="mb-2">
             <h2 className="h3 py-4">{current.text3}</h2>
-            <FileInput type={current.type3} placeholder={current.placeholder3} onChange={handleResumeChange} />
+            <input
+              type={current.type3}
+              placeholder={current.placeholder3}
+              onChange={(e) => handleResumeChange(e)}
+            />
           </div>
           <div className="d-flex flex-row gap-4">
-            <button onClick={handleNextQuestion} className="button-g btn text-light fw-bold">Next</button>
-            <button onClick={handlePreviousQuestion} className="button-g btn text-light fw-bold">Back</button>
+            <button
+              onClick={handleNextQuestion}
+              className="button-g btn text-light fw-bold"
+            >
+              Next
+            </button>
+            <button
+              onClick={handlePreviousQuestion}
+              className="button-g btn text-light fw-bold"
+            >
+              Back
+            </button>
           </div>
         </Container>
       );
     } else {
       return (
         <Container className="text-light">
-          <div className="progress-bar" style={{ width: `${((currentQuestion - 1) / questions.length) * 100}%` }}></div>
+          <div
+            className="progress-bar"
+            style={{
+              width: `${((currentQuestion ) / questions.length) * 100}%`,
+            }}
+          ></div>
           <div className="mb-2">
             <h2 className="h3 py-4">{current.text1}</h2>
-            <Input type={current.type1} placeholder={current.placeholder1} value={answer1[currentQuestion] || ''} onChange={handleChange1} />
+            <Input
+              type={current.type1}
+              placeholder={current.placeholder1}
+              value={answer1[currentQuestion] || ""}
+              onChange={handleChange1}
+            />
           </div>
           <div className="mb-2">
             <h2 className="h3 py-4">{current.text2}</h2>
-            <Input type={current.type2} placeholder={current.placeholder2} value={answer2[currentQuestion] || ''} onChange={handleChange2} />
+            <Input
+              type={current.type2}
+              placeholder={current.placeholder2}
+              value={answer2[currentQuestion] || ""}
+              onChange={handleChange2}
+            />
           </div>
           <div className="mb-2">
             <h2 className="h3 py-4">{current.text3}</h2>
-            <Input type={current.type3} placeholder={current.placeholder3} value={answer3[currentQuestion] || ''} onChange={handleChange3} />
+            <Input
+              type={current.type3}
+              placeholder={current.placeholder3}
+              value={answer3[currentQuestion] || ""}
+              onChange={handleChange3}
+            />
           </div>
           <div className="d-flex flex-row gap-4">
             {currentQuestion === questions.length ? (
-              <button onClick={handleSubmit} className="button-g btn text-light fw-bold">Submit</button>
+              <button
+                onClick={handleNextQuestion}
+                className="button-g btn text-light fw-bold"
+              >
+                Submit
+              </button>
             ) : (
-              <button onClick={handleNextQuestion} className="button-g btn text-light fw-bold">Next</button>
+              <button
+                onClick={handleNextQuestion}
+                className="button-g btn text-light fw-bold"
+              >
+                Next
+              </button>
             )}
-            <button onClick={handlePreviousQuestion} className="button-g btn text-light fw-bold">Back</button>
+            <button
+              onClick={handlePreviousQuestion}
+              className="button-g btn text-light fw-bold"
+            >
+              Back
+            </button>
           </div>
         </Container>
       );
     }
   };
-  
 
   return (
     <div className={classes.root}>
@@ -350,10 +486,7 @@ const Herosection = (props) => {
               <div class="col d-flex justify-content-center align-items-center">
                 <h1 class="display-3 head-txt text-light fw-bold text-center">
                   Go Global with{" "}
-                  <Text
-                    component="span"
-                    inherit
-                  >
+                  <Text component="span" inherit>
                     Globalogy
                   </Text>
                 </h1>
@@ -386,13 +519,24 @@ const Herosection = (props) => {
                   zIndex={10000}
                 >
                   <div className="progress-wrapper">
-                  <Progress color="green" value={((currentQuestion - 1) / questions.length) * 100} striped animated />;
+                    <Progress
+                      color="green"
+                      value={((currentQuestion - 1 ) / questions.length) * 100}
+                      striped
+                      animated
+                    />
                   </div>
                   <Container mt="3rem">
                     {currentQuestion <= questions.length ? (
                       renderQuestion()
+                    ) : formCompleted ? (
+                      <p className="h3 d-flex justify-content-center align-items-center text-light">
+                        Thank you for answering all !
+                      </p>
                     ) : (
-                      <p class="h3 d-flex justify-content-center align-items-center text-light">Thank you for answering all questions!</p>
+                      <p className="h3 d-flex justify-content-center align-items-center text-light">
+                        Form error
+                      </p>
                     )}
                   </Container>
                 </Modal>

@@ -4,7 +4,13 @@ import rightarrow from "../../assests/images/right-arrow.png"
 
 const Featurevideo = () => {
   return (
-    <div class="container-fluid py-4">
+    <div class="container-fluid py-4"
+    style={{
+      padding: "50px 0px",
+      color: "black",
+      background: "linear-gradient(179deg, rgb(35, 123, 84) -166%, rgb(5, 13, 34) 100%)",
+      paddingBottom: "100px"
+    }}>
       <div class="container ">
         <div class="row justify-content-center align-items-center flex-row g-2">
           <div class="col-lg-6 col-sm-12">
@@ -16,12 +22,12 @@ const Featurevideo = () => {
               style={{width:"64px", height:"64px"}}
             />
             </div>
-            <div class="h3 text-light text-center">Dubai ( The DBA Program )</div>
+            <div class="h3 text-light text-center">Canada</div>
             </div>
           </div>
           <div class="col-lg-6 col-sm-12 player-wrapper">
             <ReactPlayer
-              url="https://youtu.be/cgmpoBwQs3U"
+              url="https://youtu.be/1Ch9tpOqfsQ"
               frameBorder="1"
               playing="true"
               controls="true"

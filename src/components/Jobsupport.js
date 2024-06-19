@@ -60,15 +60,15 @@ const Jobsupport = () => {
   return (
     <div>
       <Navbar/>
-      <Support data={data}/>
-      <Verticalstepper data={data}/>
-      <Services/>
+      {/* <Support data={data}/>
+      <Verticalstepper data={data}/> */}
+      {/* <Services/> */}
       <About/>
-      <Competitive/>
-      <Achievements/>
+      {/* <Competitive/> */}
+      {/* <Achievements/> */}
       <Testimonials/>
-      <Bottomform/>
-      <Social/>
+      {/* <Bottomform/> */}
+      {/* <Social/> */}
     </div>
   )
 }

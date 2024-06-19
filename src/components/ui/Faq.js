@@ -12,8 +12,6 @@ const answer4 =
   "Unfortunately, we are unable to provide any refunds.";
 const answer5 =
   "Yes. Masterclass is scheduled specifically tailored to one country on a monthly basis.";
-const answer6 =
-  "Yes. You can book a 1:1 Consultation Call with Nidhi Nagori.";
 
 export function FaqWithImage() {
   return (
@@ -74,7 +72,9 @@ export function FaqWithImage() {
                   <Accordion.Control>
                   Can I consult with Nidhi Nagori?
                   </Accordion.Control>
-                  <Accordion.Panel>{answer6}</Accordion.Panel>
+                  <Accordion.Panel>
+                  Yes. You can book a <a href="https://topmate.io/nidhi_nagori" class="fw-bold text-primary">1:1 Consultation Call</a> with Nidhi Nagori.
+                  </Accordion.Panel>
                 </Accordion.Item>
               </Accordion>
             </Grid.Col>

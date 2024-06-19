@@ -5,22 +5,26 @@ import fb from "../../assests/images/icons8-facebook.svg";
 const Footer = () => {
   return (
     <div>
-      <div class="container-fluid bg-dark">
+      <div class="container-fluid bg-dark ">
         <div class="container" style={{ paddingBottom: "150px" }}>
           <div class="tex d-flex justify-content-center align-items-center">
             <div class="row d-flex justify-content-center align-items-center g-2">
-              <div class="col d-flex justify-content-center align-items-center flex-column">
-                <div class="h1 fw-bold text-light text-center">
-                  Join Our Community
+              <div class="col d-flex justify-content-center align-items-center flex-column gap-4 mb-2">
+                <div class="h1 fw-bold text-light text-center w-75 mb-2">
+                  Ready to make your move?
                 </div>
-                <div class="h5 text-light text-center">
-                  Connect with like-minded individuals, get expert answers to
-                  your queries, access exclusive job opportunities and insights,
-                  receive newsletters on a weekly basis, avail special offers &
-                  much more. Be a part of our exclusive vibrant community.
+                <div class="h5 text-light text-center w-75 mb-2">
+                  Dreaming of a life abroad but not sure where to start or
+                  overwhelmed by the process? We can help! Share your details &
+                  our team of expert consultants will evaluate & share
+                  personalised insights to guide you towards your dream
+                  destination. Get Matched with Your Dream Country!
                 </div>
                 <div class="col-5 d-flex justify-content-center align-items-center">
-                  <button class="btn button-g text-light h5">Join Us</button>
+                  <button class="btn wherecanmove text-light h5 p-3 fw-bold">Want to Move Abroad?
+                  <div class="glare"></div>
+                  </button>
+                  
                 </div>
               </div>
             </div>
@@ -47,9 +51,9 @@ const Footer = () => {
               </div>
             </div>
             <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-start">
-              <div class="row d-flex justify-content-center align-items-center g-2 flex-row text-center">
-              <div class=" fw-bold">Quick Links</div>
-                <div class="col-6 d-flex justify-content-center align-items-center flex-column">   
+              <div class="row d-flex justify-content-center align-items-center g-2 flex-row text-center gap-1">
+                <div class=" fw-bold h5 pb-2 m-0.5">Quick Links</div>
+                <div class="d-flex justify-content-center align-items-center flex-column gap-1">
                   <a href="" class="col">
                     Home
                   </a>
@@ -60,49 +64,39 @@ const Footer = () => {
                     Masterclass
                   </a>
                   <a href="" class="col">
-                    Campus Ambasador
-                  </a>
-                </div>
-                <div class="col-6 d-flex justify-content-start align-items-center flex-column">
-                  <a href="" class="col">
                     Testimonials
                   </a>
                   <a href="" class="col">
-                    Blog
-                  </a>
-                  <a href="" class="col">
-                    Contact
-                  </a>
-                  <a href="" class="col">
                     About
+                  </a>
+                  <a href="" class="col">
+                    Blog
                   </a>
                 </div>
               </div>
             </div>
             <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-start">
-              <div class="row d-flex justify-content-center align-items-center g-2 flex-column text-center">
-                {" "}
-                <a href="" class=" fw-bold">
+              <div class="row d-flex justify-content-center align-items-center g-2 flex-column text-center gap-1">
+                <a href="" class=" fw-bold h5 pb-2 m-0.5">
                   Legal
                 </a>
-                <a href="" class="col">
+                <a href="" class="col m-0">
                   Privacy Policy
                 </a>
-                <a href="" class="col">
+                <a href="" class="col m-0">
                   Terms of use
                 </a>
-                <a href="" class="col">
+                <a href="" class="col m-0">
                   Refund & Cancellation Policy
                 </a>
               </div>
             </div>
             <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-start ">
-              <div class="row d-flex justify-content-center align-items-center g-2 flex-column text-center">
-                {" "}
-                <div class="fw-bold">Get in Touch</div>
-                <a
+              <div class="row d-flex justify-content-center align-items-center g-2 flex-column text-center gap-1">
+                <div class="fw-bold h5 pb-2 m-0.5">Get in Touch</div>
+                <a 
                   href=""
-                  class="col justify-content-center d-flex flex-row gap-1"
+                  class="col justify-content-center d-flex flex-row gap-1 m-0"
                 >
                   <img
                     src={m_icon}

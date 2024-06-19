@@ -7,8 +7,8 @@ const Ratings = () => {
       <div class="container">
         <div class="row stat-content mb-4">
           <div class="col-lg-3 col-sm-12 rating-box">
-            <div class="row d-flex justify-content-center align-items-center g-2">
-              <div class="col d-flex justify-content-center align-items-center flex-row gap-2">
+            <div class="row ">
+              <div class="col d-flex justify-content-start align-items-center flex-row gap-2">
                 <svg
                   width="48"
                   height="46"
@@ -27,7 +27,7 @@ const Ratings = () => {
                 </svg>
                 <div>
                   <p class="text-muted">Featured In</p>
-                  <div class="h5 fw-bold">
+                  <div class="h5 fw-bold d-flex justify-content-center align-items-center">
                     World's first Ed-Tech company to be featured on Times Square
                     ✨
                   </div>
@@ -36,8 +36,8 @@ const Ratings = () => {
             </div>
           </div>
           <div class="col-lg-3 col-sm-12 rating-box">
-            <div class="row d-flex justify-content-center align-items-center g-2">
-              <div class="col d-flex justify-content-center align-items-center flex-row gap-2">
+            <div class="row  ">
+              <div class="col d-flex justify-content-start align-items-center flex-row gap-2">
                 <img
                   src={social}
                   class="img-fluid rounded-top"
@@ -45,15 +45,15 @@ const Ratings = () => {
                   alt=""
                 />
                 <div>
-                  <p class="text-muted">followers</p>
-                  <div class="h5 fw-bold">200K+ Followers on Social Media</div>
+                  <p class="text-muted">Followers</p>
+                  <div class="h5 fw-bold d-flex justify-content-center align-items-center">200K+ followers on Social Media</div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-sm-12 rating-box">
-            <div class="row d-flex justify-content-center align-items-center g-2">
-              <div class="col d-flex justify-content-center align-items-center flex-row gap-2">
+            <div class="row ">
+              <div class="col d-flex justify-content-start align-items-center flex-row gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -81,7 +81,7 @@ const Ratings = () => {
                 </svg>
                 <div>
                   <p class="text-muted">Google Reviews</p>
-                  <div class="h5 fw-bold">Rated 4.6/5 210+)</div>
+                  <div class="h5 fw-bold">Rated 4.6/5 (220+)</div>
                 </div>
               </div>
             </div>
@@ -98,7 +98,7 @@ const Ratings = () => {
                   alt="customer-insight"
                 />
                 <p class=" h2 fw-bold">2500+</p>
-                <div class="h5 fw-bold text-center">Candidates Benifited from our courses.</div>
+                <div class="h5 fw-bold text-center">Candidates benefited from our courses.</div>
               </div>
             </div>
           </div>

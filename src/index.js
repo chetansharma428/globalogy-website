@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createTheme, MantineProvider } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,7 +12,6 @@ import { Notifications } from '@mantine/notifications';
 
 import "./index.css";
 import Homepage from "./components/Homepage";
-import Facingissue from "./components/ui/Facingissue";
 import Contact from "./components/ui/Contact";
 import Aboutus from "./components/Aboutus";
 import Jobsupport from "./components/Jobsupport";
@@ -21,18 +20,23 @@ import Visasupport from "./components/Visasupport";
 import Footer from "./components/ui/Footer";
 import '@mantine/carousel/styles.css';
 import Campusambasador from "./components/Campusambasador";
-import Course from "./components/Course";
 import Cometocanada from "./components/Cometocanada";
 import Directjobplacement from "./components/Directjobplacement";
+import Dubai from "./components/Masterclasses/dubai";
+import Australia from "./components/Masterclasses/Australia";
+import Canada from "./components/Masterclasses/Canada";
+import CanadaWork from "./components/Masterclasses/CanadaWork";
+import Chancenkarte from "./components/Masterclasses/Chancenkarte";
+import GlobalMasterclass from "./components/Masterclasses/GlobalMasterclass";
+import Ireland from "./components/Masterclasses/Ireland";
+import Linkedin_one from "./components/Masterclasses/Linkedin_one";
+import Linkedin_two from "./components/Masterclasses/Linkedin_two";
+import Luxembourg from "./components/Masterclasses/luxembourg";
+import Netherlands from "./components/Masterclasses/Netherlands";
+import Profilebuilding from "./components/Masterclasses/Profilebuilding";
+import Uk from "./components/Masterclasses/uk";
 
 
-const theme = createTheme({
-  // fontFamily: "Inter, sans-serif",
-  // fontFamily: "Arimo, sans-serif",
-  // fontFamily: "Poppins, sans-serif",
-  // fontFamily: "Lato, sans-serif",
-  fontFamily: "Plus Jakarta Sans, sans-serif",
-});
 const router = createBrowserRouter([
   {
     path: "/",
@@ -59,10 +63,6 @@ const router = createBrowserRouter([
     element: <Courses />,
   },
   {
-    path: "/masterclass",
-    element: <Course />,
-  },
-  {
     path: "/campusambasador",
     element: <Campusambasador />,
   },
@@ -74,11 +74,64 @@ const router = createBrowserRouter([
     path: "/directjobplacement",
     element: <Directjobplacement />,
   },
+  //Masterclass paths
+  {
+    path: "/dubaimasterclass",
+    element: <Dubai />,
+  },
+  {
+    path: "/australiamasterclass",
+    element: <Australia />,
+  },
+  {
+    path: "/canadamasterclass",
+    element: <Canada />,
+  },
+  {
+    path: "/canadaworkmasterclass",
+    element: <CanadaWork />,
+  },
+  {
+    path: "/chancenkartmasterclass",
+    element: <Chancenkarte />,
+  },
+  {
+    path: "/globalmasterclass",
+    element: <GlobalMasterclass />,
+  },
+  {
+    path: "/irelandmasterclass",
+    element: <Ireland />,
+  },
+  {
+    path: "/linkedinonemasterclass",
+    element: <Linkedin_one />,
+  },
+  {
+    path: "/linkedintwomasterclass",
+    element: <Linkedin_two />,
+  },
+  {
+    path: "/luxembourgmasterclass",
+    element: <Luxembourg />,
+  },
+  {
+    path: "/netherlandsmasterclass",
+    element: <Netherlands />,
+  },
+  {
+    path: "/profilebuildingmasterclass",
+    element: <Profilebuilding />,
+  },
+  {
+    path: "/ukmasterclass",
+    element: <Uk />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <MantineProvider theme={theme}>
+  <MantineProvider>
     <Notifications position="top-right" zIndex={100000}/>
       <React.StrictMode>
         <RouterProvider router={router} />

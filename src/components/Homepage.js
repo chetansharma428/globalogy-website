@@ -41,9 +41,9 @@ const Homepage = () => {
       <Ratings/>
       <Featuredsection/>
       <Services/>
-      <Competitive/>
-      <Featurevideo/>
+      {/* <Competitive/> */}
       <About/>
+      <Featurevideo/>
       <Testimonials/>
       <FaqWithImage/>
     </div>

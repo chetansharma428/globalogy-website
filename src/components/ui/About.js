@@ -7,9 +7,9 @@ const About = () => {
       <div class="container">
         <div class="row justify-content-center align-items-center g-2 flex-column py-4">
           <div class="col">
-            <div class="h2 fw-bold text-center text-dark">
-              About the Founder
-            </div>
+            {/* <div class="h2 fw-bold text-center text-dark">
+            Hi, This is Nidhi Nagori
+            </div> */}
           </div>
           <div class="col">
               <Founder/>
