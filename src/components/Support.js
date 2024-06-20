@@ -460,7 +460,7 @@ const Support = (props) => {
 
   return (
     <div class="hero-bg">
-      <div class="container text-light" style={{ padding: "6rem 0rem" }}>
+      <div class="container text-light" style={{ paddingTop: "6rem" }}>
         <div
           class="row d-flex justify-content-center g-2"
           style={{ padding: "1rem" }}
@@ -468,11 +468,11 @@ const Support = (props) => {
           <div class="col d-flex justify-content-center align-items-center m-0">
             <div class="m-0">
               <div class="col">
-                <h1 class="display-5 head-txt fw-bold mb-4">{header}</h1>
-                <h1 class="display-6 head-txt fw-bold mb-4 text-uppercase" style={{color: "#fdb11e"}}>{subheader}</h1>
+                <h1 class="h1 head-txt fw-bold mb-4">{header}</h1>
+                <h1 class="h2 head-txt fw-bold mb-4 text-uppercase" style={{color: "#fdb11e"}}>{subheader}</h1>
               </div>
               <div class="col">
-                <h5 class="h5 head-txt">
+                <h5 class="h6 head-txt">
                   {subhead1} <br />
                   {subhead2}
                 </h5>
@@ -539,7 +539,7 @@ const Support = (props) => {
               </div>
             </div>
           </div>
-          <div class="banner col-sm-12 col-lg-6 d-flex justify-content-center align-items-center g-2">
+          <div class="banner col-sm-12 col-lg-6 d-flex justify-content-center align-items-start g-2 m-0">
             <img
               src={dp}
               class=""

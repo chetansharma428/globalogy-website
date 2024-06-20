@@ -38,7 +38,8 @@ const Directjobplacement = () => {
       subhead: "",
       stepheader: "",
       step1: "Collateral-Free Loan:",
-      point1: "Focus on your studies without the burden of upfront tuition costs. Repay the loan only if you choose to stay in Canada after graduation.",
+      point1:
+        "Focus on your studies without the burden of upfront tuition costs. Repay the loan only if you choose to stay in Canada after graduation.",
       step2: "Work Permit and PR Pathway:",
       point2:
         " Gain valuable Canadian work experience with a built-in work permit and a clear path towards permanent residency.",
@@ -61,21 +62,185 @@ const Directjobplacement = () => {
       button1: "Get Started Now!",
     },
   ];
-  const question1 = "How many mentors will be there in the session?";
-   const answer1="There will be 5 experienced mentors, each of whom used a different pathway to move to Canada.";
-   const question2 = "Is this a live session, or will it be pre-recorded?";
-   const answer2 = "The Masterclass will be a live interactive session held over Zoom. The recording will be available for 90 days from your registration date.";
-   const question3 = "What if I want a refund?";
-   const answer3="Unfortunately, do not offer refunds for the Masterclass.";
-   const question4 = "How will I access the bonuses?";
-   const answer4 = "The exclusive bonuses will be unveiled during the Masterclass. Once the session is over, you'll be able to access them easily within the Resources section on your course page.";
-   const question5 = "Will I get a chance to ask my questions?";
-   const answer5 = "Absolutely! There will be a dedicated Q&A session during the live masterclass where you can submit your questions through the chat box. The mentors will address each question to ensure you gain maximum value.";
+  const question1 = "What skills or experience do I need for these blue-collar jobs?";
+  const answer1 =
+    "The specific skills and experience required will vary depending on the job type. Some roles may require specific technical skills or experience with operating machinery. We will work with you to identify suitable positions based on your background and qualifications.";
+  const question2 = "Is there any financial assistance available for the program costs?";
+  const answer2 =
+    "Unfortunately, we do not currently offer direct financial assistance for consultation costs.";
+  const question3 = "What happens if my visa application gets rejected?";
+  const answer3 = "Unfortunately, do not offer refunds for the Masterclass.";
+  const question4 = "How will I access the bonuses?";
+  const answer4 =
+    "The exclusive bonuses will be unveiled during the Masterclass. Once the session is over, you'll be able to access them easily within the Resources section on your course page.";
+  const question5 = "Will I get a chance to ask my questions?";
+  const answer5 =
+    "Absolutely! There will be a dedicated Q&A session during the live masterclass where you can submit your questions through the chat box. The mentors will address each question to ensure you gain maximum value.";
+  //  stepper points
+  const header = "";
+  const subhead = "";
+  const stepheader = "";
+  const step1 = "Countries Available:";
+  const point1 =
+    "Focus on your studies without the burden of upfront tuition costs. Repay the loan only if you choose to stay in Canada after graduation.";
+  const step2 = "Who is this for?";
+  const point2 =
+    " Gain valuable Canadian work experience with a built-in work permit and a clear path towards permanent residency.";
+  const step3 = "Why choose this program?";
+  const point5 =
+    "The 7-year loan term allows for manageable repayments, with no penalties for early settlement.";
+  const step4 = "Our Comprehensive Support Services Include:";
+  const point6 =
+    "Choose from a selection of 10+ in-demand programs aligned with Canada's labour market needs, increasing your earning potential.";
+  const step5 = "Transparent Payment Structure:";
+  const point7 =
+    " Receive a monthly stipend of CAD $1700 for the first 12 months to help cover your living expenses.";
   return (
     <div>
       <Navbar />
       <Support data={data} />
-      <Verticalstepper data={data} />
+      {/* <Verticalstepper data={data} /> */}
+      <div
+        class="container-fluid bg-light"
+        style={{ paddingTop: "8rem", paddingBottom: "2rem" }}
+      >
+        <div class="container">
+          <div class="row d-flex justify-content-center align-items-center gap-2 flex-column ">
+            <div class="d-flex justify-content-center align-items-center gap-2">
+              <div class=" d-flex justify-content-start"></div>
+              <div class="d-flex justify-content-center align-items-center flex-column">
+                <div class="col h1 fw-bold text-center ">{header}</div>
+                <p class="text-center h6">{subhead}</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <div class="stepper d-flex flex-column mt-5 ml-2 w-75">
+                <div class="d-flex mb-1">
+                  <div class="d-flex flex-column pr-4 align-items-center">
+                    <div class="rounded-circle py-2 px-3 stepper-col text-white mb-1">
+                      1
+                    </div>
+                    <div class="line h-100"></div>
+                  </div>
+                  <div class="px-2">
+                    <div class="h4 fw-bold">{step1}</div>
+                    <div class="h5">
+                      <li>Czech Republic</li>
+                      <li>Germany</li>
+                      <li>Austria</li>
+                      <li>Poland</li>
+                      <li>Hungary</li>
+                      <li>Croatia</li>
+                      <li>Lithuania</li>
+                      <li>Albania</li>
+                      <li>Slovakia</li>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex mb-1">
+                  <div class="d-flex flex-column pr-4 align-items-center">
+                    <div class="rounded-circle py-2 px-3 stepper-col text-white mb-1">
+                      2
+                    </div>
+                    <div class="line h-100"></div>
+                  </div>
+                  <div class="px-2">
+                    <div class="h4 fw-bold">{step2}</div>
+                    <div class="h5">
+                      <li>Individuals looking for Blue Collar Jobs</li>
+                      <li>Individuals with Diplomas, Bachelor's Degrees, or High School Education (10th or 12th grade)</li>
+                      <li>Anyone seeking immediate employment and relocation to Europe</li>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex mb-1">
+                  <div class="d-flex flex-column pr-4 align-items-center">
+                    <div class="rounded-circle py-2 px-3 stepper-col text-white mb-1">
+                      3
+                    </div>
+                    <div class="line h-100"></div>
+                  </div>
+                  <div class="px-2">
+                    <div class="h4 fw-bold">{step3}</div>
+                    <div class="h5">
+                      <li><span class="fw-bold">Zero Recruitment Fees:</span> You only pay our transparent consultation fee.</li>
+                      <li><span class="fw-bold">12th Pass & Ready to Go?</span> Our program is open to everyone who has completed Class 12.</li>
+                      <li><span class="fw-bold">Visa Guarantee:</span> If a visa gets rejected because of our fault, we'll appeal, apply elsewhere, or refund you.</li>
+                      <li><span class="fw-bold">Guaranteed Placement:</span> Employment is provided with Work Permit, Residence Permit, and Accommodation.</li>
+                      <li><span class="fw-bold">Looking for PR?</span>  Get eligible to Permanent Residency (PR) in 5 years.</li>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex mb-1">
+                  <div class="d-flex flex-column pr-4 align-items-center">
+                    <div class="rounded-circle py-2 px-3 stepper-col text-white mb-1">
+                      4
+                    </div>
+                    <div class="line h-100"></div>
+                  </div>
+                  <div class="px-2">
+                    <div class="h4 fw-bold">{step4}</div>
+                    <div class="h5">
+                      <li>Job Placement Assistance</li>
+                      <li>Document Preparation</li>
+                      <li>Visa Interview Booking & Preparation</li>
+                      <li>Flight Booking & Airport Transfer</li>
+                      <li>Bank Account Opening Assistance</li>
+                      <li>Remittance Assistance (Sending Money Back Home)</li>
+                      <li>Legal Agreement for Your Protection</li>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex mb-1">
+                  <div class="d-flex flex-column pr-4 align-items-center">
+                    <div class="rounded-circle py-2 px-3 stepper-col text-white mb-1">
+                      5
+                    </div>
+                    <div class="line h-100"></div>
+                  </div>
+                  <div class="px-2">
+                    <div class="h4 fw-bold">{step5}</div>
+                    <div class="h5">
+                      <li>20% Down Payment to Start the Process</li>
+                      <li>30% Payment After Work Permit Approval</li>
+                      <li>50% Payment After Visa Approval</li>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex mb-1">
+                <div class="d-flex flex-column pr-4 align-items-center">
+                  <div class="rounded-circle py-2 px-3 stepper-col text-white mb-1">
+                    6
+                  </div>
+                  <div class="line h-100"></div>
+                </div>
+                <div class="px-2">
+                  <div class="h6">Requirements:</div>
+                  <div class="h5">
+                      <li>Valid Passport (6+ Months Validity)</li>
+                      <li>CV/Resume</li>
+                      <li>Class 12 Marksheet/Certificate (or Highest Qualification)</li>
+                      <li>Age Under 55 Years Old</li>
+                    </div>
+                </div>
+              </div>
+              {/* <div class="d-flex mb-1">
+                <div class="d-flex flex-column pr-4 align-items-center">
+                  <div class="rounded-circle py-2 px-3 stepper-col text-white mb-1">
+                    7
+                  </div>
+                  <div class="line h-100"></div>
+                </div>
+                <div class="px-2">
+                  <div class="h6">{step7}</div>
+                  <li class="h6 fw-normal  pb-3">{point11}</li>
+                </div>
+              </div> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* <Services/> */}
       {/* <Competitive/> */}
       {/* <Achievements/> */}

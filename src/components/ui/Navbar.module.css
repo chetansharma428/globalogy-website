@@ -124,6 +124,10 @@ a{
   url('../../assests/images/bg_dark.jpeg'); */
   padding-top: calc(var(--mantine-spacing-xl) * 6);
   padding-bottom: calc(var(--mantine-spacing-xl) * 10);
+  @media (max-width: 764px) {
+    padding-top: calc(var(--mantine-spacing-xl) * 3);
+    padding-bottom: calc(var(--mantine-spacing-xl) * 5);
+  }
 }
 
 .inner {

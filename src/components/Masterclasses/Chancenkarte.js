@@ -5,11 +5,11 @@ import Footer from '../ui/Footer'
 const Chancenkarte = () => {
   const data =[{
     header1:"CHANCENKARTE VISA",
-    header2:"GUIDE! 🇩🇪",
+    header2:"GUIDE!",
     header3:"with Nidhi Nagori",
     header4:"The Chancenkarte aka Opportunity Card Visa is a game-changer for skilled non-EU workers seeking employment in Germany. This new visa allows you to live and work part-time in Germany for up to one year while you search for a full-time job or vocational training.",
     time:"",
-    hours:"",
+    hours:"2 hours",
     date:"",
     Enroll_link:"",
     button1:"REGISTER NOW!",

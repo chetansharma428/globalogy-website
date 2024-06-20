@@ -211,7 +211,7 @@ const Course = (props) => {
       <div class="container-fluid bg-light text-dark p-0">
         <div class="hero-section ">
           <div class="container">
-            <div class="row d-flex justify-content-center align-items-center g-2">
+            <div class="row d-flex justify-content-center align-items-start g-2">
               <div
                 ref={(el) => (popUpRefs.current[0] = el)}
                 class="col-lg-7 col-sm-12 d-flex gap-4 flex-column hero-content pop-up"
@@ -304,7 +304,7 @@ const Course = (props) => {
                   </div>
                 </div>
               </div>
-              <div class="col-lg-5 col-sm-12">
+              <div class="col-lg-5 col-sm-12" style={{padding:"10px"}}>
                 <img src={dp} class="img-fluid rounded-top" alt="" />
               </div>
             </div>
