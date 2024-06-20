@@ -71,6 +71,30 @@ const Cometocanada = () => {
    const answer4 = "To be eligible you must take one of the following English language tests and achieve the minimum score: • IELTS (Academic): Overall score of 6.0, with a minimum of 5.5 in each band. (Test validity: 2 years) • TOEFL: Minimum score of 80 overall, with a minimum of 20 in each section. (Test validity: 2 years) • PTE Academic: Minimum score of 54, with a minimum of 50 in each band. (Test validity: 2 years) • Duolingo English Test: Minimum score of 110. (Test validity: 2 years)";
   return (
     <div>
+      {/* Alert section */}
+      <div class="alert fixed-bottom d-flex justify-content-center mb-0">
+        <div
+          class=" alert-dismissible fade show m-0 border-0 text-center text-light"
+          role="alert"
+        >
+          <strong>Unlock the Great White North: </strong> Your Guide to Canada{" "}
+          <span class="">
+            <button class="check btn button-g fw-bold">
+              {" "}
+              Check-it-out
+              <div class="glare"></div>
+            </button>
+          </span>
+        </div>
+        <div class="d-flex justify-content-end">
+          <button
+            type="button"
+            class="btn-close text-light"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
       <Navbar />
       <Support data={data} />
       <Verticalstepper data={data} />

@@ -91,30 +91,6 @@ const Navbar = () => {
 
   return (
     <div>
-      {/* Alert section */}
-      <div class="alert fixed-bottom d-flex justify-content-center mb-0">
-        <div
-          class=" alert-dismissible fade show m-0 border-0 text-center text-light"
-          role="alert"
-        >
-          <strong>Unlock the Great White North: </strong> Your Guide to Canada{" "}
-          <span class="">
-            <button class="check btn button-g fw-bold">
-              {" "}
-              Check-it-out
-              <div class="glare"></div>
-            </button>
-          </span>
-        </div>
-        <div class="d-flex justify-content-end">
-          <button
-            type="button"
-            class="btn-close text-light"
-            data-bs-dismiss="alert"
-            aria-label="Close"
-          ></button>
-        </div>
-      </div>
       {/* Navbar section */}
       <Box class="head-bar">
         <Box class="rounded-0 navbar-back" p={20} fz="lg">

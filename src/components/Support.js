@@ -530,8 +530,9 @@ const Support = (props) => {
                   </Container>
                 </Modal>
                 <a
-                  onClick={open}
+                  // onClick={open} when modal is needed then button will be used
                   class="wherecanmove btn d-flex flew-row align-items-center fw-bold p-3"
+                  href="https://raviopedia.viewpage.co/Landing-Page-01"
                 >
                   <a>{subheaderbutton}</a>
                   <div class="glare"></div>
